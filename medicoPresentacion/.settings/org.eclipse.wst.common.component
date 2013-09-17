@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="medicoPresentacion">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="hcdigitalAdmiciones.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalAdmiciones/hcdigitalAdmiciones">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hcdigitalUtil.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalUtil/hcdigitalUtil">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hcdigitalAgenda.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalAgenda/hcdigitalAgenda">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hcdigitalHistoriaClinica.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalHistoriaClinica/hcdigitalHistoriaClinica">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/medicoPresentacion/build/classes"/>
+        <property name="context-root" value="medicoPresentacion"/>
+    </wb-module>
+</project-modules>

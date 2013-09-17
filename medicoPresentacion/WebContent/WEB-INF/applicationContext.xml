@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:p="http://www.springframework.org/schema/p" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context/spring-context-2.5.xsd" 
+		xmlns:context="http://www.springframework.org/schema/context">
+    
+    
+   		<!-- BEANS  CONFIGURACION DATASOURCE -->
+   		 <!-- MySQL 
+        <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+            <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+	        <property name="url" value="jdbc:mysql://localhost:3306/hcdigital"></property>
+	        <property name="username" value="root"></property>
+	        <property name="password" value="12345"></property>
+        </bean>-->
+        
+         <!-- POSTGRESQL -->
+         <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+			    <property name="driverClassName" value="org.postgresql.Driver" />
+			    <property name="url" value="jdbc:postgresql://vps505.netciel.net:5432/hcdigital" />
+			    <property name="username" value="postgres" />
+			    <property name="password" value="1Wdwiuassq" />
+			</bean>
+	    <!-- TERMINA CONFIGURACION DATASOURCE -->
+	    
+        <!-- BEANS CONFIGURACION HIBERNATE	-->
+        <bean id="factory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+                <property name="mappingResources">
+                        <list>
+                        	 <!-- MODULO AGENDA-->
+                        	<value>agenda/db/dto/mapeo/Cita.hbm.xml</value>
+                        	<value>agenda/db/dto/mapeo/Turno.hbm.xml</value> 
+                        	
+                        
+                             
+                              <!-- MODULO ADMICIONES-->
+                              <value>admisiones/db/dto/mapeo/Actividad.hbm.xml</value>
+                              <value>admisiones/db/dto/mapeo/Especialidad.hbm.xml</value>
+                            <value>admisiones/db/dto/mapeo/MedicamentoMaestro.hbm.xml</value> 												
+							<value>admisiones/db/dto/mapeo/Municipio.hbm.xml</value>                                                    
+							<value>admisiones/db/dto/mapeo/Prestador.hbm.xml</value>	
+							<value>admisiones/db/dto/mapeo/Entidad.hbm.xml</value>									
+							<value>admisiones/db/dto/mapeo/Paciente.hbm.xml</value>
+							<value>admisiones/db/dto/mapeo/Profesional.hbm.xml</value>     
+								 <!-- MODULO HISTORIA CLINICA-->
+								
+                        	<value>historia/clinica/db/dto/mapeo/Remision.hbm.xml</value>
+                        	<value>historia/clinica/db/dto/mapeo/CampoHistoria.hbm.xml</value>
+                            <value>historia/clinica/db/dto/mapeo/Atencion.hbm.xml</value>               
+                            <value>historia/clinica/db/dto/mapeo/Formula.hbm.xml</value>                             						
+							<value>historia/clinica/db/dto/mapeo/Procedimiento.hbm.xml</value>							
+							<value>historia/clinica/db/dto/mapeo/CausaExterna.hbm.xml</value>							
+							<value>historia/clinica/db/dto/mapeo/DiagnosticoMaestro.hbm.xml</value>	
+							<value>historia/clinica/db/dto/mapeo/Medicamento.hbm.xml</value>
+							<value>historia/clinica/db/dto/mapeo/Diagnostico.hbm.xml</value>						
+							<value>historia/clinica/db/dto/mapeo/Finalidad.hbm.xml</value>							
+							<value>historia/clinica/db/dto/mapeo/Incapacidad.hbm.xml</value>
+							<value>historia/clinica/db/dto/mapeo/Ingreso.hbm.xml</value> 
+							 <value>historia/clinica/db/dto/mapeo/AutorizacionPaciente.hbm.xml</value>                      						
+                        </list>
+                </property>                
+                <property name="hibernateProperties">
+                        <props>
+                                <prop key="hibernate.dialect">
+                                        org.hibernate.dialect.MySQLDialect
+                                </prop>
+                                <prop key="hibernate.show_sql">
+                                        true                                   
+                                </prop>
+                                <prop key="hibernate.transaction.factory_class">
+                                        org.hibernate.transaction.JDBCTransactionFactory
+                                </prop>                               
+                        </props>
+                </property>                
+                <property name="dataSource">
+                        <ref bean="dataSource"/>
+                </property>
+        </bean>
+        
+    <!-- Acceso a datos	-->
+    
+     <!-- MODULO AGENDA-->
+    <bean id="citaDao" class="agenda.db.dao.implementacion.CitaDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+    <bean id="turnoDao" class="agenda.db.dao.implementacion.TurnoDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	
+	<!-- MODULO HISTORIA CLINICA-->
+		<bean id="incapacidadDao" class="historia.clinica.db.dao.implementacion.IncapacidadDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="remisionDao" class="historia.clinica.db.dao.implementacion.RemisionDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="medicamentoDao" class="historia.clinica.db.dao.implementacion.MedicamentoDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="formulaDao" class="historia.clinica.db.dao.implementacion.FormulaDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="diagnosticoDao" class="historia.clinica.db.dao.implementacion.DiagnosticoDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+    <bean id="diagnosticoMaestroDao" class="historia.clinica.db.dao.implementacion.DiagnosticoMaestroDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+    <bean id="atencionDao" class="historia.clinica.db.dao.implementacion.AtencionDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+    <bean id="finalidadDao" class="historia.clinica.db.dao.implementacion.FinalidadDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+      <bean id="causaExternaDao" class="historia.clinica.db.dao.implementacion.CausaExternaDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	 <bean id="ingresoDao" class="historia.clinica.db.dao.implementacion.IngresoDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="autorizacionPacienteDao" class="historia.clinica.db.dao.implementacion.AutorizacionPacienteDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	
+	 <!-- MODULO ADMICIONES-->
+	 <bean id="prestadorDao" class="admisiones.db.dao.implementacion.PrestadorDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	 <bean id="actividadDao" class="admisiones.db.dao.implementacion.ActividadDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="especialidadDao" class="admisiones.db.dao.implementacion.EspecialidadDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+    <bean id="municipioDao" class="admisiones.db.dao.implementacion.MunicipioDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="medicamentoMaestroDao" class="admisiones.db.dao.implementacion.MedicamentoMaestroDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+     <bean id="profesionalDao" class="admisiones.db.dao.implementacion.ProfesionalDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="pacienteDao" class="admisiones.db.dao.implementacion.PacienteDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	<bean id="entidadDao" class="admisiones.db.dao.implementacion.EntidadDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="factory" />
+		</property>
+	</bean>
+	
+	
+	<!-- Servicio	-->
+	
+	<!-- MODULO HISTORIA CLINICA-->	
+	<bean id="incapacidadServicio" class="historia.clinica.servicio.IncapacidadServicio">
+		<property name="incapacidadDao" ref="incapacidadDao"></property>
+	</bean>
+	<bean id="remisionServicio" class="historia.clinica.servicio.RemisionServicio">
+		<property name="remisionDao" ref="remisionDao"></property>
+	</bean>
+	<bean id="diagnosticoServicio" class="historia.clinica.servicio.DiagnosticoServicio">
+		<property name="diagnosticoDao" ref="diagnosticoDao"></property>
+	</bean>
+	
+	<bean id="diagnosticoMaestroServicio" class="historia.clinica.servicio.DiagnosticoMaestroServicio">
+		<property name="diagnosticoMaestroDao" ref="diagnosticoMaestroDao"></property>
+	</bean>
+	<bean id="atencionServicio" class="historia.clinica.servicio.AtencionServicio">
+		<property name="atencionDao" ref="atencionDao"></property>
+	</bean>
+	<bean id="finalidadServicio" class="historia.clinica.servicio.FinalidadServicio">
+		<property name="finalidadDao" ref="finalidadDao"></property>
+	</bean>
+	<bean id="causaExternaServicio" class="historia.clinica.servicio.CausaExternaServicio">
+		<property name="causaExternaDao" ref="causaExternaDao"></property>
+	</bean>
+	<bean id="ingresoServicio" class="historia.clinica.servicio.IngresoServicio">
+		<property name="ingresoDao" ref="ingresoDao"></property>
+	</bean>
+	<bean id="formulaServicio" class="historia.clinica.servicio.FormulaServicio">
+		<property name="formulaDao" ref="formulaDao"></property>
+	</bean>
+	<bean id="autorizacionPacienteServicio" class="historia.clinica.servicio.AutorizacionPacienteServicio">
+		<property name="autorizacionPacienteDao" ref="autorizacionPacienteDao"></property>
+	</bean>
+	
+	<!-- MODULO ADMISIONES-->
+	<bean id="prestadorServicio" class="admisiones.servicio.PrestadorServicio">
+		<property name="prestadorDao" ref="prestadorDao"></property>
+	</bean>
+	<bean id="actividadServicio" class="admisiones.servicio.ActividadServicio">
+		<property name="actividadDao" ref="actividadDao"></property>
+	</bean>
+	<bean id="medicamentoMaestroServicio" class="admisiones.servicio.MedicamentoMaestroServicio">
+		<property name="medicamentoMaestroDao" ref="medicamentoMaestroDao"></property>
+	</bean>
+	<bean id="especialidadServicio" class="admisiones.servicio.EspecialidadServicio">
+		<property name="especialidadDao" ref="especialidadDao"></property>
+	</bean>
+	<bean id="profesionalServicio" class="admisiones.servicio.ProfesionalServicio">
+		<property name="profesionalDao" ref="profesionalDao"></property>
+	</bean>
+	<bean id="pacienteServicio" class="admisiones.servicio.PacienteServicio">
+		<property name="pacienteDao" ref="pacienteDao"></property>
+		<property name="profesionalDao" ref="profesionalDao"></property>
+		<property name="municipioDao" ref="municipioDao"></property>          
+	</bean>
+	<bean id="municipioServicio" class="admisiones.servicio.MunicipioServicio">
+		<property name="municipioDao" ref="municipioDao"></property>
+	</bean>	
+	<bean id="entidadServicio" class="admisiones.servicio.EntidadServicio">
+		<property name="entidadDao" ref="entidadDao"></property>
+	</bean>
+	
+	
+     
+     <!-- Controladores	-->
+     	
+		<bean id="plantillaCtl" class="hcdigital.controlador.PlantillaCtl" scope="prototype"></bean>    
+	  	<bean id="loginCtl" class="hcdigital.controlador.LoginCtl" scope="prototype"></bean> 
+	  	<bean id="menuLateralCtl" class="hcdigital.controlador.MenuLateralCtl" scope="prototype"></bean>  	
+	  	  
+     <!-- Modulo Admisiones	-->
+			<bean id="menuAdmisionesCtl" class="admisiones.web.controlador.MenuAdmisionesCtl" scope="prototype"></bean>
+			 <bean id="nuevoMunicipioCtl" class="admisiones.web.controlador.NuevoMunicipioCtl" scope="prototype"></bean>
+			 <bean id="nuevoPrestadorCtl" class="admisiones.web.controlador.NuevoPrestadorCtl" scope="prototype"></bean>
+			 <bean id="nuevoProfesionalCtl" class="admisiones.web.controlador.NuevoProfesionalCtl" scope="prototype"></bean>
+			 <bean id="nuevaActividadCtl" class="admisiones.web.controlador.NuevaActividadCtl" scope="prototype"></bean>
+			 <bean id="nuevoMedicamentoMaestroCtl" class="admisiones.web.controlador.NuevoMedicamentoMaestroCtl" scope="prototype"></bean>
+			 <bean id="nuevaEntidadCtl" class="admisiones.web.controlador.NuevaEntidadCtl" scope="prototype"></bean>
+			 <bean id="nuevaEspecialidadCtl" class="admisiones.web.controlador.NuevaEspecialidadCtl" scope="prototype"></bean>
+			<bean id="listaActividadesCtl" class="admisiones.web.controlador.ListaActividadesCtl" scope="prototype"></bean>
+			<bean id="listaMedicamentosMaestrosCtl" class="admisiones.web.controlador.ListaMedicamentosMaestrosCtl" scope="prototype"></bean>
+			<bean id="listaMunicipiosCtl" class="admisiones.web.controlador.ListaMunicipiosCtl" scope="prototype"></bean>
+			<bean id="listaEspecialidadesCtl" class="admisiones.web.controlador.ListaEspecialidadesCtl" scope="prototype"></bean>
+			 <bean id="listaEntidadesCtl" class="admisiones.web.controlador.ListaEntidadesCtl" scope="prototype"></bean>
+			 <bean id="listaPrestadoresCtl" class="admisiones.web.controlador.ListaPrestadoresCtl" scope="prototype"></bean>
+			 <bean id="listaProfesionalesCtl" class="admisiones.web.controlador.ListaProfesionalesCtl" scope="prototype"></bean>
+			<bean id="nuevoPacienteCtl" class="admisiones.web.controlador.NuevoPacienteCtl" scope="prototype"></bean> 
+			<bean id="buscarPacienteCtl" class="admisiones.web.controlador.BuscarPacienteCtl" scope="prototype"></bean>			
+  			<bean id="datosPacienteCtl" class="admisiones.web.controlador.DatosPacienteCtl" scope="prototype"></bean>        
+			 
+    
+     <!-- Modulo historia Clinica	-->
+     <bean id="menuHCCtl" class="historia.clinica.web.controlador.MenuHCCtl" scope="prototype"></bean>          
+    <bean id="nuevaConsultaGeneralCtl" class="historia.clinica.web.controlador.NuevaConsultaGeneralCtl" scope="prototype"></bean>
+    <bean id="subFormulariosAtencionCtl" class="historia.clinica.web.controlador.SubFormulariosAtencionCtl" scope="prototype"></bean>
+    <bean id="diagnosticoCtl" class="historia.clinica.web.controlador.DiagnosticoCtl" scope="prototype"></bean>
+     <bean id="nuevaFormulaCtl" class="historia.clinica.web.controlador.NuevaFormulaCtl" scope="prototype"></bean> 
+     <bean id="nuevaIncapacidadCtl" class="historia.clinica.web.controlador.NuevaIncapacidadCtl" scope="prototype"></bean> 
+     <bean id="nuevaRemisionCtl" class="historia.clinica.web.controlador.NuevaRemisionCtl" scope="prototype"></bean>   
+    <bean id="listaAtencionesCtl" class="historia.clinica.web.controlador.ListaAtencionesCtl" scope="prototype"></bean>          
+    <bean id="ingresoCtl" class="historia.clinica.web.controlador.IngresoCtl" scope="prototype"></bean>      
+</beans>
