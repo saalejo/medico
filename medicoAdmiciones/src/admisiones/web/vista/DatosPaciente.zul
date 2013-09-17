@@ -1,0 +1,199 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${datosPacienteCtl}" minimizable="true" closable="true" >
+		<caption src="/res/profile.png" sclass="fn-caption" label="Paciente"/>					
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="Identificacion:"/>
+					</cell>
+					<cell>
+						<textbox id="identificacion" readonly="true" width="90%" />
+					</cell>
+					<cell >
+						<label value="Tipo Documento:"/>
+					</cell>
+					<cell>
+						<textbox id="tipoDocumento" readonly="true"/>
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+					<label value="Primer Nombre:"/>
+					</cell>
+					<cell>
+						<textbox id="primerNombre" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Segundo Nombre:"/>
+					</cell>
+					<cell>
+						<textbox id="segundoNombre" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Primer Apellido:"/>
+					</cell>
+					<cell>
+						<textbox id="primerApellido" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Segundo Apellido:"/>
+					</cell>
+					<cell>
+						<textbox id="segundoApellido" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Fecha Nacimiento"/>
+					</cell>
+					<cell>
+						<hbox>
+						    <datebox id="fechaNacimiento" readonly="true" />
+						</hbox>
+					</cell>
+					<cell>
+					<label value="Genero:"/>
+					</cell>
+					<cell>
+						<textbox id="genero" readonly="true"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Estado Civil:"/>
+					</cell>
+					<cell>
+						<textbox id="estadoCivil" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Lugar de Nacimiento:"/>
+					</cell>
+					<cell>
+						<textbox id="lugarNacimiento" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Zona:"/>
+					</cell>
+					<cell>
+						<textbox id="zona" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Municipio:"/>
+					</cell>
+					<cell>
+						<textbox id="municipio" readonly="true"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Primer Telefono:"/>
+					</cell>
+					<cell>
+						<textbox id="primerTelefono" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Segundo Telefono:"/>
+					</cell>
+					<cell>
+						<textbox id="SegundoTelefono" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Direccion:"/>
+					</cell>
+					<cell>
+						<textbox id="direccion" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Mail:"/>
+					</cell>
+					<cell>
+						<textbox id="mail" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Antecedentes Patologicos:"/>
+					</cell>
+					<cell>
+						<textbox id="antecedentesPatologicos" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="antecedentes Quirurgicos:"/>
+					</cell>
+					<cell>
+						<textbox id="antecedentesQuirurgicos" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Antecedentes Habitos:"/>
+					</cell>
+					<cell>
+						<textbox id="antecedentesHabitos" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="antecedentes Familiares:"/>
+					</cell>
+					<cell>
+						<textbox id="antecedentesFamiliares" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Tipo Usuario:"/>
+					</cell>
+					<cell>
+						<textbox id="tipoUsuario" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Entidad:"/>
+					</cell>
+					<cell>
+						<textbox id="entidad" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					<label value="Ocupacion:"/>
+					</cell>
+					<cell>
+						<textbox id="ocupacion" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Observaciones:"/>
+					</cell>
+					<cell>
+						<textbox id="observaciones" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>							
+					</cell>
+					<cell>								
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="modificar" label="${labels.formulario.general.Modificar }"> </button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+</zk>

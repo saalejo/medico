@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Diagnostico" table="atencion_has_diagnostico">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="atencionId" type="int" >
+            <column name="atencion_id" />
+        </property>
+        <property name="prinsipal" type="boolean">
+            <column name="prinsipal" />
+        </property>
+        <property name="diagnosticoId" type="int">
+            <column name="diagnostico_id" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="observaciones" />
+        </property>
+        <property name="ingresoEgreso" type="java.lang.String">
+            <column name="ingreso_egreso" />
+        </property>
+        <property name="tipo" type="java.lang.String">
+            <column name="tipo" />
+        </property>
+        <property name="clase" type="java.lang.String">
+            <column name="clase" />
+        </property>
+        <property name="codigo" type="java.lang.String">
+            <column name="codigo" />
+        </property>
+        <many-to-one name="diagnostico" class="historia.clinica.db.dto.modelo.DiagnosticoMaestro" fetch="join" insert="false" update="false">
+            <column name="diagnostico_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

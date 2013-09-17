@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Ingreso" table="ingreso">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="pacienteId" type="int">
+            <column name="paciente_id" />
+        </property>
+        <property name="estado" type="java.lang.String">
+            <column name="estado" />
+        </property>
+        <property name="fecha" type="java.util.Date">
+            <column name="fecha" />
+        </property>
+        <property name="usuarioConectado" type="java.lang.String">
+            <column name="usuario_conectado" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="observaciones" />
+        </property>
+        <property name="tipoIngresoId" type="int" not-null="true">
+            <column name="tipo_ingreso_id" />
+        </property>
+        <property name="areaServicioId" type="int">
+            <column name="area_servicio_id" />
+        </property>
+        <property name="causaIngresoId" type="int">
+            <column name="causa_ingreso_id" />
+        </property>
+        <property name="fechaAccidente" type="java.util.Date">
+            <column name="fecha_Accidente" />
+        </property>
+        <property name="contratoId" type="int">
+            <column name="contrato_id" />
+        </property>
+        <property name="centroAtencionId" type="int">
+            <column name="centro_Atencion_id" />
+        </property>  
+        <property name="acompanante" type="java.lang.String">
+            <column name="acompanante" />
+        </property>
+        <property name="parentezco" type="java.lang.String">
+            <column name="parentesco" />
+        </property>
+        <property name="telefonoAcompanante" type="java.lang.String">
+            <column name="telefono_acompanante" />
+        </property>
+        <property name="autorizacion" type="java.lang.String">
+            <column name="autorizacion" />
+        </property>      
+    </class>
+</hibernate-mapping>

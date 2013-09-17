@@ -1,0 +1,24 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="lang" ?>
+		<window title="${labels.formulario.finalidad.Titulo}" border="normal" apply="${nuevaFinalidadCtl}">
+			<grid>
+				<columns>
+					<column/>
+					<column/>
+				</columns>				
+				<rows>
+					<row>
+					<cell align="right"><label value="${labels.formulario.finalidad.Finalidad}"></label></cell>
+					<cell align="left"><textbox id="finalidad"></textbox></cell>	
+					</row>
+					<row>
+					<cell align="right"><label value="${labels.formulario.finalidad.Codigo}"></label></cell>
+					<cell align="left"><textbox id="codigo"></textbox></cell>	
+					</row>
+					<row>
+					<cell></cell>
+					<cell><button id="aceptar" label="${labels.formulario.general.Aceptar}"></button></cell>
+					</row>
+				</rows>
+			</grid>			
+		</window>

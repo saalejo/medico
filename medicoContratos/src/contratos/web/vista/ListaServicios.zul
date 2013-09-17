@@ -1,0 +1,14 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaServiciosCtl}" minimizable="true" closable="true" >
+		<listbox id="listaServicios" multiple="true" rows="10">
+				        <listhead>
+				            <listheader label="Servicios"/>
+				            <listheader label=""/>
+				        </listhead>       
+				        <listitem >            
+				            <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

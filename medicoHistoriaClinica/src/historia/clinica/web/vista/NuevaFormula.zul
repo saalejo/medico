@@ -1,0 +1,63 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" apply="${nuevaFormulaCtl}" minimizable="true" closable="true" >
+	<caption label="Formula Medica"></caption>
+		<grid hflex="1">
+			<columns>
+				<column></column>
+          		<column></column>
+          		<column></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="cantidad"/>
+					</cell>
+					<cell >
+						<label value="Medicamento"/>
+					</cell>
+					<cell colspan="2">
+						<label value="Posologia"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<textbox id="cantidad" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<combobox id="medicamentosCombo" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>
+					<cell >
+						<textbox id="posologia" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+						<button id="nuevoMedicamento" label="Agregar"></button>
+					</cell>
+				</row>
+				<row>									
+					<cell colspan="3">
+						<listbox id="listaMedicamentos" multiple="true">
+					        <listhead>
+					            <listheader label="Cantidad"/>
+					            <listheader label="Medicamento"/>
+					            <listheader label="Posologia"/>
+					        </listhead>       
+					        <listitem >            
+					            
+					        </listitem>
+					    </listbox>
+					</cell>									
+				</row>	
+				<row>					
+					<cell>
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

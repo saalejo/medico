@@ -1,0 +1,59 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" width="60%" apply="${nuevaGestionCtl}" minimizable="false" closable="false">
+		<caption sclass="fn-caption" label="Especialidad y dias de intervalo"/>	
+		<grid hflex="2">
+			<columns>
+				<column hflex="7"></column>
+	          		<column hflex="15"></column>
+	          		
+	          		
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.gestion.Especialidad}"/>
+					</cell>
+					<cell>
+						<listbox id="listaEspecialidades" mold="select">
+                      
+                    </listbox>
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.gestion.Numero}"/>
+					</cell>
+					<cell>
+						<intbox id="numero" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.gestion.Intervalo}"/>
+					</cell>
+					<cell>
+						<intbox id="intervalo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>					
+					<cell>
+					<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+					
+					<cell>	
+					
+					<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+									
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

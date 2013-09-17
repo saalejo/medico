@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Atencion" table="atencion">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+       <set name="diagnosticos" table="atencion_has_diagnostico" inverse="false"  lazy="true" access="field" cascade="all">
+            <key>
+                <column name="atencion_id" not-null="true"/>
+            </key>
+            <one-to-many class="historia.clinica.db.dto.modelo.Diagnostico" />
+        </set>        
+        <property name="fechaAtencion" type="java.util.Date">
+            <column name="fecha_atencion" />
+        </property>
+        <property name="tipoConsulta" type="java.lang.String">
+            <column name="tipo_consulta" />
+        </property>         
+        <property name="observaciones" type="java.lang.String">
+            <column name="observaciones" />
+        </property>
+        
+        <property name="pacienteId" type="int">
+            <column name="paciente_id" />
+        </property>
+        <property name="causaExternaId" type="int">
+            <column name="causa_externa_id" />
+        </property>
+         <property name="finalidadId" type="int">
+            <column name="finalidad_id" />
+        </property>
+        <property name="municipioId" type="int">
+            <column name="municipio_id" />
+        </property>
+        <property name="profesionalId" type="int">
+            <column name="profesional_id" />
+        </property>
+        <property name="ingresoId" type="int">
+            <column name="ingreso_id" />
+        </property>
+         <property name="antecedentesMedicos" type="java.lang.String">
+            <column name="antecedentes_medicos" />
+        </property>
+        <property name="antecedentesQuirurgicos" type="java.lang.String">
+            <column name="antecedentes_quirurgicos" />
+        </property>
+        <property name="antecedentesGinecologicos" type="java.lang.String">
+            <column name="antecedentes_ginecologicos" />
+        </property>
+        <property name="antecedentesAlergicos" type="java.lang.String">
+            <column name="antecedentes_alergicos" />
+        </property>
+        <property name="antecedentesTraumaticos" type="java.lang.String">
+            <column name="antecedentes_traumaticos" />
+        </property>
+        <property name="antecedentesPsiquiatricos" type="java.lang.String">
+            <column name="antecedentes_psiquiatricos" />
+        </property>
+        <many-to-one name="causaExterna" class="historia.clinica.db.dto.modelo.CausaExterna" fetch="join" insert="false" update="false">
+            <column name="causa_externa_id" />
+        </many-to-one>
+        <many-to-one name="finalidad" class="historia.clinica.db.dto.modelo.Finalidad" fetch="join" insert="false" update="false">
+            <column name="finalidad_id" />
+        </many-to-one>
+        <many-to-one name="ingreso" class="historia.clinica.db.dto.modelo.Ingreso" fetch="join" insert="false" update="false">
+            <column name="ingreso_id" />
+        </many-to-one>
+        <set name="camposHistoria" table="campos_historia" inverse="false"  lazy="true" access="field" cascade="all" order-by="padre">
+            <key>
+                <column name="atencion_id" not-null="true"/>
+            </key>
+            
+            <one-to-many class="historia.clinica.db.dto.modelo.CampoHistoria" />
+        </set>  
+    </class>
+</hibernate-mapping>

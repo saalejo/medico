@@ -1,0 +1,48 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" width="60%" apply="${nuevoConsultorioCtl}" minimizable="true" closable="true" >
+		<caption sclass="fn-caption" label="Codigo y nombre del consultorio"/>	
+		<grid hflex="2">
+			<columns>
+				<column hflex="7"></column>
+	          		<column hflex="15"></column>
+	          		
+	          		
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.consultorio.Codigo}"/>
+					</cell>
+					<cell>
+						<intbox id="codigo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.consultorio.Nombre}"/>
+					</cell>
+					<cell>
+						<textbox id="nombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>					
+					<cell>
+					<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+					
+					<cell>	
+					
+					<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+									
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

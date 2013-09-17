@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.AutorizacionPaciente" table="AUTORIZACION_PACIENTE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="atencionId" type="int">
+            <column name="ATENCION_ID" />
+        </property>
+        <property name="nombreAutoriza" type="java.lang.String">
+            <column name="NOMBRE_AUTORIZA" />
+        </property>
+        <property name="tipoProcedimiento" type="java.lang.String">
+            <column name="TIPO_PROCEDIMIENTO" />
+        </property>
+        <property name="diagnosticoId" type="int">
+            <column name="DIAGNOSTICO_ID" />
+        </property>
+        <property name="procedimiento" type="java.lang.String">
+            <column name="PROCEDIMIENTO" />
+        </property>
+        <property name="responsable" type="java.lang.String">
+            <column name="responsable" />
+        </property>
+        <property name="aspectosProcedimiento" type="java.lang.String">
+            <column name="ASPECTOS_PROCEDIMIENTO" />
+        </property>
+        <property name="riesgos" type="java.lang.String">
+            <column name="RIESGOS" />
+        </property>
+        <property name="preparacion" type="java.lang.String">
+            <column name="PREPARACION" />
+        </property>
+        <property name="tiempoQuirurgico" type="java.lang.String">
+            <column name="TIEMPO_QUIRURGICO" />
+        </property>
+        <property name="requerimientoEspecial" type="java.lang.String">
+            <column name="REQUERIMIENTO_ESPECIAL" />
+        </property>
+    </class>
+</hibernate-mapping>

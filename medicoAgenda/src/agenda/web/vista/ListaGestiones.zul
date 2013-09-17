@@ -1,0 +1,22 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaGestionesCtl}" minimizable="true" closable="true" >
+		<menubar>
+		<menuitem id="btnNuevaGestion" label="${labels.agenda.menu.maestros.nueva.Gestion}" image="/res/plus.png" />
+		</menubar>
+		<listbox id="listaGestiones" multiple="true" rows="4">
+				        <listhead>
+				            <listheader width="18%" label="Especialidad"/>
+				            <listheader width="33%" label="Numero de citas en un mes"/>
+				            <listheader width="33%" label="Intervalo de dias entre citas"/>
+				            <listheader width="16%" label=""/>
+				        </listhead>       
+				        <listitem >            
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

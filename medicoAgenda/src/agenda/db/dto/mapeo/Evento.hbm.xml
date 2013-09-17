@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="agenda.db.dto.modelo.Evento" table="eventos">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+          
+        
+         <property name="fecha" type="java.util.Date">
+            <column name="fecha" />
+        </property>
+        
+        
+         <property name="horaInicial" type="java.util.Date">
+            <column name="hora_inicial" />
+        </property>
+        
+        <property name="horaFinal" type="java.util.Date">
+            <column name="hora_final" />
+        </property>
+        
+          <property name="motivo" type="java.lang.String">
+            <column name="motivo" />
+        </property> 
+        
+        <property name="todosDias" type="boolean">
+            <column name="todos_dias" />
+        </property>
+         
+        <property name="usuarioConectado" type="java.lang.String">
+            <column name="usuario_conectado" />
+        </property>       
+    </class>
+</hibernate-mapping>

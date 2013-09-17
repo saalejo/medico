@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Procedimiento" table="procedimiento">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="procedimiento" type="java.lang.String">
+            <column name="procedimiento" />
+        </property>
+        <property name="resultadoExamenes" type="java.lang.String">
+            <column name="resultado_examenes" />
+        </property>        
+        <property name="atencionId" type="int">
+            <column name="atencion_id" />
+        </property>       
+    </class>
+</hibernate-mapping>

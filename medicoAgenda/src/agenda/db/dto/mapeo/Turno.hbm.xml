@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="agenda.db.dto.modelo.Turno" table="turno">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="profesionalId" type="int">
+		    <column name="profesional_id" />
+		</property>
+        <property name="duracion" type="int">
+            <column name="duracion" />
+        </property> 
+         <property name="duracionCita" type="int">
+            <column name="duracion_cita" />
+        </property>       
+        
+        <property name="fecha" type="java.util.Date">
+            <column name="fecha" />
+        </property>
+        <set name="citas" table="Cita" inverse="false" lazy="true">
+            <key>
+                <column name="turnoId" />
+            </key>
+            <one-to-many class="agenda.db.dto.modelo.Cita" />
+        </set>         
+    </class>
+</hibernate-mapping>

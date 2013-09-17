@@ -1,0 +1,107 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="100%" width="100%" apply="${nuevaConfiguracionCtl}" minimizable="false" closable="false">
+		<caption sclass="fn-caption" label="Configuraciones de la Agenda"/>	
+		<grid hflex="2">
+			<columns>
+				<column hflex="7"></column>
+	          		<column hflex="15"></column>
+	          		
+	          		
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.Sabado}"/>
+					</cell>
+					<cell>
+					<radiogroup>
+						<radio id="Ssi" label="Si"/>
+                        <radio id="Sno" label="No"/>
+                     </radiogroup>
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.Domingo}"/>
+					</cell>
+					<cell>
+					<radiogroup>
+						<radio id="Dsi" label="Si" value="1"/>
+                        <radio id="Dno" label="No" value="0"/>
+                     </radiogroup>
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.Festivo}"/>
+					</cell>
+					<cell>
+					<radiogroup>
+						<radio id="Fsi" label="Si" value="1"/>
+                        <radio id="Fno" label="No" value="0"/>
+                     </radiogroup>
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.Mensaje1}"/>
+					</cell>
+					<cell>
+						<textbox id="mensaje1" multiline="true" rows="4" width="90%" />
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.Mensaje2}"/>
+					</cell>
+					<cell>
+						<textbox id="mensaje2" multiline="true" rows="4" width="90%" />
+					</cell>
+				</row>
+				
+				
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.HoraInicial}"/>
+					</cell>
+					<cell>
+						<timebox id="horaInicial" cols="12" format="medium" mold="rounded" />
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.configuracion.HoraFinal}"/>
+					</cell>
+					<cell>
+						<timebox id="horaFinal" cols="12" format="medium" mold="rounded" />
+					</cell>
+				</row>
+				
+				
+				<row>					
+					<cell>
+					<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+					
+					<cell>	
+					
+									
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+	</zk>

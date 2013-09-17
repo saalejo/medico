@@ -1,0 +1,48 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" width="60%" apply="${nuevoFestivoCtl}" minimizable="true" closable="true" >
+		<caption sclass="fn-caption" label="Fecha y motivo del Festivo"/>	
+		<grid hflex="2">
+			<columns>
+				<column hflex="13"></column>
+	          		<column hflex="27"></column>
+	          		
+	          		
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.festivo.Fecha}"/>
+					</cell>
+					<cell>
+					<datebox id="fecha" cols="12" format="dd/MM/yyyy"  mold="rounded" />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.festivo.Motivo}"/>
+					</cell>
+					<cell>
+						<textbox id="motivo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>					
+					<cell>
+					<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+					
+					<cell>	
+					
+					<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+									
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

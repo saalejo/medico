@@ -1,0 +1,117 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" apply="${ingresoCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="Autorizacion"/>
+					</cell>
+					<cell>
+						<textbox id="autorizacion" readonly="false"  />
+					</cell>
+					<cell>
+						<label value="${labels.historia.clinica.formulario.Ingreso.Fecha}"/>
+					</cell>
+					<cell>
+						<textbox id="fecha" readonly="false"  />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Observaciones"/>
+					</cell>
+					<cell>
+						<textbox id="observaciones" readonly="false"  />
+					</cell>
+					<cell>
+						<label value="Tipo Ingreso"/>
+					</cell>
+					<cell>
+						<combobox id="tipoIngreso" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>		
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Area Servicio"/>
+					</cell>
+					<cell>
+						<combobox id="areaServicio" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>		
+					</cell>
+					<cell>
+						<label value="Finalidad"/>
+					</cell>
+					<cell>
+						<combobox id="finalidad" readonly="true">
+											<comboitem label=" "/>			
+							</combobox>		
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="${labels.historia.clinica.formulario.Ingreso.Estado}"/>
+					</cell>
+					<cell>
+						<combobox id="causaIngreso" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>		
+					</cell>
+					<cell>
+						<label value="${labels.historia.clinica.formulario.Ingreso.Fecha} Accidente"/>
+					</cell>
+					<cell>
+						<datebox id="fechaAccidente" readonly="false"  />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Contrato"/>
+					</cell>
+					<cell>
+						<textbox id="contrato" readonly="false"  />
+					</cell>
+					<cell>
+						<label value=" Centro Atencion"/>
+					</cell>
+					<cell>
+						<textbox id="centroAtencion" readonly="false"  />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Acudiente"/>
+					</cell>
+					<cell>
+						<textbox id="acudiente" readonly="false"  />
+					</cell>
+					<cell>
+						<label value="${labels.historia.clinica.formulario.Ingreso.Estado}"/>
+					</cell>
+					<cell>
+						<textbox id="estado" readonly="false"  />
+					</cell>
+				</row>	
+				<row>					
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="guardar" label="${labels.historia.clinica.formulario.Ingreso.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

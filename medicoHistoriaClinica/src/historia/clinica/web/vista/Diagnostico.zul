@@ -1,0 +1,103 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="lang" ?>
+	<window height="100%" closable="true" apply="${diagnosticoCtl}">
+	<caption src="/res/profile.png" label="Nueva Atencion-Diagnosticos"></caption>					
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>			
+			<rows>	
+			
+			<row>
+					<cell>
+					<label value="Identificacion"/>
+					</cell>
+					<cell>
+						<textbox id="idPaciente" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Nombres"/>
+					</cell>
+					<cell>
+						<textbox id="nombrePaciente" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="${labels.formulario.atencion.Observaciones}"/>
+					</cell>
+					<cell colspan="3">
+						<textbox id="observaciones" width="90%"/>
+					</cell>					
+				</row>
+				<row>
+					<cell >
+						<label value="Diagnostico" width="90%"/>
+					</cell>						
+					<cell colspan="2">
+						<combobox id="diagnosticosCombo" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>	
+					<cell>
+						<button id="nuevoDiagnostico" width="90%"/>
+					</cell>															
+				</row>				
+				<row>						
+					<cell colspan="4">
+						<listbox id="listaDiagnosticos" multiple="true" rows="4">
+					        <listhead>
+					            <listheader label="Diagnosticos"/>
+					            <listheader label=""/>
+					            <listheader label=""/>
+					        </listhead>       
+					        <listitem > 
+					        </listitem>
+					    </listbox>
+					</cell>									
+				</row>	
+				<row>						
+					<cell colspan="4">
+						<listbox id="listaOtros" multiple="true" rows="4">
+					        <listhead>
+					            <listheader label=""/>
+					            <listheader label=""/>
+					            <listheader label=""/>
+					        </listhead>       
+					        <listitem > 
+					        </listitem>
+					    </listbox>
+					</cell>									
+				</row>					
+				<row>
+					<cell>						
+					</cell>
+					<cell>						
+					</cell>
+					<cell>					
+					</cell>
+					<cell>	
+						<menubar>												
+								<menuitem id="btnFormula" label="${labels.historia.clinica.menu.Formula}" image="/res/plus.png"/>
+								<menuitem id="btnFinalidad" label="${labels.historia.clinica.menu.Incapacidad}" image="/res/plus.png"/>
+								<menuitem id="btnIncapacidad" label="${labels.historia.clinica.menu.Incapacidad}" image="/res/plus.png"/>
+								<menuitem id="btnAyuda" label="${labels.historia.clinica.menu.Ayuda}" image="/res/plus.png"/>
+								<menuitem id="btnRemision" label="${labels.historia.clinica.menu.Ayuda}" image="/res/plus.png"/>
+						</menubar>					
+					</cell>
+				</row>								
+			</rows>
+		</grid>	
+	</window>

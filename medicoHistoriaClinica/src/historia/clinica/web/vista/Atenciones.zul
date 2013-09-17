@@ -1,0 +1,36 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	
+	<window height="90%" apply="${listaAtencionesCtl}" >
+		<grid>
+			<columns>
+	          		<column ></column>
+			</columns>			
+			<rows>
+				<row>
+					<cell>
+						<menubar>
+							<menuitem id="imprimir" label="Imprimir Historia">
+							
+							</menuitem>
+						</menubar>
+					</cell>
+	    		</row>	
+				<row>
+					<cell>	
+						<listbox id="listaAtenciones" multiple="true" rows="4">
+					        <listhead>
+					            <listheader label="Atenciones"/>
+					            <listheader label=""/>
+					            <listheader label=""/>	
+					        </listhead>       
+					        <listitem >            
+					            <listcell/>
+					             <listcell/>
+					             <listcell/>
+					        </listitem>
+	    				</listbox>
+	    			</cell>
+	    		</row>
+    		</rows>
+   		</grid>
+ </window>

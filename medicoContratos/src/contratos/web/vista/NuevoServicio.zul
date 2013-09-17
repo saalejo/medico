@@ -1,0 +1,174 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevoServicioCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="Nombre"/>
+					</cell>
+					<cell>
+						<textbox id="txtNombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="codigo Cups"/>
+					</cell>
+					<cell>
+						<textbox id="txtCodigoCaps" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>				
+				<row>
+					<cell>
+						<label value="Codigo Soat"/>
+					</cell>
+					<cell>
+						<textbox id="txtCodigoSoat" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="Codigo Iss"/>
+					</cell>
+					<cell>
+						<textbox id="txtCodigoIss" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Presentacion"/>
+					</cell>
+					<cell>
+						<combobox id="comboPresentacion" readonly="true" value="Quirurgico">
+							<comboitem label="Quirurgico "/>
+							<comboitem label="Paquete"/>											
+						</combobox>
+					</cell>			
+					<cell>
+						<label value="Tipo Tarifa"/>
+					</cell>
+					<cell>
+						<combobox id="comboTipoTarifa" readonly="true">
+							<comboitem label="SOAT"/>
+							<comboitem label="ISS"/>											
+						</combobox>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Tipo"/>
+					</cell>
+					<cell>
+						<combobox id="comboTipo" readonly="true">
+							<comboitem label="Diagnostico"/>
+							<comboitem label="Terapeutico"/>	
+							<comboitem label="Proteccion Especifica"/>
+							<comboitem label="Det_Temprana_Enf_General"/>	
+							<comboitem label="Det_Temprana_Enf_Profesional"/>					
+						</combobox>
+					</cell>
+					<cell>
+						<label value="Clase"/>
+					</cell>
+					<cell>
+						<combobox id="comboClase" readonly="true">
+							<comboitem label="Consulta"/>
+							<comboitem label="Imaginologia"/>	
+							<comboitem label="Ayudas Dx"/>
+							<comboitem label="Ecografias"/>	
+							<comboitem label="Proc_No_qcos"/>
+							<comboitem label="Proc_Qcos"/>
+							<comboitem label="Odontologico"/>	
+							<comboitem label="Estancias"/>
+							<comboitem label="Traslado"/>	
+							<comboitem label="Tomografia"/>
+							<comboitem label="Terapias"/>
+							<comboitem label="Medicamento"/>	
+							<comboitem label="Medicamento_No_pos"/>
+							<comboitem label="Mat. Osteosintesis"/>	
+							<comboitem label="Promocion_Prevencion"/>					
+						</combobox>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Concepto de facturacion"/>
+					</cell>
+					<cell>
+						<combobox id="comboConceptofacturacion" readonly="true">
+							<comboitem label="Consulta"/>
+							<comboitem label="Ayudas Dx"/>	
+							<comboitem label="Procedimientos_Terapeuticos_No_quirurgicos"/>
+							<comboitem label="Procedimientos_Terapeuticos_quirurgicos"/>	
+							<comboitem label="Hospitalizacion"/>
+							<comboitem label="Honorarios"/>
+							<comboitem label="Derechos de Sala"/>	
+							<comboitem label="Materiales e insumos"/>
+							<comboitem label="Medicamentos Pos"/>	
+							<comboitem label="Medicamentos No Pos"/>
+							<comboitem label="Traslados"/>	
+							<comboitem label="Otros"/>					
+						</combobox>
+					</cell>
+					<cell>
+						<label value="Estado"/>
+					</cell>
+					<cell>
+						<combobox id="comboEstado" readonly="true" value="ACTIVO">
+							<comboitem label="INACTIVO"/>				
+						</combobox>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Area de Servicio"/>
+					</cell>
+					<cell>
+						<combobox id="comboAreaServicio" readonly="true">
+						</combobox>
+					</cell>
+					<cell>
+						<label value="Complejidad"/>
+					</cell>
+					<cell>
+						<combobox id="comboComplejidad" readonly="true" value="BAJA">
+							<comboitem label="MEDIA"/>	
+							<comboitem label="ALTA"/>								
+						</combobox>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Genero"/>
+					</cell>
+					<cell>
+						<radiogroup id="radioGenero"><radio label="MASCULINO"></radio><radio label="FEMENINO"></radio><radio label="AMBOS" selected="true"></radio></radiogroup>
+					</cell>
+					<cell>
+						<label value="Edad minima"/>
+					</cell>
+					<cell>
+						<textbox id="txtEdadMinima"></textbox>
+					</cell>
+				</row>
+				<row>					
+					<cell>
+						<label value="Edad maxima"/>
+					</cell>
+					<cell>
+						<textbox id="txtEdadMaxima"></textbox>
+					</cell>
+					<cell></cell>
+					<cell>
+						<button id="btnGuardar" label="guardar"></button>
+					</cell>
+					
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+</zk>

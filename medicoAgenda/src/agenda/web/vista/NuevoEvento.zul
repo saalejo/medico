@@ -1,0 +1,84 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="100%" width="100%" apply="${nuevoEventoCtl}" minimizable="false" closable="false">
+		<caption sclass="fn-caption" label="Nuevo Evento a Programar"/>	
+		<grid hflex="2">
+			<columns>
+				<column hflex="7"></column>
+	          		<column hflex="15"></column>
+	          		
+	          		
+			</columns>
+			<rows>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.festivo.Fecha}"/>
+					</cell>
+					<cell>
+					<datebox id="fecha" cols="12" format="dd/MM/yyyy"  mold="rounded" />
+					</cell>
+				</row>
+				
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.evento.HoraInicial}"/>
+					</cell>
+					<cell>
+						<timebox id="horaInicial" cols="12" format="medium" mold="rounded" />
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.evento.HoraFinal}"/>
+					</cell>
+					<cell>
+						<timebox id="horaFinal" cols="12" format="medium" mold="rounded" />
+					</cell>
+				</row>
+			
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.evento.Motivo}"/>
+					</cell>
+					<cell>
+						<textbox id="motivo" multiline="true" rows="2" width="90%" />
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.agenda.formulario.evento.Todos}"/>
+					</cell>
+					<cell>
+					<radiogroup>
+						<radio id="Tsi" label="Si"/>
+                        <radio id="Tno" label="No"/>
+                     </radiogroup>
+					</cell>
+				</row>	
+				
+				
+				<row>					
+					<cell>
+					<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+					
+					<cell>	
+					
+						<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>			
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+	</zk>

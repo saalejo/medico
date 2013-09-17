@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="contratos.db.dto.modelo.AreaServicios" table="AREASERVICIOS">
+         <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        
+        <property name="almacenId" type="int">
+            <column name="ALMACEN_ID" />
+        </property>
+        <property name="Codigo" type="java.lang.String">
+            <column name="CODIGO" />
+        </property>
+        <property name="Nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="centroAtencionId" type="int">
+            <column name="CENTRO_ATENCION_ID" />
+        </property>
+        <property name="cuentaIngresosEntidad" type="java.lang.String">
+            <column name="CUENTA_INGRESOS_ENTIDAD" />
+        </property>
+        <property name="cuentaIngresosParticular" type="java.lang.String">
+            <column name="CUENTA_INGRESOS_PARTICULAR" />
+        </property>
+        <property name="cuentaSuministrosPaciente" type="java.lang.String">
+            <column name="CUENTA_SUMINISTROS_PACIENTE" />
+        </property>
+        <property name="cuentadeDescuento" type="java.lang.String">
+            <column name="CUENTA_DE_DESCUENTO" />
+        </property>
+        <property name="cuentaGastosHonorarios" type="java.lang.String">
+            <column name="CUENTA_GASTOS_HONORARIOS" />
+        </property>
+        <property name="centroCostosId" type="int">
+            <column name="CENTRO_COSTOS_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

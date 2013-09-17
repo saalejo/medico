@@ -1,0 +1,26 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaEventosCtl}" minimizable="true" closable="true" >
+		<menubar >
+		<menuitem id="btnNuevoEvento" label="${labels.agenda.menu.maestros.nuevo.Evento}" image="/res/plus.png" />
+		</menubar>
+		<listbox id="listaEventos" multiple="true" rows="6">
+				        <listhead>
+				            <listheader label="Fecha" />
+				            <listheader label="Hora Inicial"/>
+				            <listheader label="Hora Final"/>
+				            <listheader label="Motivo" width="24%"/>
+				            <listheader label="Todos los Dias" width="18%"/>
+				            <listheader label="" width="14%"/>
+				        </listhead>       
+				        <listitem >            
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

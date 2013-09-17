@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Incapacidad" table="incapacidad">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity"/>
+        </id>
+        <property name="fechaInicio" type="java.util.Date">
+            <column name="fecha_inicio" />
+        </property>
+        <property name="fechaFin" type="java.util.Date">
+            <column name="fecha_fin" />
+        </property>        
+        <property name="orden" type="java.lang.String">
+            <column name="orden" />
+        </property>
+        <property name="atencionId" type="int">
+            <column name="atencion_id" />
+        </property>
+         <property name="usuarioConectado" type="java.lang.String">
+            <column name="usuario_conectado" />
+        </property>
+    </class>
+</hibernate-mapping>

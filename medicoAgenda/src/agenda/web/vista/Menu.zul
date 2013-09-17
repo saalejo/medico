@@ -1,0 +1,49 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<borderlayout apply="${menuAgendaCtl}" >
+	<north border="0">
+		<borderlayout height="30px">
+			<center border="0">
+				<hlayout spacing="5px" style="background: #C9C9C9;">
+					<menubar >	
+							<menu label="${labels.agenda.menu.Maestros}">
+		                    <menupopup>		
+		                        <menuitem id="btnProfesiones" label="${labels.agenda.menu.maestros.Profesiones}" image="/res/fn.png" />  
+		                        <menuitem id="btnProfesionales" label="${labels.agenda.menu.maestros.Profesionales}" image="/res/fn.png" />
+		                        <menuitem id="btnEspecialidades" label="${labels.agenda.menu.maestros.Especialidades}" image="/res/fn.png" />
+		                        <menuitem id="btnActividades" label="${labels.agenda.menu.maestros.Actividades}" image="/res/fn.png" />
+		                        <menuitem id="btnConsultorios" label="${labels.agenda.menu.maestros.Consultorios}" image="/res/fn.png" />
+		                        <menuitem id="btnCausasCancelacion" label="${labels.agenda.menu.maestros.CausasCancelacion}" image="/res/fn.png" /> 
+		                        <menuitem id="btnFestivos" label="${labels.agenda.menu.maestros.Festivos}" image="/res/fn.png" /> 
+		                        <menuitem id="btnEventos" label="${labels.agenda.menu.maestros.Evento}" image="/res/fn.png" /> 
+		                        <menuitem id="btnGestiones" label="${labels.agenda.menu.maestros.Gestion}" image="/res/fn.png" /> 
+		                        <menuitem id="btnConfiguraciones" label="${labels.agenda.menu.maestros.Configuracion}" image="/res/fn.png" />                
+		                    </menupopup>
+		                </menu>
+		                
+		                <menu label="${labels.agenda.menu.Procesos}">
+		                    <menupopup>		
+		                        <menuitem id="btnturnosMedicos" label="${labels.agenda.menu.procesos.Turnos}" image="/res/agenda.png" />  
+		                        <menuitem id="btncitasMedicas" label="${labels.agenda.menu.procesos.Citas}" image="/res/agenda.png" />
+		                                            
+		                    </menupopup>
+		                </menu>
+		                
+		                <menu label="${labels.agenda.menu.Reportes}">
+		                    <menupopup>		
+		                        <menuitem id="btnListadoProfesionalFecha" label="${labels.agenda.menu.reportes.ProfesionalFecha}" image="/res/fn.png" />  
+		                        <menuitem id="btnOportunidadCita" label="${labels.agenda.menu.reportes.OportunidadCita}" image="/res/fn.png" />
+		                        <menuitem id="btnOportunidadCitaContrato" label="${labels.agenda.menu.reportes.OportunidadCitaContrato}" image="/res/fn.png" />  
+		                        <menuitem id="btnOportunidadCitaAsiganadaContrato" label="${labels.agenda.menu.reportes.OportunidadCitaAsiganadaContrato}" image="/res/fn.png" />  
+		                            
+		                    </menupopup>
+		                </menu>
+		               
+					</menubar>
+				</hlayout>
+			</center>			
+		</borderlayout>
+	</north>
+	<center border="0">
+    	<window id="contenido" style="width:100%; height:100%;" />
+	</center>
+</borderlayout>

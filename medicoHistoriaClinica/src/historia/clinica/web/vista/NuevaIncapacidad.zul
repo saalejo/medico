@@ -1,0 +1,73 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	<window height="90%" apply="${nuevaIncapacidadCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+					<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+			<row>
+					<cell>
+					<label value="Identificacion"/>
+					</cell>
+					<cell>
+						<textbox id="idPaciente" readonly="true" width="90%"/>
+					</cell>
+					<cell>
+					<label value="Nombres"/>
+					</cell>
+					<cell>
+						<textbox id="nombrePaciente" readonly="true" width="90%"/>
+					</cell>
+				</row>
+				<row>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+					<cell>
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="Orden"/>
+					</cell>
+					<cell colspan="3">
+						<textbox id="orden" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Desde"/>
+					</cell>
+					<cell >
+						<datebox id="fechaInicio" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="Hasta"/>
+					</cell>
+					<cell>
+						<datebox id="fechaFin" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>					
+					<cell>
+						<label value="Cantidad dias"/>
+					</cell>
+					<cell>
+						<label id="cantidadDias" value=""/>
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>

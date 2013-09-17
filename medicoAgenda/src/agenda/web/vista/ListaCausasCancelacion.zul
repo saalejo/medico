@@ -1,0 +1,20 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaCausasCancelacionCtl}" minimizable="true" closable="true" >
+		<menubar >
+		<menuitem id="btnNuevaCausaCancelacion" label="${labels.agenda.menu.maestros.nuevo.CausasCancelacion}" image="/res/plus.png" />
+		</menubar>
+		<listbox id="listaCausasCancelacion" multiple="true" rows="4">
+				        <listhead>
+				            <listheader label="Codigo Causa"/>
+				            <listheader label="Nombre Causa"/>
+				            <listheader label=""/>
+				        </listhead>       
+				        <listitem >            
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

@@ -2,16 +2,13 @@
     <wb-module deploy-name="medicoPresentacion">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="hcdigitalAdmiciones.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalAdmiciones/hcdigitalAdmiciones">
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/medicoAdmiciones/medicoAdmiciones">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="hcdigitalUtil.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalUtil/hcdigitalUtil">
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/medicoUtil/medicoUtil">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="hcdigitalAgenda.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalAgenda/hcdigitalAgenda">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="hcdigitalHistoriaClinica.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hcdigitalHistoriaClinica/hcdigitalHistoriaClinica">
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/medicoHistoriaClinica/medicoHistoriaClinica">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/medicoPresentacion/build/classes"/>

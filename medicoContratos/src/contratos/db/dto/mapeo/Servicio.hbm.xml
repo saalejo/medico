@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/09/2013 02:47:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="contratos.db.dto.modelo.Servicio" table="SERVICIO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="codigo" type="java.lang.String">
+            <column name="CODIGO" />
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOMBRE" />
+        </property>
+        <property name="codCups" type="java.lang.String">
+            <column name="COD_CUPS" />
+        </property>
+        <property name="cod_Soat" type="java.lang.String">
+            <column name="COD_SOAT" />
+        </property>
+        <property name="codIss" type="java.lang.String">
+            <column name="COD_ISS" />
+        </property>
+        <property name="presentacion" type="java.lang.String">
+            <column name="PRESENTACION" />
+        </property>
+        <property name="tipoTarifa" type="java.lang.String">
+            <column name="TIPO_TARIFA" />
+        </property>
+        <property name="tipo" type="java.lang.String">
+            <column name="TIPO" />
+        </property>
+        <property name="clase" type="java.lang.String">
+            <column name="CLASE" />
+        </property>
+        <property name="conceptoFacturacion" type="java.lang.String">
+            <column name="CONCEPTO_FACTURACION" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name="ESTADO" />
+        </property>
+        <property name="areaServicioId" type="int">
+            <column name="AREA_SERVICIO_ID" />
+        </property>
+        <property name="complejidad" type="java.lang.String">
+            <column name="COMPLEJIDAD" />
+        </property>
+        <property name="genero" type="java.lang.String">
+            <column name="GENERO" />
+        </property>
+        <property name="edadMinima" type="int">
+            <column name="EDAD_MINIMA" />
+        </property>
+        <property name="edadMaxima" type="int">
+            <column name="EDAD_MAXIMA" />
+        </property>
+    </class>
+</hibernate-mapping>

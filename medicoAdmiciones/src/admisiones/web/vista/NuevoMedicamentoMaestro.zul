@@ -1,0 +1,71 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevoMedicamentoMaestroCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="Codigo"/>
+					</cell>
+					<cell>
+						<textbox id="txtCodigo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.medicamento.Nombre}"/>
+					</cell>
+					<cell>
+						<textbox id="txtNombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>		
+				<row>
+					<cell>
+						<label value="Concentracion"/>
+					</cell>
+					<cell>
+						<textbox id="txtConcentracion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="Forma farmaceutica"/>
+					</cell>
+					<cell>
+						<textbox id="txtFormaFarmaceutica" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>	
+				<row>
+					<cell>
+						<label value="Unidad de consumo"/>
+					</cell>
+					<cell>
+						<textbox id="txtUnidadDeConsumo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="Via de Administracion"/>
+					</cell>
+					<cell>
+						<textbox id="txtViaDeAdministracion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>				
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.medicamento.Posologia}"/>
+					</cell>
+					<cell>
+						<textbox id="txtPosologia" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+</zk>

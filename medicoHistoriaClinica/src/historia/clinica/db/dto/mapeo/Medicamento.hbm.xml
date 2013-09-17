@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/09/2013 02:40:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Medicamento" table="formula_has_medicamento">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="formulaId" type="int">
+            <column name="FORMULA_ID" />
+        </property>
+        <property name="medicamentoMaestroId" type="int" access="field">
+            <column name="MEDICAMENTO_MAESTRO_ID" />
+        </property>
+        <property name="cantidad" type="java.lang.String">
+            <column name="CANTIDAD" />
+        </property>
+        <property name="posologia" type="java.lang.String">
+            <column name="POSOLOGIA" />
+        </property>
+        <property name="esPost" type="boolean">
+            <column name="ES_POST" />
+        </property>
+        <property name="justificacion" type="java.lang.String">
+            <column name="JUSTIFICACION" />
+        </property>
+        <property name="aspectosAdversos" type="java.lang.String">
+            <column name="ASPECTOS_ADVERSOS" />
+        </property>
+        <property name="razones" type="java.lang.String">
+            <column name="RAZONES" />
+        </property>
+        <property name="existeRiesgo" type="boolean">
+            <column name="EXISTE_RIESGO" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="OBSERVACIONES" />
+        </property>
+        <property name="impactoDelMedicamentoEnLaEnfermedad" type="java.lang.String">
+            <column name="IMPACTO_DEL_MEDICAMENTO_ENLA_ENFERMEDAD" />
+        </property>
+        <property name="grupoId" type="int">
+            <column name="GRUPO_ID" />
+        </property>
+        <property name="laboratorioId" type="int">
+            <column name="LABORATORIO_ID" />
+        </property>
+         <many-to-one name="medicamentoMaestro" class="admisiones.db.dto.modelo.MedicamentoMaestro" fetch="join" insert="false" update="false">
+            <column name="medicamento_maestro_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

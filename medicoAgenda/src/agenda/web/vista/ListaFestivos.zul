@@ -1,0 +1,20 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaFestivosCtl}" minimizable="true" closable="true" >
+		<menubar >
+		<menuitem id="btnNuevoFestivo" label="${labels.agenda.menu.maestros.nuevo.Festivo}" image="/res/plus.png" />
+		</menubar>
+		<listbox id="listaFestivos" multiple="true" rows="4">
+				        <listhead>
+				            <listheader label="Fecha Festivo"/>
+				            <listheader label="Motivo"/>
+				            <listheader label=""/>
+				        </listhead>       
+				        <listitem >            
+				             <listcell/>
+				             <listcell/>
+				             <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

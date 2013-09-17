@@ -3,10 +3,9 @@
 	<name>medicoPresentacion</name>
 	<comment></comment>
 	<projects>
-		<project>hcdigitalAdmiciones</project>
-		<project>hcdigitalUtil</project>
-		<project>hcdigitalAgenda</project>
-		<project>hcdigitalHistoriaClinica</project>
+		<project>medicoAdmiciones</project>
+		<project>medicoUtil</project>
+		<project>medicoHistoriaClinica</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
