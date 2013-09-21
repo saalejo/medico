@@ -13,10 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/hcdigitalAdmiciones"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/hcdigitalAgenda"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/hcdigitalHistoriaClinica"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/hcdigitalUtil"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
@@ -42,5 +38,10 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/medicoAgenda"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/medicoContratos"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/medicoHistoriaClinica"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/medicoUtil"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/medicoAdmisiones"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
