@@ -21,9 +21,9 @@
          <!-- POSTGRESQL -->
          <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 			    <property name="driverClassName" value="org.postgresql.Driver" />
-			    <property name="url" value="jdbc:postgresql://vps505.netciel.net:5432/hcdigital" />
-			    <property name="username" value="postgres" />
-			    <property name="password" value="1Wdwiuassq" />
+			   <property name="url" value="jdbc:postgresql://medico.heliohost.org:5432/saalejo_medico" />
+			    <property name="username" value="saalejo_medico" />
+			    <property name="password" value=",1qsHa;uu8@#" />
 			</bean>
 	    <!-- TERMINA CONFIGURACION DATASOURCE -->
 	    

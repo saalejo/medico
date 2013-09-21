@@ -3,9 +3,11 @@
 	<name>medicoPresentacion</name>
 	<comment></comment>
 	<projects>
-		<project>medicoAdmiciones</project>
 		<project>medicoUtil</project>
 		<project>medicoHistoriaClinica</project>
+		<project>medicoContratos</project>
+		<project>medicoAgenda</project>
+		<project>medicoAdmisiones</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
