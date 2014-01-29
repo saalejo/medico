@@ -14,7 +14,7 @@
         <dependent-module archiveName="medicoAgenda.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/medicoAgenda/medicoAgenda">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/medicoAdmisiones/medicoAdmisiones">
+        <dependent-module archiveName="medicoAdmiciones.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/medicoAdmiciones/medicoAdmiciones">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/medicoPresentacion/build/classes"/>

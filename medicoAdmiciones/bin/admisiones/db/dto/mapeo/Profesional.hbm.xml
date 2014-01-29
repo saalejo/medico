@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="admisiones.db.dto.modelo.Profesional" table="profesional">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="usuario" type="java.lang.String">
+            <column name="usuario" />
+        </property>
+        <property name="clave" type="java.lang.String">
+            <column name="clave" />
+        </property>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="tipoUsuario" type="java.lang.String">
+            <column name="tipo_usuario" />
+        </property>
+        <property name="codigo" type="java.lang.String">
+            <column name="codigo" />
+        </property>
+        <property name="estado" type="java.lang.String">
+            <column name="estado" />
+        </property>
+        <property name="prestadorId" type="int">
+            <column name="prestador_id" />
+        </property>
+        <property name="usuarioConectado" type="java.lang.String">
+            <column name="usuario_conectado" />
+        </property>
+        <many-to-one name="prestador" class="admisiones.db.dto.modelo.Prestador" fetch="join" insert="false" update="false">
+            <column name="prestador_id" />
+        </many-to-one>       
+    </class>
+</hibernate-mapping>

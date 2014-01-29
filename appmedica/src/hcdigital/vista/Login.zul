@@ -1,0 +1,40 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="lang" ?>
+	<window title="${labels.login.Titulo}" border="none" width="600px" apply="${loginCtl}">
+		<grid>
+			<columns>
+				<column/>
+				<column/>
+			</columns>
+			<rows>
+				<row >
+					<cell colspan="2" align="center">
+						<box>
+							<separator/>
+							<label zclass="adm-label" value="${labels.login.Info}"/>
+							<separator/>
+						</box>
+					</cell>							
+				</row>
+				<row align="center">
+					<label zclass="adm-label" value="${labels.login.Nombre}"/>
+					<textbox id="usuario" onCreate="self.focus()" cols="30"/>
+				</row>
+				<row align="center">
+					<label zclass="adm-label" value="${labels.login.Clave}" />
+					<textbox id="clave" type="password" cols="30"/>
+				</row>				
+				<row>
+					<cell colspan="2" align="center">
+						<box width="100%" align="center">
+							<separator/>
+							<label id="errorLabel" zclass="adm-label-err"> </label>           
+							<separator/>
+							<button id="aceptar" label="${labels.login.Aceptar}" mold="trendy"/>
+							<separator/>
+						</box>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>

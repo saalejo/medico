@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="admisiones.db.dto.modelo.Entidad" table="entidad">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="nombre" />
+        </property>
+        <property name="codigo" type="java.lang.String">
+            <column name="codigo" />
+        </property>
+        <property name="tipoUsuario" type="java.lang.String">
+            <column name="tipo_usuario" />
+        </property>
+        <property name="numeroContrato" type="java.lang.String">
+            <column name="numero_contrato" />
+        </property>
+        <property name="planBeneficios" type="java.lang.String">
+            <column name="plan_beneficios" />
+        </property>
+        <property name="numeroPoliza" type="java.lang.String">
+            <column name="numero_poliza"/>
+        </property>
+        <property name="usuarioConectado" type="java.lang.String">
+            <column name="usuario_conectado"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<zk>
+	
+	<borderlayout>
+		<north zclass="adm-banner" collapsible="true" splittable="true">						
+                    <image id="logout" src="/res/pc.png" /> 
+			</north>
+		<west width="auto" border="none" collapsible="true" splittable="true">
+			<menubar orient="vertical" apply="${menuLateralCtl}">								
+                    <menuitem width="auto" label="${labels.menu.west.Admisiones}" id="btnAdmisiones" image="/res/pc.png" />
+                    <menuitem label="${labels.menu.west.Agenda}" id="btnAgenda" image="/res/agenda.png" />
+                    <menuitem label="${labels.menu.west.HistoriaClinica}" id="btnHistoriaClinica" image="/res/pc.png" />		                   
+			</menubar>
+		</west>
+		<center  >
+			<window id="content"  apply="${plantillaCtl}" height="100%" />
+		</center>
+		<south border="none">
+			<box align="center" width="100%">
+				<label >Historias Clinicas Digitales</label>
+				<label >Copyright &#169; 2013</label>
+			</box>
+		</south>
+	</borderlayout>	
+</zk>
