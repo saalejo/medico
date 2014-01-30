@@ -6,7 +6,8 @@
 				<hlayout spacing="5px" style="background: #C9C9C9;">
 					<menubar >	
 							<menu label="${labels.admisiones.menu.Nuevo}">
-		                    <menupopup>		
+		                    <menupopup>	
+		                    	<menuitem id="btnNuevoPaciente" label="${labels.admisiones.menu.nuevo.Paciente}" image="/res/plus.png" />	
 		                        <menuitem id="btnNuevoPrestador" label="${labels.admisiones.menu.nuevo.Prestador}" image="/res/plus.png" />
 		                        <menuitem id="btnNuevoProfesional" label="${labels.admisiones.menu.nuevo.Profesional}" image="/res/plus.png" />	
 		                        <menuseparator></menuseparator>		                        

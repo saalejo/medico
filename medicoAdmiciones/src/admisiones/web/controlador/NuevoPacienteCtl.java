@@ -63,8 +63,11 @@ public class NuevoPacienteCtl extends GenericForwardComposer implements Serializ
 	 */
 	public void doAfterCompose(Component comp) throws Exception{
 		super.doAfterCompose(comp);
-		identificacion.setText((String)Sessions.getCurrent().getAttribute("idPaciente"));
-		Sessions.getCurrent().setAttribute("idPaciente",null);
+		String pi=(String)Sessions.getCurrent().getAttribute("idPaciente");
+		if(pi!=null){
+			identificacion.setText(pi);
+			Sessions.getCurrent().setAttribute("idPaciente",null);		
+		}		
 		obtenerMunicipios();
 		obtenerEntidades();
 		
