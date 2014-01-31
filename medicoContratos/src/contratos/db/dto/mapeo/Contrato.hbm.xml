@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 31/01/2014 09:22:38 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="contratos.db.dto.modelo.Contrato" table="CO_CONTRATO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="codigo" type="java.lang.String">
+            <column name="COD" />
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+         <property name="usuarioConectado" type="int">
+            <column name="USR_CON" />
+        </property>
+        <property name="regimenId" type="int">
+            <column name="CO_REGIMEN_ID" />
+        </property>
+        <many-to-one name="regimen" class="contratos.db.dto.modelo.Regimen" fetch="join" insert="false" update="false">
+            <column name="CO_REGIMEN_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
