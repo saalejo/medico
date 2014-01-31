@@ -1,9 +1,10 @@
 package contratos.db.dao.implementacion;
 
+import java.util.List;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import contratos.db.dao.interfaz.RegimenDao;
@@ -15,13 +16,12 @@ public class RegimenDaoImpl extends HibernateDaoSupport  implements RegimenDao{
 
 	
 	@Override
-	public Regimen obtener(int regimenId) {
+	public List<Regimen> obtener() {
 		Session sesion = null;
 		sesion = getSession();		
-		Regimen regimen = (Regimen)sesion.createCriteria(Regimen.class)
-				.add(Restrictions.eq("id", regimenId))
-				.uniqueResult();		
-		return regimen;
+		List<Regimen> regimenes = sesion.createCriteria(Regimen.class)
+				.list();	
+		return regimenes;
 	}
 
 	@Override
