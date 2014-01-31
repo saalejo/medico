@@ -20,11 +20,17 @@
         <property name="codigoHabilitacionIps" type="java.lang.String">
             <column name="COD_HAB" />
         </property>
-        <many-to-one name="compania" class="logistico.db.dto.modelo.Compania" fetch="join">
+        <many-to-one name="compania" class="logistico.db.dto.modelo.Compania" fetch="join" insert="false" update="false">
             <column name="LO_COMPANIA_ID" />
         </many-to-one>
-        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join">
+        <property name="companiaId" type="int">
+            <column name="LO_COMPANIA_ID" />
+        </property>
+        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
             <column name="LO_DEPARTAMENTO_ID" />
         </many-to-one>
+        <property name="departamentoId" type="int">
+            <column name="LO_DEPARTAMENTO_ID" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -11,8 +11,11 @@
         <property name="descripcion" type="java.lang.String">
             <column name="DES" />
         </property>
-        <many-to-one name="municipio" class="logistico.db.dto.modelo.Municipio" fetch="join">
+        <many-to-one name="municipio" class="logistico.db.dto.modelo.Municipio" fetch="join" insert="false" update="false">
             <column name="LO_MUNICIPIO_ID" />
         </many-to-one>
+        <property name="municipioId" type="int">
+            <column name="LO_MUNICIPIO_ID" />
+        </property>
     </class>
 </hibernate-mapping>

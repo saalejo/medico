@@ -11,7 +11,10 @@
         <property name="descripcion" type="java.lang.String">
             <column name="DES" />
         </property>
-        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join">
+        <property name="departamentoId" type="int">
+            <column name="LO_DEPARTAMENTO_ID" />
+        </property>
+        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
             <column name="LO_DEPARTAMENTO_ID" />
         </many-to-one>
     </class>

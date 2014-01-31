@@ -23,14 +23,23 @@
         <property name="sloganIps" type="java.lang.String">
             <column name="SLG" />
         </property>
-        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join">
+        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
             <column name="LO_DEPARTAMENTO_ID" />
         </many-to-one>
-        <many-to-one name="municipio" class="logistico.db.dto.modelo.Municipio" fetch="join">
+        <property name="departamentoId" type="int">
+            <column name="LO_DEPARTAMENTO_ID" />
+        </property>
+        <many-to-one name="municipio" class="logistico.db.dto.modelo.Municipio" fetch="join" insert="false" update="false">
             <column name="LO_MUNICIPIO_ID" />
         </many-to-one>
-        <many-to-one name="zona" class="logistico.db.dto.modelo.Zona" fetch="join">
+        <property name="municipioId" type="int">
+            <column name="LO_MUNICIPIO_ID" />
+        </property>
+        <many-to-one name="zona" class="logistico.db.dto.modelo.Zona" fetch="join" insert="false" update="false">
             <column name="LO_ZONA_ID" />
         </many-to-one>
+        <property name="zonaId" type="int">
+            <column name="LO_ZONA_ID" />
+        </property>
     </class>
 </hibernate-mapping>
