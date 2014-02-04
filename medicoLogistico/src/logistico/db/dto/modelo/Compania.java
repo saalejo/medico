@@ -15,13 +15,13 @@ public class Compania implements Serializable{
 	String telefono;
 	String codigoHabilitacionIps;
 	String sloganIps;
-	Departamento departamento;
-	int departamentoId;
-	Municipio municipio;
-	int municipioId;
-	Zona zona;
-	int zonaId;
 	int usuarioConectado;
+	int departamentoId;
+	int municipioId;
+	int barrioId;
+	Departamento departamento;	
+	Municipio municipio;
+	Barrio barrio;	
 	
 	public Compania() {
 		super();
@@ -39,100 +39,102 @@ public class Compania implements Serializable{
 		this.sloganIps = sloganIps;
 		this.departamentoId = departamentoId;
 		this.municipioId = municipioId;
-		this.zonaId = zonaId;
+		this.barrioId = barrioId;
 		this.usuarioConectado = usuarioConectado;
 	}
 	
+
 	/**
-	 * @return the departamentoId
+	 * @return the barrioId
 	 */
-	public int getDepartamentoId() {
-		return departamentoId;
+	public int getBarrioId() {
+		return barrioId;
 	}
+
 	/**
-	 * @param departamentoId the departamentoId to set
+	 * @param barrioId the barrioId to set
 	 */
-	public void setDepartamentoId(int departamentoId) {
-		this.departamentoId = departamentoId;
+	public void setBarrioId(int barrioId) {
+		this.barrioId = barrioId;
 	}
+
 	/**
-	 * @return the municipioId
+	 * @return the barrio
 	 */
-	public int getMunicipioId() {
-		return municipioId;
+	public Barrio getBarrio() {
+		return barrio;
 	}
+
 	/**
-	 * @param municipioId the municipioId to set
+	 * @param barrio the barrio to set
 	 */
-	public void setMunicipioId(int municipioId) {
-		this.municipioId = municipioId;
+	public void setBarrio(Barrio barrio) {
+		this.barrio = barrio;
 	}
-	/**
-	 * @return the zonaId
-	 */
-	public int getZonaId() {
-		return zonaId;
-	}
-	/**
-	 * @param zonaId the zonaId to set
-	 */
-	public void setZonaId(int zonaId) {
-		this.zonaId = zonaId;
-	}
+
 	/**
 	 * @return the id
 	 */
 	public int getId() {
 		return id;
 	}
+
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	/**
 	 * @return the nit
 	 */
 	public String getNit() {
 		return nit;
 	}
+
 	/**
 	 * @param nit the nit to set
 	 */
 	public void setNit(String nit) {
 		this.nit = nit;
 	}
+
 	/**
 	 * @return the direccion
 	 */
 	public String getDireccion() {
 		return direccion;
 	}
+
 	/**
 	 * @param direccion the direccion to set
 	 */
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+
 	/**
 	 * @return the telefono
 	 */
 	public String getTelefono() {
 		return telefono;
 	}
+
 	/**
 	 * @param telefono the telefono to set
 	 */
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
 	/**
 	 * @return the codigoHabilitacionIps
 	 */
 	public String getCodigoHabilitacionIps() {
 		return codigoHabilitacionIps;
 	}
+
 	/**
 	 * @param codigoHabilitacionIps the codigoHabilitacionIps to set
 	 */
@@ -155,40 +157,73 @@ public class Compania implements Serializable{
 	}
 
 	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
+	}
+
+	/**
+	 * @return the departamentoId
+	 */
+	public int getDepartamentoId() {
+		return departamentoId;
+	}
+
+	/**
+	 * @param departamentoId the departamentoId to set
+	 */
+	public void setDepartamentoId(int departamentoId) {
+		this.departamentoId = departamentoId;
+	}
+
+	/**
+	 * @return the municipioId
+	 */
+	public int getMunicipioId() {
+		return municipioId;
+	}
+
+	/**
+	 * @param municipioId the municipioId to set
+	 */
+	public void setMunicipioId(int municipioId) {
+		this.municipioId = municipioId;
+	}
+
+	/**
 	 * @return the departamento
 	 */
 	public Departamento getDepartamento() {
 		return departamento;
 	}
+
 	/**
 	 * @param departamento the departamento to set
 	 */
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
+
 	/**
 	 * @return the municipio
 	 */
 	public Municipio getMunicipio() {
 		return municipio;
 	}
+
 	/**
 	 * @param municipio the municipio to set
 	 */
 	public void setMunicipio(Municipio municipio) {
 		this.municipio = municipio;
 	}
-	/**
-	 * @return the zona
-	 */
-	public Zona getZona() {
-		return zona;
-	}
-	/**
-	 * @param zona the zona to set
-	 */
-	public void setZona(Zona zona) {
-		this.zona = zona;
-	}		
 
 }

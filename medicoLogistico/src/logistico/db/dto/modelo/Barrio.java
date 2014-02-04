@@ -2,7 +2,7 @@ package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
-public class Zona implements Serializable{
+public class Barrio implements Serializable{
 
 	/**
 	 * 
@@ -15,21 +15,6 @@ public class Zona implements Serializable{
 	int municipioId;
 	int usuarioConectado;
 	
-	public Zona() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public Zona(String descripcion, int municipioId,
-			int usuarioConectado) {
-		super();
-		this.descripcion = descripcion;
-		this.municipioId = municipioId;
-		this.usuarioConectado = usuarioConectado;
-	}
-
-
 	/**
 	 * @return the municipioId
 	 */
