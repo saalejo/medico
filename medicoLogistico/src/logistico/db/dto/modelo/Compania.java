@@ -30,7 +30,7 @@ public class Compania implements Serializable{
 
 	public Compania(String nit, String direccion, String telefono,
 			String codigoHabilitacionIps, String sloganIps, int departamentoId, int municipioId,
-			int zonaId, int usuarioConectado) {
+			int zonaId, int usuarioConectado, int barrioId) {
 		super();
 		this.nit = nit;
 		this.direccion = direccion;
