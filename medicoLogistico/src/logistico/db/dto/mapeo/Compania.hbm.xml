@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 31/01/2014 09:22:38 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="logistico.db.dto.modelo.Compania" table="LO_COMPANIA">
         <id name="id" type="int">
@@ -35,11 +34,11 @@
         <property name="municipioId" type="int">
             <column name="LO_MUNICIPIO_ID" />
         </property>
-        <many-to-one name="zona" class="logistico.db.dto.modelo.Zona" fetch="join" insert="false" update="false">
-            <column name="LO_ZONA_ID" />
+        <many-to-one name="barrio" class="logistico.db.dto.modelo.Barrio" fetch="join" insert="false" update="false">
+            <column name="LO_BARRIO_ID" />
         </many-to-one>
-        <property name="zonaId" type="int">
-            <column name="LO_ZONA_ID" />
+        <property name="barrioId" type="int">
+            <column name="LO_BARRIO_ID" />
         </property>
     </class>
 </hibernate-mapping>
