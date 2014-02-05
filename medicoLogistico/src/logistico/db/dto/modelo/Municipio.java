@@ -22,6 +22,21 @@ public class Municipio implements Serializable{
 	Departamento departamento;
 	int departamentoId;
 	
+	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase MunicipioServicio.
+	 *
+	 */
+	public Municipio() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Municipio(String descripcion, int departamentoId, int usuarioConectado) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

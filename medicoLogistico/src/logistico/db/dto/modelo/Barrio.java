@@ -22,6 +22,21 @@ public class Barrio implements Serializable{
 	Municipio municipio;
 	int municipioId;
 	
+	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase BarrioServicio.
+	 *
+	 */
+	public Barrio() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Barrio(String descripcion, int usuarioConectado, int municipioId) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

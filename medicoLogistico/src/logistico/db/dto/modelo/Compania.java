@@ -32,6 +32,22 @@ public class Compania implements Serializable{
 	Barrio barrio;
 	int barrioId;
 	
+	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase CompaniaServicio.
+	 *
+	 */
+	public Compania() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Compania(String nit, String direccion, String telefono,
+			String codigoHabilitacionIps, String sloganIps, int usuarioConectado, int departamentoId, int municipioId, int barrioId2) {
+		// TODO Auto-generated constructor stub
+	}
+	
+
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

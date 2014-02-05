@@ -19,6 +19,21 @@ public class Departamento implements Serializable {
 	String descripcion;
 	int usuarioConectado;
 	
+	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase DepartamentoServicio.
+	 *
+	 */
+	public Departamento() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Departamento(String descripcion, int usuarioConectado) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

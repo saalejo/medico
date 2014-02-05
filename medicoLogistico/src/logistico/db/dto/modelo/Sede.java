@@ -28,6 +28,21 @@ public class Sede implements Serializable{
 	Departamento departamento;
 	int departamentoId;
 	
+	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase SedeServicio.
+	 *
+	 */	
+	public Sede() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Sede(String nombre, String direccion, String telefono, String codigoHabilitacionIps, int usuarioConectado, int companiaId, int departamentoId) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
