@@ -2,6 +2,7 @@ package admisiones.db.dto.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 public class Paciente implements Serializable{
 	/**
@@ -17,20 +18,30 @@ public class Paciente implements Serializable{
 	String segundoApellido;
 	Date fechaNacimiento;
 	String genero;
-	String zona;
-	Municipio municipio;
+	String zona;	
 	String primerTelefono;
 	String segundoTelefono;
 	String direccion;
 	String mail;
-	String  observaciones;
-	String  estadoCivil;
+	String observaciones;
+	String estadoCivil;
 	String lugarNacimiento;
-	String  ocupacion;
-	String  tipoUsuario;
-	Entidad entidad;
+	String tipoUsuario;
+	String atencionEspecial;
+	String empresaLabora;
+	String telefonoEmpresaLabora;
+	String nivelEducativo;
+	String barrio;
+	String grupoPoblacional;
+	//----------------------	
+	Ocupacion ocupacion;
+	Municipio municipio;	
+	Set<Ingreso> ingresos;
+	//--------------------
 	int municipioId;
 	int entidadId;
+	int ocupacionId;
+	
 	
 	
 	
@@ -276,19 +287,7 @@ public class Paciente implements Serializable{
 	 */
 	public void setLugarNacimiento(String lugarNacimiento) {
 		this.lugarNacimiento = lugarNacimiento;
-	}
-	/**
-	 * @return the ocupacion
-	 */
-	public String getOcupacion() {
-		return ocupacion;
-	}
-	/**
-	 * @param ocupacion the ocupacion to set
-	 */
-	public void setOcupacion(String ocupacion) {
-		this.ocupacion = ocupacion;
-	}
+	}	
 	/**
 	 * @return the tipoUsuario
 	 */
@@ -302,16 +301,104 @@ public class Paciente implements Serializable{
 		this.tipoUsuario = tipoUsuario;
 	}
 	/**
-	 * @return the entidad
+	 * @return the atencionEspecial
 	 */
-	public Entidad getEntidad() {
-		return entidad;
+	public String getAtencionEspecial() {
+		return atencionEspecial;
 	}
 	/**
-	 * @param entidad the entidad to set
+	 * @param atencionEspecial the atencionEspecial to set
 	 */
-	public void setEntidad(Entidad entidad) {
-		this.entidad = entidad;
+	public void setAtencionEspecial(String atencionEspecial) {
+		this.atencionEspecial = atencionEspecial;
 	}
+	/**
+	 * @return the empresaLabora
+	 */
+	public String getEmpresaLabora() {
+		return empresaLabora;
+	}
+	/**
+	 * @param empresaLabora the empresaLabora to set
+	 */
+	public void setEmpresaLabora(String empresaLabora) {
+		this.empresaLabora = empresaLabora;
+	}
+	/**
+	 * @return the telefonoEmpresaLabora
+	 */
+	public String getTelefonoEmpresaLabora() {
+		return telefonoEmpresaLabora;
+	}
+	/**
+	 * @param telefonoEmpresaLabora the telefonoEmpresaLabora to set
+	 */
+	public void setTelefonoEmpresaLabora(String telefonoEmpresaLabora) {
+		this.telefonoEmpresaLabora = telefonoEmpresaLabora;
+	}
+	/**
+	 * @return the nivelEducativo
+	 */
+	public String getNivelEducativo() {
+		return nivelEducativo;
+	}
+	/**
+	 * @param nivelEducativo the nivelEducativo to set
+	 */
+	public void setNivelEducativo(String nivelEducativo) {
+		this.nivelEducativo = nivelEducativo;
+	}
+	/**
+	 * @return the barrio
+	 */
+	public String getBarrio() {
+		return barrio;
+	}
+	/**
+	 * @param barrio the barrio to set
+	 */
+	public void setBarrio(String barrio) {
+		this.barrio = barrio;
+	}
+	
+	/**
+	 * @return the ocupacion
+	 */
+	public Ocupacion getOcupacion() {
+		return ocupacion;
+	}
+	/**
+	 * @param ocupacion the ocupacion to set
+	 */
+	public void setOcupacion(Ocupacion ocupacion) {
+		this.ocupacion = ocupacion;
+	}
+	/**
+	 * @return the ingresos
+	 */
+	public Set<Ingreso> getIngresos() {
+		return ingresos;
+	}
+	/**
+	 * @param ingresos the ingresos to set
+	 */
+	public void setIngresos(Set<Ingreso> ingresos) {
+		this.ingresos = ingresos;
+	}
+
+	/**
+	 * @return the ocupacionId
+	 */
+	public int getOcupacionId() {
+		return ocupacionId;
+	}
+	/**
+	 * @param ocupacionId the ocupacionId to set
+	 */
+	public void setOcupacionId(int ocupacionId) {
+		this.ocupacionId = ocupacionId;
+	}
+
+	
 	
 }
