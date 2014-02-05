@@ -1,20 +1,48 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/02/2014 03:02:57 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="historia.clinica.db.dto.modelo.Procedimiento" table="procedimiento">
+    <class name="historia.clinica.db.dto.modelo.Procedimiento" table="HC_PROCEDIMIENTO">
         <id name="id" type="int">
-            <column name="id" />
+            <column name="ID" />
             <generator class="identity" />
         </id>
-        <property name="procedimiento" type="java.lang.String">
-            <column name="procedimiento" />
+        <property name="codigo" type="java.lang.String">
+            <column name="COD" />
         </property>
-        <property name="resultadoExamenes" type="java.lang.String">
-            <column name="resultado_examenes" />
-        </property>        
-        <property name="atencionId" type="int">
-            <column name="atencion_id" />
-        </property>       
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="tipo" type="java.lang.String">
+            <column name="TIP" />
+        </property>
+        <property name="plan" type="java.lang.String">
+            <column name="PLA" />
+        </property>
+        <property name="edadInicial" type="java.lang.String">
+            <column name="EDA_INI" />
+        </property>
+        <property name="edadFinal" type="java.lang.String">
+            <column name="EDA_FIN" />
+        </property>
+        <property name="sexo" type="java.lang.String">
+            <column name="SEX" />
+        </property>
+        <property name="telefono" type="java.lang.String">
+            <column name="TEL" />
+        </property>
+        <property name="deLey" type="java.lang.Boolean">
+            <column name="LEY" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <property name="protocoloId" type="int">
+            <column name="HC_PROTOCOLO_ID" />
+        </property>
+        <many-to-one name="protocolo" class="historia.clinica.db.dto.modelo.Protocolo" fetch="join" insert="false" update="false">
+            <column name="HC_PROTOCOLO_ID" />
+        </many-to-one>
     </class>
 </hibernate-mapping>

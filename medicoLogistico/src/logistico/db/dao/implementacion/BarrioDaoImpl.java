@@ -1,6 +1,9 @@
-package contratos.db.dao.implementacion;
+package logistico.db.dao.implementacion;
 
 import java.util.List;
+
+import logistico.db.dao.interfaz.BarrioDao;
+import logistico.db.dto.modelo.Barrio;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -8,32 +11,32 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import contratos.db.dao.interfaz.ContratoDao;
-import contratos.db.dto.modelo.Contrato;
+/**
+ * Descripción: Clase que implementa al contrato proporcionado por la interfaz BarrioDao.
+ * @author Yedinzon Toro Gil
+ * 
+ */
 
-
-
-public class ContratoDaoImpl extends HibernateDaoSupport  implements ContratoDao{
-
+public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 	
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Contrato> obtener(int entidadId) {
+	public List<Barrio> obtener(int municipioId) {
 		Session sesion = null;
 		sesion = getSession();		
-		List<Contrato> contratos = sesion.createCriteria(Contrato.class)
-				.add(Restrictions.eq("co_entidad_id", entidadId))
+		List<Barrio> barrios = sesion.createCriteria(Barrio.class).add(Restrictions.eq("lo_municipio_id", municipioId))
 				.list();		
-		return contratos;
+		return barrios;
 	}
 
 	@Override
-	public void guardar(Contrato contrato) throws Exception {		
+	public void guardar(Barrio barrio) throws Exception {		
 		Session sesion = null;
 		try{
 			sesion = getSession();
 			Transaction tx = sesion.beginTransaction();
 			
-			sesion.save(contrato);
+			sesion.save(barrio);
 			
 			tx.commit();
 			
@@ -44,13 +47,13 @@ public class ContratoDaoImpl extends HibernateDaoSupport  implements ContratoDao
 	}
 
 	@Override
-	public void borrar(Contrato contrato) {
+	public void borrar(Barrio barrio) {
 		Session sesion = null;
 		try{
 			sesion = getSession();
 			Transaction tx = sesion.beginTransaction();
 			
-			sesion.delete(contrato);
+			sesion.delete(barrio);
 			
 			tx.commit();
 			

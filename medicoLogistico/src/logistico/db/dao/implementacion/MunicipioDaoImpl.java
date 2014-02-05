@@ -1,6 +1,9 @@
-package contratos.db.dao.implementacion;
+package logistico.db.dao.implementacion;
 
 import java.util.List;
+
+import logistico.db.dao.interfaz.MunicipioDao;
+import logistico.db.dto.modelo.Municipio;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -8,32 +11,32 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import contratos.db.dao.interfaz.ContratoDao;
-import contratos.db.dto.modelo.Contrato;
+/**
+ * Descripción: Clase que implementa al contrato proporcionado por la interfaz MunicipioDao.
+ * @author Yedinzon Toro Gil
+ * 
+ */
 
-
-
-public class ContratoDaoImpl extends HibernateDaoSupport  implements ContratoDao{
-
+public class MunicipioDaoImpl extends HibernateDaoSupport  implements MunicipioDao{
 	
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Contrato> obtener(int entidadId) {
+	public List<Municipio> obtener(int departamentoId) {
 		Session sesion = null;
 		sesion = getSession();		
-		List<Contrato> contratos = sesion.createCriteria(Contrato.class)
-				.add(Restrictions.eq("co_entidad_id", entidadId))
+		List<Municipio> municipios = sesion.createCriteria(Municipio.class).add(Restrictions.eq("lo_departamento_id", departamentoId))
 				.list();		
-		return contratos;
+		return municipios;
 	}
 
 	@Override
-	public void guardar(Contrato contrato) throws Exception {		
+	public void guardar(Municipio municipio) throws Exception {		
 		Session sesion = null;
 		try{
 			sesion = getSession();
 			Transaction tx = sesion.beginTransaction();
 			
-			sesion.save(contrato);
+			sesion.save(municipio);
 			
 			tx.commit();
 			
@@ -44,13 +47,13 @@ public class ContratoDaoImpl extends HibernateDaoSupport  implements ContratoDao
 	}
 
 	@Override
-	public void borrar(Contrato contrato) {
+	public void borrar(Municipio municipio) {
 		Session sesion = null;
 		try{
 			sesion = getSession();
 			Transaction tx = sesion.beginTransaction();
 			
-			sesion.delete(contrato);
+			sesion.delete(municipio);
 			
 			tx.commit();
 			
@@ -58,6 +61,5 @@ public class ContratoDaoImpl extends HibernateDaoSupport  implements ContratoDao
 		}catch(HibernateException e){
 			
 		}	
-		
 	}
 }
