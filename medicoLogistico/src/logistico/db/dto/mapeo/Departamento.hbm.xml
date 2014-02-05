@@ -10,5 +10,8 @@
         <property name="descripcion" type="java.lang.String">
             <column name="DES" />
         </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -22,6 +22,9 @@
         <property name="sloganIps" type="java.lang.String">
             <column name="SLG" />
         </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
         <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
             <column name="LO_DEPARTAMENTO_ID" />
         </many-to-one>

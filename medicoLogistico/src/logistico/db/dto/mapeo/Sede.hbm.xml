@@ -19,6 +19,9 @@
         <property name="codigoHabilitacionIps" type="java.lang.String">
             <column name="COD_HAB" />
         </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
         <many-to-one name="compania" class="logistico.db.dto.modelo.Compania" fetch="join" insert="false" update="false">
             <column name="LO_COMPANIA_ID" />
         </many-to-one>
