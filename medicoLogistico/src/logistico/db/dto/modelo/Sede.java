@@ -2,6 +2,12 @@ package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
+/**
+ * Descripción de la clase: Clase que contiene los atributos de la entidad LO_SEDE
+ * @author Yedinzon Toro Gil
+ * 
+ */
+
 public class Sede implements Serializable{
 
 	/**
@@ -14,73 +20,15 @@ public class Sede implements Serializable{
 	String direccion;
 	String telefono;
 	String codigoHabilitacionIps;
+	int usuarioConectado;
+	// Corresponde al código de la compania.
 	Compania compania;
 	int companiaId;
+	// Corresponde al código del departamento.
 	Departamento departamento;
 	int departamentoId;
-	int usuarioConectado;
 	
-	
-	
-	public Sede() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Sede(String nombre, String direccion, String telefono,
-			String codigoHabilitacionIps, int companiaId, int departamentoId, int usuarioConectado) {
-		super();
-		this.nombre = nombre;
-		this.direccion = direccion;
-		this.telefono = telefono;
-		this.codigoHabilitacionIps = codigoHabilitacionIps;
-		this.companiaId = companiaId;
-		this.departamentoId = departamentoId;
-		this.usuarioConectado = usuarioConectado;
-	}
-	
-	/**
-	 * @return the companiaId
-	 */
-	public int getCompaniaId() {
-		return companiaId;
-	}
-
-	/**
-	 * @param companiaId the companiaId to set
-	 */
-	public void setCompaniaId(int companiaId) {
-		this.companiaId = companiaId;
-	}
-
-	/**
-	 * @return the departamentoId
-	 */
-	public int getDepartamentoId() {
-		return departamentoId;
-	}
-
-	/**
-	 * @param departamentoId the departamentoId to set
-	 */
-	public void setDepartamentoId(int departamentoId) {
-		this.departamentoId = departamentoId;
-	}
-
-	/**
-	 * @return the usuarioConectado
-	 */
-	public int getUsuarioConectado() {
-		return usuarioConectado;
-	}
-
-	/**
-	 * @param usuarioConectado the usuarioConectado to set
-	 */
-	public void setUsuarioConectado(int usuarioConectado) {
-		this.usuarioConectado = usuarioConectado;
-	}
-
+	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
 	 */
@@ -142,6 +90,18 @@ public class Sede implements Serializable{
 		this.codigoHabilitacionIps = codigoHabilitacionIps;
 	}
 	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
+	}
+	/**
 	 * @return the compania
 	 */
 	public Compania getCompania() {
@@ -152,6 +112,18 @@ public class Sede implements Serializable{
 	 */
 	public void setCompania(Compania compania) {
 		this.compania = compania;
+	}
+	/**
+	 * @return the companiaId
+	 */
+	public int getCompaniaId() {
+		return companiaId;
+	}
+	/**
+	 * @param companiaId the companiaId to set
+	 */
+	public void setCompaniaId(int companiaId) {
+		this.companiaId = companiaId;
 	}
 	/**
 	 * @return the departamento
@@ -165,8 +137,16 @@ public class Sede implements Serializable{
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
-	
-	
-	
-
+	/**
+	 * @return the departamentoId
+	 */
+	public int getDepartamentoId() {
+		return departamentoId;
+	}
+	/**
+	 * @param departamentoId the departamentoId to set
+	 */
+	public void setDepartamentoId(int departamentoId) {
+		this.departamentoId = departamentoId;
+	}
 }

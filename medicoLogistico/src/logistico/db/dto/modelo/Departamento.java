@@ -2,6 +2,12 @@ package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
+/**
+ * Descripción de la clase: Clase que contiene los atributos de la entidad LO_DEPARTAMENTO
+ * @author Yedinzon Toro Gil
+ * 
+ */
+
 public class Departamento implements Serializable {
 
 	/**
@@ -13,31 +19,7 @@ public class Departamento implements Serializable {
 	String descripcion;
 	int usuarioConectado;
 	
-	public Departamento() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public Departamento(String descripcion, int usuarioConectado) {
-		super();
-		this.descripcion = descripcion;
-		this.usuarioConectado = usuarioConectado;
-	}
-
-
-	/**
-	 * @return the usuarioConectado
-	 */
-	public int getUsuarioConectado() {
-		return usuarioConectado;
-	}
-	/**
-	 * @param usuarioConectado the usuarioConectado to set
-	 */
-	public void setUsuarioConectado(int usuarioConectado) {
-		this.usuarioConectado = usuarioConectado;
-	}
+	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
 	 */
@@ -62,8 +44,16 @@ public class Departamento implements Serializable {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
-	
-	
-
+	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
+	}
 }

@@ -2,6 +2,12 @@ package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
+/**
+ * Descripción de la clase: Clase que contiene los atributos de la entidad LO_MUNICIPIO
+ * @author Yedinzon Toro Gil
+ * 
+ */
+
 public class Municipio implements Serializable{
 
 	/**
@@ -11,48 +17,12 @@ public class Municipio implements Serializable{
 	
 	int id;
 	String descripcion;
+	int usuarioConectado;
+	// Corresponde al código del departamento.
 	Departamento departamento;
 	int departamentoId;
-	int usuarioConectado;
 	
-	
-	public Municipio() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Municipio(String descripcion, int departamentoId, int usuarioConectado) {
-		super();
-		this.descripcion = descripcion;
-		this.departamentoId = departamentoId;
-		this.usuarioConectado = usuarioConectado;
-	}
-		
-
-	/**
-	 * @return the departamentoId
-	 */
-	public int getDepartamentoId() {
-		return departamentoId;
-	}
-	/**
-	 * @param departamentoId the departamentoId to set
-	 */
-	public void setDepartamentoId(int departamentoId) {
-		this.departamentoId = departamentoId;
-	}
-	/**
-	 * @return the usuarioConectado
-	 */
-	public int getUsuarioConectado() {
-		return usuarioConectado;
-	}
-	/**
-	 * @param usuarioConectado the usuarioConectado to set
-	 */
-	public void setUsuarioConectado(int usuarioConectado) {
-		this.usuarioConectado = usuarioConectado;
-	}
+	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
 	 */
@@ -89,5 +59,28 @@ public class Municipio implements Serializable{
 	public void setDepartamento(Departamento departamento) {
 		this.departamento = departamento;
 	}
-	
+	/**
+	 * @return the departamentoId
+	 */
+	public int getDepartamentoId() {
+		return departamentoId;
+	}
+	/**
+	 * @param departamentoId the departamentoId to set
+	 */
+	public void setDepartamentoId(int departamentoId) {
+		this.departamentoId = departamentoId;
+	}
+	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
+	}	
 }

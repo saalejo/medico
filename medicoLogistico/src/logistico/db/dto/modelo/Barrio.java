@@ -2,6 +2,12 @@ package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
+/**
+ * Descripción de la clase: Clase que contiene los atributos de la entidad LO_BARRIO
+ * @author Yedinzon Toro Gil
+ * 
+ */
+
 public class Barrio implements Serializable{
 
 	/**
@@ -11,34 +17,12 @@ public class Barrio implements Serializable{
 	
 	int id;
 	String descripcion;
+	int usuarioConectado;
+	// Corresponde al código del municipio.
 	Municipio municipio;
 	int municipioId;
-	int usuarioConectado;
 	
-	/**
-	 * @return the municipioId
-	 */
-	public int getMunicipioId() {
-		return municipioId;
-	}
-	/**
-	 * @param municipioId the municipioId to set
-	 */
-	public void setMunicipioId(int municipioId) {
-		this.municipioId = municipioId;
-	}
-	/**
-	 * @return the usuarioConectado
-	 */
-	public int getUsuarioConectado() {
-		return usuarioConectado;
-	}
-	/**
-	 * @param usuarioConectado the usuarioConectado to set
-	 */
-	public void setUsuarioConectado(int usuarioConectado) {
-		this.usuarioConectado = usuarioConectado;
-	}
+	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
 	 */
@@ -64,6 +48,18 @@ public class Barrio implements Serializable{
 		this.descripcion = descripcion;
 	}
 	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
+	}
+	/**
 	 * @return the municipio
 	 */
 	public Municipio getMunicipio() {
@@ -75,6 +71,16 @@ public class Barrio implements Serializable{
 	public void setMunicipio(Municipio municipio) {
 		this.municipio = municipio;
 	}
-	
-
+	/**
+	 * @return the municipioId
+	 */
+	public int getMunicipioId() {
+		return municipioId;
+	}
+	/**
+	 * @param municipioId the municipioId to set
+	 */
+	public void setMunicipioId(int municipioId) {
+		this.municipioId = municipioId;
+	}
 }
