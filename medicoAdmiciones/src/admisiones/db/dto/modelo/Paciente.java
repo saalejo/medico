@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
+import logistico.db.dto.modelo.Municipio;
+
 public class Paciente implements Serializable{
 	/**
 	 * 

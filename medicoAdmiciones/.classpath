@@ -13,5 +13,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/log4j"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/spring"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/zk7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Logistico"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

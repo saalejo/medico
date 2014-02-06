@@ -2,6 +2,8 @@ package admisiones.db.dto.modelo;
 
 import java.io.Serializable;
 
+import logistico.db.dto.modelo.Sede;
+
 public class Pabellon implements Serializable{
 
 	/**
