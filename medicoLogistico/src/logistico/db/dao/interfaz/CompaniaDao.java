@@ -12,10 +12,12 @@ import logistico.db.dto.modelo.Compania;
 
 public interface CompaniaDao {
 	
+	List<Compania> obtener() throws Exception;
+	
+	void actualizar(Compania compania) throws Exception;
+	
 	void guardar(Compania compania) throws Exception;
 
-	void borrar(Compania compania);
-
-	List<Compania> obtener();
+	void borrar(Compania compania) throws Exception;
 
 }

@@ -39,6 +39,18 @@ public class SedeServicio implements Serializable {
 	}
 
 	
+	public List<Sede> obtener(int companiaId) throws Exception {
+		return sedeDao.obtener(companiaId);
+	}	
+	
+	public List<Sede> obtener() throws Exception {
+		return sedeDao.obtener();
+	}	
+	
+	public void actualizar(int id) throws Exception {
+		
+	}
+	
 	public void guardar(String nombre, String direccion,String telefono,String codigoHabilitacionIps, int usuarioConectado, int companiaId, int departamentoId ) {
 		Sede sede = new Sede(nombre, direccion, telefono, codigoHabilitacionIps, usuarioConectado, companiaId, departamentoId);
 		try {
@@ -49,17 +61,10 @@ public class SedeServicio implements Serializable {
 		}
 		
 	}
-
 	
-	public void borrar(int id) {
+	public void borrar(int id) throws Exception {
 		Sede sede = new Sede();
 		sede.setId(id);
-		sedeDao.borrar(sede);
-		
+		sedeDao.borrar(sede);	
 	}
-
-	
-	public List<Sede> obtener(int companiaId) {
-		return sedeDao.obtener(companiaId);
-	}	
 }

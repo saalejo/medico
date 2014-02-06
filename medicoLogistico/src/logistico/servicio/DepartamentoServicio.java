@@ -17,13 +17,13 @@ public class DepartamentoServicio implements Serializable {
 	@Autowired
 	DepartamentoDao departamentoDao;
 	
+	
 	/**
 	 * @return the departamentoDao
 	 */
 	public DepartamentoDao getDepartamentoDao() {
 		return departamentoDao;
 	}
-
 
 	/**
 	 * @param departamentoDao the departamentoDao to set
@@ -33,28 +33,30 @@ public class DepartamentoServicio implements Serializable {
 	}
 
 
-	public void guardar(String descripcion, int usuarioConectado) {
+	public List<Departamento> obtener() throws Exception {
+		return departamentoDao.obtener();
+	}
+	
+	public void actualizar() throws Exception {
+		
+	}
+	
+	public void guardar(String descripcion, int usuarioConectado) throws Exception{
 		Departamento departamento = new Departamento(descripcion, usuarioConectado);
 		try {
 			departamentoDao.guardar(departamento);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			throw new Exception(e);
 		}
 		
 	}
 
-
-	public void borrar(int id) {
+	public void borrar(int id) throws Exception {
 		Departamento departamento = new Departamento();
 		departamento.setId(id);
 		departamentoDao.borrar(departamento);
-		
-	}
-
-
-	public List<Departamento> obtener() {
-		return departamentoDao.obtener();
-	}
 	
+	}	
 }

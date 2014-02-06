@@ -27,6 +27,11 @@ public class DepartamentoDaoImpl extends HibernateDaoSupport  implements Departa
 				.list();		
 		return departamentos;
 	}
+	
+	@Override
+	public void actualizar(Departamento departamento) throws Exception {		
+	
+	}
 
 	@Override
 	public void guardar(Departamento departamento) throws Exception {		
@@ -46,7 +51,7 @@ public class DepartamentoDaoImpl extends HibernateDaoSupport  implements Departa
 	}
 
 	@Override
-	public void borrar(Departamento departamento) {
+	public void borrar(Departamento departamento) throws Exception {
 		Session sesion = null;
 		try{
 			sesion = getSession();
@@ -58,7 +63,7 @@ public class DepartamentoDaoImpl extends HibernateDaoSupport  implements Departa
 			
 			
 		}catch(HibernateException e){
-			
+			throw new Exception(e);
 		}		
 	}
 }

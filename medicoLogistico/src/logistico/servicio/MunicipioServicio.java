@@ -28,7 +28,6 @@ public class MunicipioServicio implements Serializable {
 		return municipioDao;
 	}
 
-
 	/**
 	 * @param municipioDao the municipioDao to set
 	 */
@@ -36,7 +35,19 @@ public class MunicipioServicio implements Serializable {
 		this.municipioDao = municipioDao;
 	}
 
-
+	
+	public List<Municipio> obtener(int departamentoId) throws Exception {
+		return municipioDao.obtener(departamentoId);
+	}
+	
+	public List<Municipio> obtener() throws Exception {
+		return municipioDao.obtener();
+	}
+	
+	public void actualizar() throws Exception {
+				
+	}
+	
 	public void guardar(String descripcion, int usuarioConectado, int departamentoId) {
 		Municipio municipio = new Municipio(descripcion, usuarioConectado, departamentoId);
 		try {
@@ -48,17 +59,10 @@ public class MunicipioServicio implements Serializable {
 		
 	}
 
-
-	public void borrar(int id) {
+	public void borrar(int id) throws Exception {
 		Municipio municipio = new Municipio();
 		municipio.setId(id);
 		municipioDao.borrar(municipio);
 		
 	}
-
-
-	public List<Municipio> obtener(int departamentoId) {
-		return municipioDao.obtener(departamentoId);
-	}
-	
 }

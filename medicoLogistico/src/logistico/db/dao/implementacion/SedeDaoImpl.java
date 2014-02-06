@@ -24,9 +24,25 @@ public class SedeDaoImpl extends HibernateDaoSupport  implements SedeDao{
 	public List<Sede> obtener(int companiaId) {
 		Session sesion = null;
 		sesion = getSession();		
-		List<Sede> sedes = sesion.createCriteria(Sede.class).add(Restrictions.eq("lo_compania_id", companiaId))
+		List<Sede> sedes = sesion.createCriteria(Sede.class)
+				.add(Restrictions.eq("companiaId", companiaId))
 				.list();		
 		return sedes;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Sede> obtener() {
+		Session sesion = null;
+		sesion = getSession();		
+		List<Sede> sedes = sesion.createCriteria(Sede.class)
+				.list();		
+		return sedes;
+	}
+	
+	@Override
+	public void actualizar(Sede sede) throws Exception {		
+		
 	}
 
 	@Override
@@ -47,7 +63,7 @@ public class SedeDaoImpl extends HibernateDaoSupport  implements SedeDao{
 	}
 
 	@Override
-	public void borrar(Sede sede) {
+	public void borrar(Sede sede) throws Exception {
 		Session sesion = null;
 		try{
 			sesion = getSession();
@@ -59,7 +75,7 @@ public class SedeDaoImpl extends HibernateDaoSupport  implements SedeDao{
 			
 			
 		}catch(HibernateException e){
-			
+			throw new Exception(e);
 		}			
 	}
 }

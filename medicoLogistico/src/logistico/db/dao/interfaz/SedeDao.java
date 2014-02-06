@@ -12,10 +12,14 @@ import logistico.db.dto.modelo.Sede;
 
 public interface SedeDao {
 	
+	List<Sede> obtener(int companiaId) throws Exception;
+	
+	List<Sede> obtener() throws Exception;
+	
+	void actualizar(Sede sede) throws Exception;
+	
 	void guardar(Sede sede) throws Exception;
 
-	void borrar(Sede sede);
-
-	List<Sede> obtener(int companiaId);
+	void borrar(Sede sede) throws Exception;
 
 }

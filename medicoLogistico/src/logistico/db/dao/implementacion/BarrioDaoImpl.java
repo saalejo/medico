@@ -24,11 +24,39 @@ public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 	public List<Barrio> obtener(int municipioId) {
 		Session sesion = null;
 		sesion = getSession();		
-		List<Barrio> barrios = sesion.createCriteria(Barrio.class).add(Restrictions.eq("lo_municipio_id", municipioId))
+		List<Barrio> barrios = sesion.createCriteria(Barrio.class)
+				.add(Restrictions.eq("municipioId", municipioId))
+				.list();		
+		return barrios;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Barrio> obtener() {
+		Session sesion = null;
+		sesion = getSession();		
+		List<Barrio> barrios = sesion.createCriteria(Barrio.class)
 				.list();		
 		return barrios;
 	}
 
+	@Override
+	public void actualizar(Barrio barrio) throws Exception {
+		Session sesion = null;
+		try{
+			sesion = getSession();
+			Transaction tx = sesion.beginTransaction();
+			
+			sesion.update(barrio);
+			
+			tx.commit();
+			
+			
+		}catch(HibernateException e){
+			throw new Exception(e);
+		}	
+	}
+	
 	@Override
 	public void guardar(Barrio barrio) throws Exception {		
 		Session sesion = null;
@@ -39,7 +67,7 @@ public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 			sesion.save(barrio);
 			
 			tx.commit();
-			
+			sesion.close();
 			
 		}catch(HibernateException e){
 			throw new Exception(e);
@@ -47,7 +75,7 @@ public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 	}
 
 	@Override
-	public void borrar(Barrio barrio) {
+	public void borrar(Barrio barrio) throws Exception {
 		Session sesion = null;
 		try{
 			sesion = getSession();
@@ -56,10 +84,10 @@ public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 			sesion.delete(barrio);
 			
 			tx.commit();
-			
+			sesion.close();
 			
 		}catch(HibernateException e){
-			
+			throw new Exception(e);
 		}	
 		
 	}

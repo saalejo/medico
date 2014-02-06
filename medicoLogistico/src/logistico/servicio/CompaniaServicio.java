@@ -27,13 +27,13 @@ public class CompaniaServicio implements Serializable {
 	@Autowired
 	BarrioDao barrioDao;
 	
+	
 	/**
 	 * @return the companiaDao
 	 */
 	public CompaniaDao getCompaniaDao() {
 		return companiaDao;
 	}
-
 
 	/**
 	 * @param companiaDao the companiaDao to set
@@ -43,6 +43,14 @@ public class CompaniaServicio implements Serializable {
 	}
 
 
+	public List<Compania> obtener() throws Exception {
+		return companiaDao.obtener();
+	}
+	
+	public void actualizar() throws Exception {
+		
+	}
+	
 	public void guardar(String nit, String direccion, String telefono, String codigoHabilitacionIps, String sloganIps, int usuarioConectado, int departamentoId, int municipioId, int barrioId) {
 		Compania compania = new Compania(nit, direccion, telefono, codigoHabilitacionIps, sloganIps, usuarioConectado, departamentoId, municipioId, barrioId);
 		try {
@@ -55,15 +63,10 @@ public class CompaniaServicio implements Serializable {
 	}
 
 
-	public void borrar(int id) {
+	public void borrar(int id) throws Exception {
 		Compania compania = new Compania();
 		compania.setId(id);
 		companiaDao.borrar(compania);
 		
-	}
-
-
-	public List<Compania> obtener() {
-		return companiaDao.obtener();
 	}
 }

@@ -12,10 +12,12 @@ import logistico.db.dto.modelo.Departamento;
 
 public interface DepartamentoDao {
 	
+	List<Departamento> obtener() throws Exception;	
+	
+	void actualizar(Departamento departamento) throws Exception;
+	
 	void guardar(Departamento departamento) throws Exception;
 
-	void borrar(Departamento departamento);
+	void borrar(Departamento departamento) throws Exception;
 
-	List<Departamento> obtener();
-	
 }

@@ -12,10 +12,14 @@ import logistico.db.dto.modelo.Municipio;
 
 public interface MunicipioDao {
 	
+	List<Municipio> obtener(int departamentoId)  throws Exception;
+	
+	List<Municipio> obtener()  throws Exception;
+	
+	void actualizar(Municipio municipio) throws Exception;
+	
 	void guardar(Municipio municipio) throws Exception;
 
-	void borrar(Municipio municipio);
-
-	List<Municipio> obtener(int departamentoId);
+	void borrar(Municipio municipio)  throws Exception;	
 
 }

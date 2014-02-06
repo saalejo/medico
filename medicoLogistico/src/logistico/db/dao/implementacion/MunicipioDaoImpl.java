@@ -24,9 +24,25 @@ public class MunicipioDaoImpl extends HibernateDaoSupport  implements MunicipioD
 	public List<Municipio> obtener(int departamentoId) {
 		Session sesion = null;
 		sesion = getSession();		
-		List<Municipio> municipios = sesion.createCriteria(Municipio.class).add(Restrictions.eq("lo_departamento_id", departamentoId))
+		List<Municipio> municipios = sesion.createCriteria(Municipio.class)
+				.add(Restrictions.eq("departamentoId", departamentoId))
 				.list();		
 		return municipios;
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Municipio> obtener() {
+		Session sesion = null;
+		sesion = getSession();		
+		List<Municipio> municipios = sesion.createCriteria(Municipio.class)
+				.list();		
+		return municipios;
+	}
+	
+	@Override
+	public void actualizar(Municipio municipio)  throws Exception{
+			
 	}
 
 	@Override
@@ -47,7 +63,7 @@ public class MunicipioDaoImpl extends HibernateDaoSupport  implements MunicipioD
 	}
 
 	@Override
-	public void borrar(Municipio municipio) {
+	public void borrar(Municipio municipio) throws Exception {
 		Session sesion = null;
 		try{
 			sesion = getSession();
@@ -59,7 +75,7 @@ public class MunicipioDaoImpl extends HibernateDaoSupport  implements MunicipioD
 			
 			
 		}catch(HibernateException e){
-			
+			throw new Exception(e);
 		}	
 	}
 }

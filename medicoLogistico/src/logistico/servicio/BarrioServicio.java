@@ -20,13 +20,13 @@ public class BarrioServicio implements Serializable {
 	@Autowired
 	Municipio municipioDao;	
 
+	
 	/**
 	 * @return the barrioDao
 	 */
 	public BarrioDao getBarrioDao() {
 		return barrioDao;
 	}
-
 
 	/**
 	 * @param barrioDao the barrioDao to set
@@ -35,6 +35,19 @@ public class BarrioServicio implements Serializable {
 		this.barrioDao = barrioDao;
 	}
 
+	
+	public List<Barrio> obtener(int municipioId) throws Exception {
+		return barrioDao.obtener(municipioId);
+	}	
+	
+	public List<Barrio> obtener() throws Exception {
+		return barrioDao.obtener();
+	}	
+	
+	public void actualizar() throws Exception {
+		
+	}
+	
 	public void guardar(String descripcion, int usuarioConectado, int municipioId) {
 		Barrio barrio = new Barrio(descripcion, usuarioConectado, municipioId);
 		try {
@@ -46,16 +59,11 @@ public class BarrioServicio implements Serializable {
 		
 	}
 
-
-	public void borrar(int id) {
+	public void borrar(int id) throws Exception {
 		Barrio barrio = new Barrio();
 		barrio.setId(id);
 		barrioDao.borrar(barrio);
 		
 	}
 
-
-	public List<Barrio> obtener(int municipioId) {
-		return barrioDao.obtener(municipioId);
-	}	
 }

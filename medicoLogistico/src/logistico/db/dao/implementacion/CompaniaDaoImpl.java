@@ -29,6 +29,11 @@ public class CompaniaDaoImpl extends HibernateDaoSupport  implements CompaniaDao
 	}
 
 	@Override
+	public void actualizar(Compania compania) throws Exception {		
+	
+	}
+	
+	@Override
 	public void guardar(Compania compania) throws Exception {		
 		Session sesion = null;
 		try{
@@ -46,7 +51,7 @@ public class CompaniaDaoImpl extends HibernateDaoSupport  implements CompaniaDao
 	}
 
 	@Override
-	public void borrar(Compania compania) {
+	public void borrar(Compania compania) throws Exception {
 		Session sesion = null;
 		try{
 			sesion = getSession();
@@ -58,7 +63,7 @@ public class CompaniaDaoImpl extends HibernateDaoSupport  implements CompaniaDao
 			
 			
 		}catch(HibernateException e){
-			
+			throw new Exception(e);
 		}			
 	}
 }
