@@ -21,61 +21,72 @@ public class SedeDaoImpl extends HibernateDaoSupport  implements SedeDao{
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Sede> obtener(int companiaId) {
+	public List<Sede> obtener(int companiaId) throws Exception {
 		Session sesion = null;
-		sesion = getSession();		
-		List<Sede> sedes = sesion.createCriteria(Sede.class)
-				.add(Restrictions.eq("companiaId", companiaId))
-				.list();		
-		return sedes;
+		try{
+			sesion = getSession();		
+			List<Sede> sedes = sesion.createCriteria(Sede.class)
+					.add(Restrictions.eq("companiaId", companiaId))
+					.list();		
+			return sedes;
+		}catch(HibernateException e){
+			throw new Exception(e);
+		}
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Sede> obtener() {
+	public List<Sede> obtener() throws Exception {
 		Session sesion = null;
-		sesion = getSession();		
-		List<Sede> sedes = sesion.createCriteria(Sede.class)
-				.list();		
-		return sedes;
+		try{
+			sesion = getSession();		
+			List<Sede> sedes = sesion.createCriteria(Sede.class)
+					.list();		
+			return sedes;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo la lista de sede", e);
+		}
 	}
 	
 	@Override
 	public void actualizar(Sede sede) throws Exception {		
-		
+		Session sesion = null;
+		Transaction tx = null;
+		try{
+			sesion = getSession();
+			tx = sesion.beginTransaction();			
+			sesion.update(sede);			
+			tx.commit();			
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error actualizando la sede", e);
+		}	
 	}
 
 	@Override
 	public void guardar(Sede sede) throws Exception {		
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
-			sesion.save(sede);
-			
-			tx.commit();
-			
-			
+			tx = sesion.beginTransaction();			
+			sesion.save(sede);			
+			tx.commit();			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error guardar la sede", e);
 		}	
 	}
 
 	@Override
 	public void borrar(Sede sede) throws Exception {
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
-			sesion.delete(sede);
-			
-			tx.commit();
-			
-			
+			tx = sesion.beginTransaction();			
+			sesion.delete(sede);			
+			tx.commit();			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error borrando la sede", e);
 		}			
 	}
 }
