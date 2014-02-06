@@ -1,4 +1,4 @@
-package historia.clinica.db.dto.modelo;
+package logistico.db.dto.modelo;
 
 import java.io.Serializable;
 
