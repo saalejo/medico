@@ -14,8 +14,8 @@ public interface BarrioDao {
 
 	void guardar(Barrio barrio) throws Exception;
 
-	void borrar(Barrio barrio);
+	void borrar(Barrio barrio) throws Exception;
 	
-	List<Barrio> obtener(int municipioId);
+	List<Barrio> obtener(int municipioId) throws Exception;
 
 }
