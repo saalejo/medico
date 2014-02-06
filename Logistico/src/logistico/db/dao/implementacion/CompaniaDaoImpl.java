@@ -20,50 +20,57 @@ public class CompaniaDaoImpl extends HibernateDaoSupport  implements CompaniaDao
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Compania> obtener() {
+	public List<Compania> obtener() throws Exception{
 		Session sesion = null;
-		sesion = getSession();		
-		List<Compania> companias = sesion.createCriteria(Compania.class)
-				.list();		
-		return companias;
+		try{
+			sesion = getSession();		
+			List<Compania> companias = sesion.createCriteria(Compania.class)
+					.list();		
+			return companias;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo la lista de compañias", e);
+		}
 	}
 
 	@Override
 	public void actualizar(Compania compania) throws Exception {		
-	
+		Session sesion = null;
+		Transaction tx = null;
+		try{
+			sesion = getSession();
+			tx = sesion.beginTransaction();
+			sesion.update(compania);
+			tx.commit();		
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error actualizando la compañia", e);
+		}
 	}
 	
 	@Override
 	public void guardar(Compania compania) throws Exception {		
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();
 			sesion.save(compania);
-			
-			tx.commit();
-			
-			
+			tx.commit();		
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error guardando la compañia", e);
 		}	
 	}
 
 	@Override
 	public void borrar(Compania compania) throws Exception {
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();	
 			sesion.delete(compania);
-			
-			tx.commit();
-			
-			
+			tx.commit();			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error borrando la compañia", e);
 		}			
 	}
 }

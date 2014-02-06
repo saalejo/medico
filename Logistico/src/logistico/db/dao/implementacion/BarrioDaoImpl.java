@@ -21,73 +21,74 @@ public class BarrioDaoImpl extends HibernateDaoSupport  implements BarrioDao{
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Barrio> obtener(int municipioId) {
+	public List<Barrio> obtener(int municipioId) throws Exception {
 		Session sesion = null;
-		sesion = getSession();		
-		List<Barrio> barrios = sesion.createCriteria(Barrio.class)
-				.add(Restrictions.eq("municipioId", municipioId))
-				.list();		
-		return barrios;
+		try{
+			sesion = getSession();		
+			List<Barrio> barrios = sesion.createCriteria(Barrio.class)
+					.add(Restrictions.eq("municipioId", municipioId))
+					.list();		
+			return barrios;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo la lista de todos los barrios", e);
+		}	
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Barrio> obtener() {
+	public List<Barrio> obtener() throws Exception {
 		Session sesion = null;
-		sesion = getSession();		
-		List<Barrio> barrios = sesion.createCriteria(Barrio.class)
-				.list();		
-		return barrios;
+		try{
+			sesion = getSession();		
+			List<Barrio> barrios = sesion.createCriteria(Barrio.class)
+					.list();		
+			return barrios;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo la lista los barrios", e);
+		}
 	}
 
 	@Override
 	public void actualizar(Barrio barrio) throws Exception {
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();
 			sesion.update(barrio);
-			
 			tx.commit();
-			
-			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error actualizando el barrio", e);
 		}	
 	}
 	
 	@Override
 	public void guardar(Barrio barrio) throws Exception {		
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();
 			sesion.save(barrio);
-			
 			tx.commit();
-			sesion.close();
-			
+			sesion.close();	
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error guardando el barrio", e);
 		}	
 	}
 
 	@Override
 	public void borrar(Barrio barrio) throws Exception {
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();
 			sesion.delete(barrio);
-			
 			tx.commit();
 			sesion.close();
-			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error borrando el barrio", e);
 		}	
 		
 	}

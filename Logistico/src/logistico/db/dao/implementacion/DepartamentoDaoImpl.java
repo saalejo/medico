@@ -20,50 +20,57 @@ public class DepartamentoDaoImpl extends HibernateDaoSupport  implements Departa
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Departamento> obtener() {
+	public List<Departamento> obtener() throws Exception {
 		Session sesion = null;
-		sesion = getSession();		
-		List<Departamento> departamentos = sesion.createCriteria(Departamento.class)
-				.list();		
-		return departamentos;
+		try{
+			sesion = getSession();		
+			List<Departamento> departamentos = sesion.createCriteria(Departamento.class)
+					.list();		
+			return departamentos;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo la lista de departamentos", e);
+		}	
 	}
 	
 	@Override
 	public void actualizar(Departamento departamento) throws Exception {		
-	
+		Session sesion = null;
+		Transaction tx = null;
+		try{
+			sesion = getSession();
+			tx = sesion.beginTransaction();	
+			sesion.update(departamento);
+			tx.commit();	
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error actualizando el departamento", e);
+		}
 	}
 
 	@Override
 	public void guardar(Departamento departamento) throws Exception {		
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
+			tx = sesion.beginTransaction();	
 			sesion.save(departamento);
-			
-			tx.commit();
-			
-			
+			tx.commit();	
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error guardando el departamento", e);
 		}	
 	}
 
 	@Override
 	public void borrar(Departamento departamento) throws Exception {
 		Session sesion = null;
+		Transaction tx = null;
 		try{
 			sesion = getSession();
-			Transaction tx = sesion.beginTransaction();
-			
-			sesion.delete(departamento);
-			
+			tx = sesion.beginTransaction();
+			sesion.delete(departamento);		
 			tx.commit();
-			
-			
 		}catch(HibernateException e){
-			throw new Exception(e);
+			throw new Exception("Ha ocurrido un error borrando el departamento", e);
 		}		
 	}
 }
