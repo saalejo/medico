@@ -19,6 +19,7 @@ public class Ingreso implements Serializable{
 	String responsableEmpresa;
 	String responsableEmpresaTelefono;
 	String responsableParentesco;
+	int usuarioConectado;
 	Paciente paciente;
 	Servicio servicio;
 	Ubicacion ubicacion;
@@ -33,6 +34,19 @@ public class Ingreso implements Serializable{
 	 */
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	/**
+	 * @return the usuarioConectado
+	 */
+	public int getUsuarioConectado() {
+		return usuarioConectado;
+	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
+	public void setUsuarioConectado(int usuarioConectado) {
+		this.usuarioConectado = usuarioConectado;
 	}
 	/**
 	 * @return the consecutivo

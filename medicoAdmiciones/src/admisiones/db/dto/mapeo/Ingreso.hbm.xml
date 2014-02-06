@@ -38,6 +38,9 @@
         <property name="responsableParentesco" type="java.lang.String">
             <column name="RESPONSABLEPARENTESCO" />
         </property>
+        <property name="usuarioConectado" type="int">
+            <column name="usu_con" />
+        </property>
         <many-to-one name="paciente" class="admisiones.db.dto.modelo.Paciente" fetch="join">
             <column name="PACIENTE" />
         </many-to-one>
