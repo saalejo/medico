@@ -2,22 +2,23 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="logistico.db.dto.modelo.Municipio" table="LO_MUNICIPIO">
-        <id name="id" type="int">
-            <column name="ID" />
-            <generator class="identity" />
-        </id>
-        <property name="descripcion" type="java.lang.String">
-            <column name="DES" />
-        </property>
-        <property name="usuarioConectado" type="int">
-            <column name="USU_CON" />
-        </property>
-        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
-            <column name="LO_DEPARTAMENTO_ID" />
-        </many-to-one>
-        <property name="departamentoId" type="int">
-            <column name="LO_DEPARTAMENTO_ID" />
-        </property>
-    </class>
+	<class name="logistico.db.dto.modelo.Municipio" table="LO_MUNICIPIO">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="descripcion" type="java.lang.String">
+			<column name="DES" />
+		</property>
+		<property name="usuarioConectado" type="int">
+			<column name="USU_CON" />
+		</property>
+		<many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento"
+			fetch="join" insert="false" update="false">
+			<column name="LO_DEPARTAMENTO_ID" />
+		</many-to-one>
+		<property name="departamentoId" type="int">
+			<column name="LO_DEPARTAMENTO_ID" />
+		</property>
+	</class>
 </hibernate-mapping>
