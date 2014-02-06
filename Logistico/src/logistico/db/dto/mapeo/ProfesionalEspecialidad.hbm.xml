@@ -22,5 +22,8 @@
           <property name="registroMedico" type="java.lang.String">
             <column name="REG" />
         </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
     </class>
 </hibernate-mapping>
