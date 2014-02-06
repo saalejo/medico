@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/02/2014 07:51:56 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="admisiones.db.dto.modelo.Ingreso" table="INGRESO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="consecutivo" type="int">
+            <column name="CONSECUTIVO" />
+        </property>
+        <property name="responsableId" type="java.lang.String">
+            <column name="RESPONSABLEID" />
+        </property>
+        <property name="responsableTipoDocumento" type="java.lang.String">
+            <column name="RESPONSABLETIPODOCUMENTO" />
+        </property>
+        <property name="responsableNombre" type="java.lang.String">
+            <column name="RESPONSABLENOMBRE" />
+        </property>
+        <property name="responsableApellido" type="java.lang.String">
+            <column name="RESPONSABLEAPELLIDO" />
+        </property>
+        <property name="responsableTelefono" type="java.lang.String">
+            <column name="RESPONSABLETELEFONO" />
+        </property>
+        <property name="responsableDireccion" type="java.lang.String">
+            <column name="RESPONSABLEDIRECCION" />
+        </property>
+        <property name="responsableEmpresa" type="java.lang.String">
+            <column name="RESPONSABLEEMPRESA" />
+        </property>
+        <property name="responsableEmpresaTelefono" type="java.lang.String">
+            <column name="RESPONSABLEEMPRESATELEFONO" />
+        </property>
+        <property name="responsableParentesco" type="java.lang.String">
+            <column name="RESPONSABLEPARENTESCO" />
+        </property>
+        <many-to-one name="paciente" class="admisiones.db.dto.modelo.Paciente" fetch="join">
+            <column name="PACIENTE" />
+        </many-to-one>
+        <many-to-one name="servicio" class="admisiones.db.dto.modelo.Servicio" fetch="join">
+            <column name="SERVICIO" />
+        </many-to-one>
+        <many-to-one name="ubicacion" class="admisiones.db.dto.modelo.Ubicacion" fetch="join">
+            <column name="UBICACION" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

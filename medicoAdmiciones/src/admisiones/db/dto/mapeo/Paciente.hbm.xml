@@ -1,87 +1,84 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 4/02/2014 08:36:44 AM by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 6/02/2014 07:51:56 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="admisiones.db.dto.modelo.Paciente" table="PACIENTE">
         <id name="id" type="int">
             <column name="ID" />
-            <generator class="identity" />
+            <generator class="assigned" />
         </id>
         <property name="identificacion" type="java.lang.String">
-            <column name="id_pac" />
+            <column name="IDENTIFICACION" />
         </property>
         <property name="tipoDocumento" type="java.lang.String">
-            <column name="tip_doc" />
+            <column name="TIPODOCUMENTO" />
         </property>
         <property name="primerNombre" type="java.lang.String">
-            <column name="pri_nom" />
+            <column name="PRIMERNOMBRE" />
         </property>
         <property name="segundoNombre" type="java.lang.String">
-            <column name="seg_nom" />
+            <column name="SEGUNDONOMBRE" />
         </property>
         <property name="primerApellido" type="java.lang.String">
-            <column name="pri_ape" />
+            <column name="PRIMERAPELLIDO" />
         </property>
         <property name="segundoApellido" type="java.lang.String">
-            <column name="seg_ape" />
+            <column name="SEGUNDOAPELLIDO" />
         </property>
         <property name="fechaNacimiento" type="java.util.Date">
-            <column name="fec_nac" />
+            <column name="FECHANACIMIENTO" />
         </property>
         <property name="genero" type="java.lang.String">
-            <column name="gen" />
+            <column name="GENERO" />
         </property>
         <property name="zona" type="java.lang.String">
             <column name="ZONA" />
         </property>
         <property name="primerTelefono" type="java.lang.String">
-            <column name="pri_tel" />
+            <column name="PRIMERTELEFONO" />
         </property>
         <property name="segundoTelefono" type="java.lang.String">
-            <column name="seg_tel" />
+            <column name="SEGUNDOTELEFONO" />
         </property>
         <property name="direccion" type="java.lang.String">
-            <column name="dir" />
+            <column name="DIRECCION" />
         </property>
         <property name="mail" type="java.lang.String">
-            <column name="mail" />
+            <column name="MAIL" />
         </property>
         <property name="observaciones" type="java.lang.String">
             <column name="OBSERVACIONES" />
         </property>
         <property name="estadoCivil" type="java.lang.String">
-            <column name="est_civ" />
+            <column name="ESTADOCIVIL" />
         </property>
         <property name="lugarNacimiento" type="java.lang.String">
-            <column name="lug_nac" />
+            <column name="LUGARNACIMIENTO" />
         </property>
         <property name="tipoUsuario" type="java.lang.String">
-            <column name="tip_usr" />
+            <column name="TIPOUSUARIO" />
         </property>
         <property name="atencionEspecial" type="java.lang.String">
-            <column name="ate_esp" />
+            <column name="ATENCIONESPECIAL" />
         </property>
         <property name="empresaLabora" type="java.lang.String">
-            <column name="emp_lab" />
+            <column name="EMPRESALABORA" />
         </property>
         <property name="telefonoEmpresaLabora" type="java.lang.String">
-            <column name="tel_emp_lab" />
+            <column name="TELEFONOEMPRESALABORA" />
         </property>
         <property name="nivelEducativo" type="java.lang.String">
-            <column name="niv_edu" />
-        </property>        
-        <many-to-one name="grupoPoblacional" class="admisiones.db.dto.modelo.GrupoPoblacional" fetch="join"  insert="false" update="false">
-            <column name="gru_pob" />
-        </many-to-one>
-        <many-to-one name="ocupacion" class="admisiones.db.dto.modelo.Ocupacion" fetch="join"  insert="false" update="false">
-            <column name="ad_ocupacion_id" />
-        </many-to-one>
-        <many-to-one name="barrio" class="admisiones.db.dto.modelo.Barrio" fetch="join"  insert="false" update="false">
-            <column name="lo_barrio_id" />
-        </many-to-one>
-        <many-to-one name="ocupacion" class="admisiones.db.dto.modelo.Ocupacion" fetch="join" insert="false" update="false">
-            <column name="lo_ocupacion_id" />
+            <column name="NIVELEDUCATIVO" />
+        </property>
+        <property name="barrio" type="java.lang.String">
+            <column name="BARRIO" />
+        </property>
+        <property name="grupoPoblacional" type="java.lang.String" access="field">
+            <column name="GRUPOPOBLACIONAL" />
+        </property>
+        <many-to-one name="ocupacion" class="admisiones.db.dto.modelo.Ocupacion" fetch="join">
+            <column name="OCUPACION" />
         </many-to-one>
         <set name="ingresos" table="INGRESO" inverse="false" lazy="true">
             <key>
@@ -89,11 +86,11 @@
             </key>
             <one-to-many class="admisiones.db.dto.modelo.Ingreso" />
         </set>
-        <property name="barrioId" type="int">
-            <column name="lo_barrio_id" />
-        </property>       
-        <property name="grupoPoblacional" type="int">
-            <column name="gru_pob" />
+        <property name="municipioId" type="int">
+            <column name="MUNICIPIOID" />
+        </property>
+        <property name="entidadId" type="int">
+            <column name="ENTIDADID" />
         </property>
         <property name="ocupacionId" type="int">
             <column name="OCUPACIONID" />
