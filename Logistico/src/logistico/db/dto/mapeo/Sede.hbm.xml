@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="logistico.db.dto.modelo.Sede" table="LO_SEDE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="java.lang.String">
+            <column name="NOM" />
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="DIR" />
+        </property>
+        <property name="telefono" type="java.lang.String">
+            <column name="TEL" />
+        </property>
+        <property name="codigoHabilitacionIps" type="java.lang.String">
+            <column name="COD_HAB" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <many-to-one name="compania" class="logistico.db.dto.modelo.Compania" fetch="join" insert="false" update="false">
+            <column name="LO_COMPANIA_ID" />
+        </many-to-one>
+        <property name="companiaId" type="int">
+            <column name="LO_COMPANIA_ID" />
+        </property>
+        <many-to-one name="departamento" class="logistico.db.dto.modelo.Departamento" fetch="join" insert="false" update="false">
+            <column name="LO_DEPARTAMENTO_ID" />
+        </many-to-one>
+        <property name="departamentoId" type="int">
+            <column name="LO_DEPARTAMENTO_ID" />
+        </property>
+    </class>
+</hibernate-mapping>
