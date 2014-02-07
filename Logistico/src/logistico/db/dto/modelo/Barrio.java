@@ -33,10 +33,14 @@ public class Barrio implements Serializable{
 	}
 	
 	public Barrio(String descripcion, int usuarioConectado, int municipioId) {
-		// TODO Auto-generated constructor stub
+		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
+		this.municipioId = municipioId;
 	}
-	
-	
+
+
+
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

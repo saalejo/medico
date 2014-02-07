@@ -38,11 +38,22 @@ public class Sede implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Sede(String nombre, String direccion, String telefono, String codigoHabilitacionIps, int usuarioConectado, int companiaId, int departamentoId) {
-		// TODO Auto-generated constructor stub
+	public Sede(String nombre, String direccion, String telefono,
+			String codigoHabilitacionIps, int usuarioConectado, int companiaId,
+			int departamentoId) {
+		super();
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.codigoHabilitacionIps = codigoHabilitacionIps;
+		this.usuarioConectado = usuarioConectado;
+		this.companiaId = companiaId;
+		this.departamentoId = departamentoId;
 	}
-	
-	
+
+
+
+
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

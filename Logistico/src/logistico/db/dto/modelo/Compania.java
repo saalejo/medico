@@ -43,10 +43,23 @@ public class Compania implements Serializable{
 	}
 	
 	public Compania(String nit, String direccion, String telefono,
-			String codigoHabilitacionIps, String sloganIps, int usuarioConectado, int departamentoId, int municipioId, int barrioId2) {
-		// TODO Auto-generated constructor stub
+			String codigoHabilitacionIps, String sloganIps,
+			int usuarioConectado, int departamentoId, int municipioId,
+			int barrioId) {
+		super();
+		this.nit = nit;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.codigoHabilitacionIps = codigoHabilitacionIps;
+		this.sloganIps = sloganIps;
+		this.usuarioConectado = usuarioConectado;
+		this.departamentoId = departamentoId;
+		this.municipioId = municipioId;
+		this.barrioId = barrioId;
 	}
-	
+
+
+
 
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**

@@ -31,12 +31,17 @@ public class Municipio implements Serializable{
 	public Municipio() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Municipio(String descripcion, int departamentoId, int usuarioConectado) {
-		// TODO Auto-generated constructor stub
+		
+	public Municipio(String descripcion, int usuarioConectado,
+			int departamentoId) {
+		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
+		this.departamentoId = departamentoId;
 	}
-	
-	
+
+
+
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id

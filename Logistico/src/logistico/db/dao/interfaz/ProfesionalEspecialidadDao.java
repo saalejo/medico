@@ -10,12 +10,13 @@ import logistico.db.dto.modelo.ProfesionalEspecialidad;
  * @author Yedinzon Toro Gil
  *
  */
+.
 
 public interface ProfesionalEspecialidadDao  {	
 	
-	List<ProfesionalEspecialidad> obtener(int profesionalId, int especialidadId) throws Exception;
+	List<ProfesionalEspecialidad> obtenerPorProfesional(int profesionalId) throws Exception;
 	
-	List<ProfesionalEspecialidad> obtener() throws Exception;
+	List<ProfesionalEspecialidad> obtenerPorEspecialidad(int especialidadId) throws Exception;
 
 	void actualizar(ProfesionalEspecialidad profesionalEspecialidad) throws Exception;
 	

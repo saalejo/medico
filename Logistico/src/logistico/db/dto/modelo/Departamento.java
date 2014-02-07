@@ -30,10 +30,13 @@ public class Departamento implements Serializable {
 	}
 	
 	public Departamento(String descripcion, int usuarioConectado) {
-		// TODO Auto-generated constructor stub
+		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
 	}
-	
-	
+
+
+
 	// Generación de métodos getters y setters para los atributos de la clase.
 	/**
 	 * @return the id
