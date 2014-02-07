@@ -10,7 +10,7 @@ import logistico.db.dto.modelo.ProfesionalEspecialidad;
  * @author Yedinzon Toro Gil
  *
  */
-.
+
 
 public interface ProfesionalEspecialidadDao  {	
 	
