@@ -16,41 +16,96 @@ public class Profesional implements Serializable {
 	Boolean tipoProfesional;
 	int usuarioConectado;
 	
+	/*
+	 * Creacion del constructor para los atributos que seran recibidos como 
+	 * parametros por los metodos borrar y guardar de la clase ProfecionalServicio.
+	 */
 	
+	public  Profesional() {
+			
+	}
+		
+	public Profesional(int id, String identificacion, String nombre,
+		String apellido, Boolean tipoProfesional, int usuarioConectado) {
+		this.id = id;
+		this.identificacion = identificacion;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.tipoProfesional = tipoProfesional;
+		this.usuarioConectado = usuarioConectado;
+	}
+	
+	//Generación de Getters y Setters 
+	
+	/**
+	 * @return the id
+	 */
 	public int getId() {
 		return id;
 	}
+	/**
+	 * @param id the id to set
+	 */
 	public void setId(int id) {
 		this.id = id;
 	}
+	/**
+	 * @return the identificacion
+	 */
 	public String getIdentificacion() {
 		return identificacion;
 	}
+	/**
+	 * @param identificacion the identificacion to set
+	 */
 	public void setIdentificacion(String identificacion) {
 		this.identificacion = identificacion;
 	}
+	/**
+	 * @return the nombre
+	 */
 	public String getNombre() {
 		return nombre;
 	}
+	/**
+	 * @param nombre the nombre to set
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	/**
+	 * @return the apellido
+	 */
 	public String getApellido() {
 		return apellido;
 	}
+	/**
+	 * @param apellido the apellido to set
+	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	/**
+	 * @return the tipoProfesional
+	 */
 	public Boolean getTipoProfesional() {
 		return tipoProfesional;
 	}
+	/**
+	 * @param tipoProfesional the tipoProfesional to set
+	 */
 	public void setTipoProfesional(Boolean tipoProfesional) {
 		this.tipoProfesional = tipoProfesional;
 	}
-	
+	/**
+	 * @return the usuarioConectado
+	 */
 	public int getUsuarioConectado() {
 		return usuarioConectado;
 	}
+	/**
+	 * @param usuarioConectado the usuarioConectado to set
+	 */
 	public void setUsuarioConectado(int usuarioConectado) {
 		this.usuarioConectado = usuarioConectado;
 	}
