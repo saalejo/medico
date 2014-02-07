@@ -35,7 +35,7 @@ public class Sede implements Serializable{
 	 *
 	 */	
 	public Sede() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Sede(String nombre, String direccion, String telefono,

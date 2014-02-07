@@ -14,7 +14,7 @@ public class Protocolo implements Serializable{
 	String descripcion;
 	Boolean tipo; 
 	int usuarioConectado;
-	
+    
 	public int getId() {
 		return id;
 	}

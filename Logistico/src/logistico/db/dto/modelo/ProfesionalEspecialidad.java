@@ -31,7 +31,7 @@ public class ProfesionalEspecialidad implements Serializable{
 	 *
 	 */
 	public ProfesionalEspecialidad() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public ProfesionalEspecialidad(String registroMedico, int usuarioConectado, int profesionalId, int especialidadId) {

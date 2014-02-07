@@ -39,7 +39,7 @@ public class Compania implements Serializable{
 	 *
 	 */
 	public Compania() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public Compania(String nit, String direccion, String telefono,

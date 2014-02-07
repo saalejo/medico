@@ -29,7 +29,7 @@ public class Municipio implements Serializable{
 	 *
 	 */
 	public Municipio() {
-		// TODO Auto-generated constructor stub
+		
 	}
 		
 	public Municipio(String descripcion, int usuarioConectado,

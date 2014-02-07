@@ -26,7 +26,7 @@ public class Departamento implements Serializable {
 	 *
 	 */
 	public Departamento() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public Departamento(String descripcion, int usuarioConectado) {
