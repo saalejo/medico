@@ -1,5 +1,6 @@
 package logistico.db.dto.modelo;
 
+import historia.clinica.db.dto.modelo.Especialidad;
 import java.io.Serializable;
 
 /**
