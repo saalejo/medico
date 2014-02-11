@@ -22,7 +22,7 @@ public class Departamento implements Serializable {
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase DepartamentoServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase DepartamentoServicio.
 	 *
 	 */
 	public Departamento() {
@@ -31,6 +31,13 @@ public class Departamento implements Serializable {
 	
 	public Departamento(String descripcion, int usuarioConectado) {
 		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
+	}
+	
+	public Departamento(int id, String descripcion, int usuarioConectado) {
+		super();
+		this.id = id;
 		this.descripcion = descripcion;
 		this.usuarioConectado = usuarioConectado;
 	}

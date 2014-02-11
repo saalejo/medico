@@ -17,10 +17,19 @@ public class Protocolo implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase SedeServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase SedeServicio.
 	 */	
 	public Protocolo(){
 		
+	}
+	
+	public Protocolo(String nombre, String descripcion, Boolean tipo,
+			int usuarioConectado) {
+		super();
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.tipo = tipo;
+		this.usuarioConectado = usuarioConectado;
 	}
 	
 	public Protocolo(int id, String nombre, String descripcion, Boolean tipo,
@@ -32,7 +41,6 @@ public class Protocolo implements Serializable{
 		this.tipo = tipo;
 		this.usuarioConectado = usuarioConectado;
 	}
-	
 	// Generación de métodos getters y setters para los atributos de la clase.
 	
 	

@@ -25,15 +25,23 @@ public class Barrio implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase BarrioServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase BarrioServicio.
 	 *
 	 */
 	public Barrio() {
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	public Barrio(String descripcion, int usuarioConectado, int municipioId) {
 		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
+		this.municipioId = municipioId;
+	}
+	
+	public Barrio(int id, String descripcion, int usuarioConectado, int municipioId) {
+		super();
+		this.id = id;
 		this.descripcion = descripcion;
 		this.usuarioConectado = usuarioConectado;
 		this.municipioId = municipioId;

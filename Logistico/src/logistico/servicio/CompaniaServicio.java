@@ -47,7 +47,14 @@ public class CompaniaServicio implements Serializable {
 		return companiaDao.obtener();
 	}
 	
-	public void actualizar() throws Exception {
+	public void actualizar(int id, String nit, String direccion, String telefono, String codigoHabilitacionIps, String sloganIps, int usuarioConectado, int departamentoId, int municipioId, int barrioId) {
+		Compania compania = new Compania(id, nit, direccion, telefono, codigoHabilitacionIps, sloganIps, usuarioConectado, departamentoId, municipioId, barrioId);
+		try {
+			companiaDao.actualizar(compania);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
@@ -59,14 +66,17 @@ public class CompaniaServicio implements Serializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 
 
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Compania compania = new Compania();
-		compania.setId(id);
-		companiaDao.borrar(compania);
-		
+		try {
+			compania.setId(id);
+			companiaDao.borrar(compania);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 }

@@ -28,7 +28,7 @@ public class ProfesionalEspecialidad implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase MunicipioServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase MunicipioServicio.
 	 *
 	 */
 	public ProfesionalEspecialidad() {
@@ -37,6 +37,15 @@ public class ProfesionalEspecialidad implements Serializable{
 	
 	public ProfesionalEspecialidad(String registroMedico, int usuarioConectado, int profesionalId, int especialidadId) {
 		super();
+		this.registroMedico = registroMedico;
+		this.usuarioConectado = usuarioConectado;
+		this.profesionalId = profesionalId;
+		this.especialidadId = especialidadId;
+	}
+	
+	public ProfesionalEspecialidad(int id, String registroMedico, int usuarioConectado, int profesionalId, int especialidadId) {
+		super();
+		this.id = id;
 		this.registroMedico = registroMedico;
 		this.usuarioConectado = usuarioConectado;
 		this.profesionalId = profesionalId;

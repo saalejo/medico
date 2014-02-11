@@ -35,7 +35,7 @@ public class Compania implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase CompaniaServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase CompaniaServicio.
 	 *
 	 */
 	public Compania() {
@@ -47,6 +47,23 @@ public class Compania implements Serializable{
 			int usuarioConectado, int departamentoId, int municipioId,
 			int barrioId) {
 		super();
+		this.nit = nit;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.codigoHabilitacionIps = codigoHabilitacionIps;
+		this.sloganIps = sloganIps;
+		this.usuarioConectado = usuarioConectado;
+		this.departamentoId = departamentoId;
+		this.municipioId = municipioId;
+		this.barrioId = barrioId;
+	}
+	
+	public Compania(int id, String nit, String direccion, String telefono,
+			String codigoHabilitacionIps, String sloganIps,
+			int usuarioConectado, int departamentoId, int municipioId,
+			int barrioId) {
+		super();
+		this.id = id;
 		this.nit = nit;
 		this.direccion = direccion;
 		this.telefono = telefono;

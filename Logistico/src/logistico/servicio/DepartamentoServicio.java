@@ -37,26 +37,34 @@ public class DepartamentoServicio implements Serializable {
 		return departamentoDao.obtener();
 	}
 	
-	public void actualizar() throws Exception {
-		
+	public void actualizar(int id, String descripcion, int usuarioConectado) {
+		Departamento departamento = new Departamento(id, descripcion, usuarioConectado);
+		try {
+			departamentoDao.actualizar(departamento);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void guardar(String descripcion, int usuarioConectado) throws Exception{
+	public void guardar(String descripcion, int usuarioConectado) {
 		Departamento departamento = new Departamento(descripcion, usuarioConectado);
 		try {
 			departamentoDao.guardar(departamento);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			throw new Exception(e);
-		}
-		
+		}		
 	}
 
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Departamento departamento = new Departamento();
-		departamento.setId(id);
-		departamentoDao.borrar(departamento);
-	
+		try {
+			departamento.setId(id);
+			departamentoDao.borrar(departamento);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}	
 }

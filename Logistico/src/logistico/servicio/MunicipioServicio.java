@@ -44,8 +44,14 @@ public class MunicipioServicio implements Serializable {
 		return municipioDao.obtener();
 	}
 	
-	public void actualizar() throws Exception {
-				
+	public void actualizar(int id, String descripcion, int usuarioConectado, int departamentoId) {
+		Municipio municipio = new Municipio(id, descripcion, usuarioConectado, departamentoId);
+		try {
+			municipioDao.actualizar(municipio);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 	}
 	
 	public void guardar(String descripcion, int usuarioConectado, int departamentoId) {
@@ -55,14 +61,17 @@ public class MunicipioServicio implements Serializable {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		
+		}	
 	}
 
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Municipio municipio = new Municipio();
-		municipio.setId(id);
-		municipioDao.borrar(municipio);
-		
+		try {
+			municipio.setId(id);
+			municipioDao.borrar(municipio);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 	}
 }

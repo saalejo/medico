@@ -31,7 +31,7 @@ public class Sede implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase SedeServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase SedeServicio.
 	 *
 	 */	
 	public Sede() {
@@ -42,6 +42,20 @@ public class Sede implements Serializable{
 			String codigoHabilitacionIps, int usuarioConectado, int companiaId,
 			int departamentoId) {
 		super();
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.codigoHabilitacionIps = codigoHabilitacionIps;
+		this.usuarioConectado = usuarioConectado;
+		this.companiaId = companiaId;
+		this.departamentoId = departamentoId;
+	}
+	
+	public Sede(int id, String nombre, String direccion, String telefono,
+			String codigoHabilitacionIps, int usuarioConectado, int companiaId,
+			int departamentoId) {
+		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.telefono = telefono;

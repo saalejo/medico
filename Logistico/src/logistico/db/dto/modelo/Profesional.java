@@ -18,21 +18,30 @@ public class Profesional implements Serializable {
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase ProfecionalServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase ProfecionalServicio.
 	 */
 	
 	public  Profesional() {
 			
 	}
 		
-	public Profesional(int id, String identificacion, String nombre,
+	public Profesional(String identificacion, String nombre,
 		String apellido, Boolean tipoProfesional, int usuarioConectado) {
-		this.id = id;
 		this.identificacion = identificacion;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.tipoProfesional = tipoProfesional;
 		this.usuarioConectado = usuarioConectado;
+	}
+	
+	public Profesional(int id, String identificacion, String nombre,
+			String apellido, Boolean tipoProfesional, int usuarioConectado) {
+			this.id = id;
+			this.identificacion = identificacion;
+			this.nombre = nombre;
+			this.apellido = apellido;
+			this.tipoProfesional = tipoProfesional;
+			this.usuarioConectado = usuarioConectado;
 	}
 	
 	//Generación de Getters y Setters 

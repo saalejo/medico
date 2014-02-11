@@ -44,8 +44,14 @@ public class BarrioServicio implements Serializable {
 		return barrioDao.obtener();
 	}	
 	
-	public void actualizar() throws Exception {
-		
+	public void actualizar(int id, String descripcion, int usuarioConectado, int municipioId) {
+		Barrio barrio = new Barrio(id, descripcion, usuarioConectado, municipioId);
+		try {
+			barrioDao.actualizar(barrio);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void guardar(String descripcion, int usuarioConectado, int municipioId) {
@@ -59,11 +65,15 @@ public class BarrioServicio implements Serializable {
 		
 	}
 
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Barrio barrio = new Barrio();
-		barrio.setId(id);
-		barrioDao.borrar(barrio);
-		
+		try {
+			barrio.setId(id);
+			barrioDao.borrar(barrio);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

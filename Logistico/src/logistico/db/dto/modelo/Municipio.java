@@ -25,7 +25,7 @@ public class Municipio implements Serializable{
 	
 	/*
 	 * Creacion del constructor para los atributos que seran recibidos como 
-	 * parametros por los metodos borrar y guardar de la clase MunicipioServicio.
+	 * parametros por los metodos borrar, guardar y actualizar de la clase MunicipioServicio.
 	 *
 	 */
 	public Municipio() {
@@ -35,6 +35,15 @@ public class Municipio implements Serializable{
 	public Municipio(String descripcion, int usuarioConectado,
 			int departamentoId) {
 		super();
+		this.descripcion = descripcion;
+		this.usuarioConectado = usuarioConectado;
+		this.departamentoId = departamentoId;
+	}
+	
+	public Municipio(int id, String descripcion, int usuarioConectado,
+			int departamentoId) {
+		super();
+		this.id = id;
 		this.descripcion = descripcion;
 		this.usuarioConectado = usuarioConectado;
 		this.departamentoId = departamentoId;

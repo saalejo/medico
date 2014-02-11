@@ -47,8 +47,14 @@ public class SedeServicio implements Serializable {
 		return sedeDao.obtener();
 	}	
 	
-	public void actualizar(int id) throws Exception {
-		
+	public void actualizar(int id, String nombre, String direccion,String telefono,String codigoHabilitacionIps, int usuarioConectado, int companiaId, int departamentoId ) {
+		Sede sede = new Sede(id, nombre, direccion, telefono, codigoHabilitacionIps, usuarioConectado, companiaId, departamentoId);
+		try {
+			sedeDao.actualizar(sede);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void guardar(String nombre, String direccion,String telefono,String codigoHabilitacionIps, int usuarioConectado, int companiaId, int departamentoId ) {
@@ -59,12 +65,16 @@ public class SedeServicio implements Serializable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 	
 	public void borrar(int id) throws Exception {
 		Sede sede = new Sede();
-		sede.setId(id);
-		sedeDao.borrar(sede);	
+		try {
+			sede.setId(id);
+			sedeDao.borrar(sede);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
