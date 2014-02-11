@@ -1,9 +1,9 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window height="90%" apply="${listaEntidadesCtl}" minimizable="true" closable="true" >
-		<listbox id="listaEntidades" multiple="true" rows="10">
+	<window height="90%" apply="${listaDepartamentosCtl}" minimizable="true" closable="true" >
+		<listbox id="listaDepartamentos" multiple="true" rows="10">
 				        <listhead>
-				            <listheader label="Entidades"/>
+				            <listheader label="Departamentos"/>
 				            <listheader label=""/>
 				        </listhead>       
 				        <listitem >            

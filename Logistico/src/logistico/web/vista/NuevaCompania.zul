@@ -1,0 +1,92 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevaCompaniaCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.logistico.compania.Nit}"/>
+					</cell>
+					<cell>
+						<textbox id="nit" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.compania.Direccion}"/>
+					</cell>
+					<cell>
+						<textbox id="direccion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="${labels.logistico.compania.Telefono}"/>
+					</cell>
+					<cell>
+						<textbox id="telefono" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.compania.CodigoHabilitacionIps}"/>
+					</cell>
+					<cell>
+						<textbox id="codigoHabilitacionIps" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="${labels.logistico.compania.Slogan}"/>
+					</cell>
+					<cell>
+						<textbox id="slogan" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.compania.Departamento}"/>
+					</cell>
+					<cell>
+						<combobox id="departamento" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>	
+				</row>
+				<row>	
+					<cell>
+						<label value="${labels.logistico.compania.Municipio}"/>
+					</cell>
+					<cell>
+						<combobox id="municipio" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>
+					<cell>
+						<label value="${labels.logistico.compania.barrio}"/>
+					</cell>				
+					<cell>		
+						<combobox id="barrio" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>							
+				</row>
+				<row>
+					<cell>
+					
+					</cell>
+					<cell>
+					
+					</cell>
+					<cell>
+					
+					</cell>					
+					<cell>
+						<button id="cancelar" label="${labels.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

@@ -1,13 +1,15 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window height="90%" apply="${listaPrestadoresCtl}" minimizable="true" closable="true" >
-		<listbox id="listaPrestadores" multiple="true" rows="10">
+	<window height="90%" apply="${listaBarriosCtl}" minimizable="true" closable="true" >
+		<listbox id="listaBarrios" multiple="true" rows="10">
 				        <listhead>
-				            <listheader label="Prestadores"/>
+				            <listheader label="Barrios"/>
 				            <listheader label=""/>
 				        </listhead>       
 				        <listitem >            
 				            <listcell/>
+				             <listcell/>
+				             <listcell/>
 				        </listitem>
 				    </listbox>
 	</window>

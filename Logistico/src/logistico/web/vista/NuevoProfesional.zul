@@ -11,67 +11,50 @@
 			<rows>
 				<row>
 					<cell>
-						<label value="${labels.admisiones.formulario.profesional.Usuario}"/>
+						<label value="${labels.logistico.profesional.Identificacion}"/>
 					</cell>
 					<cell>
-						<textbox id="usuario" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+						<textbox id="identificacion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
 					</cell>
 					<cell>
-						<label value="${labels.admisiones.formulario.profesional.Clave}"/>
-					</cell>
-					<cell>
-						<textbox type="password" id="clave" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
-					</cell>
-				</row>				
-				<row>
-					<cell>
-						<label value="${labels.admisiones.formulario.profesional.Nombre}"/>
+						<label value="${labels.logistico.profesional.Nombre}"/>
 					</cell>
 					<cell>
 						<textbox id="nombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
 					</cell>
+				</row>				
+				<row>
 					<cell>
-						<label value="${labels.admisiones.formulario.profesional.TipoUsuario}"/>
+						<label value="${labels.logistico.profesional.Apellido}"/>
 					</cell>
 					<cell>
-						<textbox id="tipoUsuario" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
-					</cell>
-				</row>
-				<row>					
-					<cell>
-						<label value="${labels.admisiones.formulario.profesional.CodigoUsuario}"/>
+						<textbox id="apellido" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
 					</cell>
 					<cell>
-						<textbox id="codigo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
-					</cell>				
-					<cell>
-						<label value="${labels.admisiones.formulario.profesional.Estado}"/>
+						<label value="${labels.logistico.profesional.TipoProfesional}"/>
 					</cell>
 					<cell>
-						<combobox id="estado" readonly="true">
-							<comboitem label="${labels.admisiones.formulario.profesional.estado.activo }"/>
-							<comboitem label="${labels.admisiones.formulario.profesional.estado.inactivo}"/>											
+						<combobox id="tipoProfesional" readonly="true">
+							<comboitem label=" "/>											
 						</combobox>
 					</cell>
 				</row>
 				<row>					
 					<cell>
-						<label value="${labels.admisiones.formulario.profesional.Prestador}"/>
+						
 					</cell>
 					<cell>
-						<combobox id="prestador" readonly="true">
-							<comboitem label=""/>										
-						</combobox>
+						
 					</cell>
-					<cell>					
+					<cell>	
+									
 					</cell>
 					<cell>
-						<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
-						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+						<button id="cancelar" label="${labels.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.general.Guardar}"></button>
 					</cell>
 				</row>
 			</rows>
 		</grid>
-	
 	</window>
 </zk>
