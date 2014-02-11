@@ -1,0 +1,60 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevoPrestadorCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.prestador.Numero}"/>
+					</cell>
+					<cell>
+						<textbox id="nombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.prestador.Codigo}"/>
+					</cell>
+					<cell>
+						<textbox id="identificacion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>				
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.prestador.RazonSocial}"/>
+					</cell>
+					<cell>
+						<textbox id="razonSocial" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.prestador.TipoId}"/>
+					</cell>
+					<cell>
+						<textbox id="tipoIdentificacion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>					
+					<cell>
+					<label value="${labels.formulario.paciente.Municipio }"/>
+					</cell>
+					<cell>
+						<combobox id="municipio" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>
+					<cell>					
+					</cell>
+					<cell>
+						<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+</zk>

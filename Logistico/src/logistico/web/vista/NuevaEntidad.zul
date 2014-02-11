@@ -1,0 +1,71 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevaEntidadCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.Nombre}"/>
+					</cell>
+					<cell>
+						<textbox id="nombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.Codigo}"/>
+					</cell>
+					<cell>
+						<textbox id="codigo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.TipoUsuario}"/>
+					</cell>
+					<cell>
+						<textbox id="tipoUsuario" readonly="false" cols="1" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.NumeroContrato}"/>
+					</cell>
+					<cell>
+						<textbox id="numeroContrato" readonly="false"  width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.PlanBeneficios}"/>
+					</cell>
+					<cell>
+						<textbox id="planBeneficios" readonly="false"  width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.admisiones.formulario.entidad.NumeroPoliza}"/>
+					</cell>
+					<cell>
+						<textbox id="numeroPoliza" readonly="false"  width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>						
+					</cell>
+					<cell>
+					</cell>					
+					<cell>					
+					</cell>
+					<cell>
+						<button id="cancelar" label="${labels.formulario.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.formulario.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	
+	</window>
+</zk>
