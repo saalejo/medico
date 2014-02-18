@@ -67,7 +67,7 @@ public class SedeServicio implements Serializable {
 		}
 	}
 	
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Sede sede = new Sede();
 		try {
 			sede.setId(id);

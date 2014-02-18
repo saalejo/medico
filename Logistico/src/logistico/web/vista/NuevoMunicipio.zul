@@ -11,10 +11,10 @@
 			<rows>
 				<row>
 					<cell>
-						<label value="${labels.logistico.municipio.Nombre}"/>
+						<label value="${labels.logistico.municipio.Descripcion}"/>
 					</cell>
 					<cell>
-						<textbox id="nombre" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+						<textbox id="descripcion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
 					</cell>
 					<cell>
 						<label value="${labels.logistico.municipio.Departamento}"/>

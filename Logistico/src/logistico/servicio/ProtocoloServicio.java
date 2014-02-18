@@ -59,7 +59,7 @@ public class ProtocoloServicio implements Serializable {
 		}
 	}
 	
-	public void borrar(int id) throws Exception {
+	public void borrar(int id) {
 		Protocolo protocolo = new Protocolo();
 		try {
 			protocolo.setId(id);
