@@ -1,9 +1,9 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window height="90%" apply="${listaBarriosCtl}" minimizable="true" closable="true" >
-		<listbox id="listaBarrios" multiple="true" rows="10">
+	<window height="90%" apply="${listaModuloSistemaCtl}" minimizable="true" closable="true" >
+		<listbox id="listaModuloSistema" multiple="true" rows="10">
 				        <listhead>
-				            <listheader label="Barrios"/>
+				            <listheader label="ModuloSistema"/>
 				            <listheader label=""/>
 				        </listhead>       
 				        <listitem >            

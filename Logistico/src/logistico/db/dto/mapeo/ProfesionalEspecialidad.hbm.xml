@@ -13,7 +13,7 @@
         <property name="profesionalId" type="int">
             <column name="LO_PROFESIONAL_ID" />
         </property>
-        <many-to-one name="especialidad" class="logistico.db.dto.modelo.Municipio" fetch="join" insert="false" update="false">
+        <many-to-one name="especialidad" class="historia.clinica.db.dto.modelo.Especialidad" fetch="join" insert="false" update="false">
             <column name="HC_ESPECIALIDAD" />
         </many-to-one>
         <property name="especialidadId" type="int">

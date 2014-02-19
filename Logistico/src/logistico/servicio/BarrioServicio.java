@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 
 import logistico.db.dao.interfaz.BarrioDao;
+import logistico.db.dao.interfaz.MunicipioDao;
 import logistico.db.dto.modelo.Barrio;
-import logistico.db.dto.modelo.Municipio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,7 +18,7 @@ public class BarrioServicio implements Serializable {
 	@Autowired
 	BarrioDao barrioDao;
 	@Autowired
-	Municipio municipioDao;	
+	MunicipioDao municipioDao;	
 
 	
 	/**

@@ -7,22 +7,34 @@
 					<menubar >	
 						<menu label="${labels.logistico.menu.Nuevo}">
 		                <menupopup>	
+	                    	<menuitem id="btnNuevaCausaCancelacion" label="${labels.logistico.menu.nuevo.CausaCancelacion}" image="/res/plus.png" />
 	                    	<menuitem id="btnNuevaCompania" label="${labels.logistico.menu.nuevo.Compania}" image="/res/plus.png" />	
+	                        <menuitem id="btnNuevaConfiguracion" label="${labels.logistico.menu.nuevo.Configuracion}" image="/res/plus.png" />
+	                        <menuseparator></menuseparator>	
 	                        <menuitem id="btnNuevaSede" label="${labels.logistico.menu.nuevo.Sede}" image="/res/plus.png" />
 	                        <menuitem id="btnNuevoBarrio" label="${labels.logistico.menu.nuevo.Barrio}" image="/res/plus.png" />	
+	                        <menuitem id="btnNuevoConsultorio" label="${labels.logistico.menu.nuevo.Consultorio}" image="/res/plus.png" />
 	                        <menuseparator></menuseparator>		                        
 	                        <menuitem id="btnNuevoDepartamento" label="${labels.logistico.menu.nuevo.Departamento}" image="/res/plus.png" />
+	                        <menuitem id="btnNuevoHorario" label="${labels.logistico.menu.nuevo.Horario}" image="/res/plus.png" />
+	                    	<menuitem id="btnNuevoModuloSistema" label="${labels.logistico.menu.nuevo.ModuloSistema}" image="/res/plus.png" />
+	                        <menuseparator></menuseparator>	
 	                        <menuitem id="btnNuevaMunicipio" label="${labels.logistico.menu.nuevo.Municipio}" image="/res/plus.png" />
 	                        <menuitem id="btnNuevaProfesional" label="${labels.logistico.menu.nuevo.Profesional}" image="/res/plus.png" />
-	                        <menuseparator></menuseparator>
 	                        <menuitem id="btnNuevoProfesionalEspecialidad" label="${labels.logistico.menu.nuevo.ProfesionalEspecialidad}" image="/res/plus.png" />		                        
+	                        <menuseparator></menuseparator>	
 	                        <menuitem id="btnNuevaProtocolo" label="${labels.logistico.menu.nuevo.Protocolo}" image="/res/plus.png" />		                        
 		                </menupopup>
 		                </menu>
+		               	<menuitem id="btnListaBarrio" label="${labels.logistico.menu.ListaBarrio}"  image="/res/fn.png" />
+		               	<menuitem id="btnListaCausaCancelacion" label="${labels.logistico.menu.ListaCausaCancelacion}"  image="/res/fn.png" />
 		               	<menuitem id="btnListaCompania" label="${labels.logistico.menu.ListaCompania}"  image="/res/fn.png" />
+		                <menuitem id="btnListaConfiguraciones" label="${labels.logistico.menu.ListaConfiguraciones}"  image="/res/fn.png" />
+		                <menuitem id="btnListaConsultorios" label="${labels.logistico.menu.ListaConsultorios}"  image="/res/fn.png" />
 		                <menuitem id="btnListaSede" label="${labels.logistico.menu.ListaSede}"  image="/res/fn.png" />
-		                <menuitem id="btnListaBarrio" label="${labels.logistico.menu.ListaBarrio}"  image="/res/fn.png" />
 		                <menuitem id="btnListaDepartamento" label="${labels.logistico.menu.ListaDepartamento}"  image="/res/fn.png" />
+		                <menuitem id="btnListaHorarios" label="${labels.logistico.menu.ListaHorarios}"  image="/res/fn.png" />
+		                <menuitem id="btnListaModuloSistema" label="${labels.logistico.menu.ListaModuloSistema}"  image="/res/fn.png" />
 		                <menuitem id="btnListaMunicipio" label="${labels.logistico.menu.ListaMunicipio}"  image="/res/fn.png" />
 		                <menuitem id="btnListaProfesional" label="${labels.logistico.menu.ListaProfesional}"  image="/res/fn.png" />
 		                <menuitem id="btnListaProfesionalEspecialidad" label="${labels.logistico.menu.ListaProfesionalEspecialidad}"  image="/res/fn.png" />
