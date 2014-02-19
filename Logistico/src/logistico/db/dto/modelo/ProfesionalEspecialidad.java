@@ -55,10 +55,14 @@ public class ProfesionalEspecialidad implements Serializable{
 	
 	
 	// Generación de métodos getters y setters para los atributos de la clase.	
+
 	/**
 	 * @return the id
 	 */
-
+	public int getId() {
+		return id;
+	}
+	
 	/**
 	 * @param id the id to set
 	 */
@@ -71,6 +75,8 @@ public class ProfesionalEspecialidad implements Serializable{
 	public Profesional getProfesional() {
 		return profesional;
 	}
+	
+
 	/**
 	 * @param profesional the profesional to set
 	 */

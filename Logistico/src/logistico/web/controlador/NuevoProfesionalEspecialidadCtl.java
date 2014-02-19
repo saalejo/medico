@@ -21,8 +21,8 @@ public class NuevoProfesionalEspecialidadCtl extends GenericForwardComposer impl
 	 */
 	private static final long serialVersionUID = 1L;
 	private Textbox registroMedico;
-	private Combobox profesionalEspecialidad;
-	private Combobox especialidad;
+	private Combobox profesionalSeleccionado;
+	private Combobox especialidadSeleccionada;
 
 	/**
 	 * Al cargar el zul
@@ -49,8 +49,8 @@ public class NuevoProfesionalEspecialidadCtl extends GenericForwardComposer impl
 			profesionalEspecialidadServicio.guardar(
 					registroMedico.getText(),
 					usuarioConectado,
-					Integer.parseInt(profesionalEspecialidad.getSelectedItem().getLabel()),
-					Integer.parseInt(especialidad.getSelectedItem().getLabel())					
+					Integer.parseInt(profesionalSeleccionado.getSelectedItem().getLabel()),
+					Integer.parseInt(especialidadSeleccionada.getSelectedItem().getLabel())					
 			);
 			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
 			if(pintor!=null ){	

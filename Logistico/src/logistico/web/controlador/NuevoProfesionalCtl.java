@@ -29,7 +29,6 @@ public class NuevoProfesionalCtl extends GenericForwardComposer implements Seria
 	 */
 	public void doAfterCompose(Component comp) throws Exception{
 		super.doAfterCompose(comp);	
-
 	}
 	
 	public void onClick$cancelar(){

@@ -137,19 +137,4 @@ public class MenuLogisticoCtl extends GenericForwardComposer{
 		}		
 	}
 	
-	public void onClick$btnNuevoSede(){
-		try {				
-			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
-			if(pintor!=null ){	
-				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
-				if(profesional!=null ){
-					pintor.abrirVentana("logistico/web/vista/NuevoSede.zul","contenidoPosicion",null);
-				}else{
-					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
-				}
-			}
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}		
-	}
 }
