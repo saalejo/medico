@@ -137,4 +137,84 @@ public class MenuLogisticoCtl extends GenericForwardComposer{
 		}		
 	}
 	
+	public void onClick$btnNuevaCausaCancelacion(){
+		try {				
+			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
+			if(pintor!=null ){	
+				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
+				if(profesional!=null ){
+					pintor.abrirVentana("logistico/web/vista/NuevaCausaCancelacion.zul","contenidoPosicion",null);
+				}else{
+					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}		
+	}
+	
+	public void onClick$btnNuevaConfiguracion(){
+		try {				
+			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
+			if(pintor!=null ){	
+				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
+				if(profesional!=null ){
+					pintor.abrirVentana("logistico/web/vista/NuevaConfiguracion.zul","contenidoPosicion",null);
+				}else{
+					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}		
+	}
+	
+	public void onClick$btnNuevoConsultorio(){
+		try {				
+			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
+			if(pintor!=null ){	
+				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
+				if(profesional!=null ){
+					pintor.abrirVentana("logistico/web/vista/NuevoConsultorio.zul","contenidoPosicion",null);
+				}else{
+					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}		
+	}
+	
+	public void onClick$btnNuevoHorario(){
+		try {				
+			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
+			if(pintor!=null ){	
+				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
+				if(profesional!=null ){
+					pintor.abrirVentana("logistico/web/vista/NuevoHorario.zul","contenidoPosicion",null);
+				}else{
+					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}		
+	}
+	
+	public void onClick$btnNuevoModuloSistema(){
+		try {				
+			Pintor pintor=(Pintor)Sessions.getCurrent().getAttribute("pintor");
+			if(pintor!=null ){	
+				Profesional profesional=(Profesional)Sessions.getCurrent().getAttribute("profesional");
+				if(profesional!=null ){
+					pintor.abrirVentana("logistico/web/vista/NuevoModuloSistema.zul","contenidoPosicion",null);
+				}else{
+					pintor.abrirVentana("hcdigital/vista/Login.zul","",null);
+				}
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}		
+	}
+	
 }

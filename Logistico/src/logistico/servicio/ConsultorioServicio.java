@@ -45,7 +45,7 @@ public class ConsultorioServicio implements Serializable {
 		}
 	}
 	
-	public void guardar(String descripcion, int usuarioConectado, int municipioId) {
+	public void guardar(String descripcion, int usuarioConectado) {
 		Consultorio consultorio = new Consultorio(descripcion, usuarioConectado);
 		try {
 			consultorioDao.guardar(consultorio);

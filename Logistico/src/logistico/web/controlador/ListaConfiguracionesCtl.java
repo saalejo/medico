@@ -3,8 +3,8 @@ package logistico.web.controlador;
 import java.io.Serializable;
 import java.util.List;
 
-import logistico.db.dto.modelo.Compania;
-import logistico.servicio.CompaniaServicio;
+import logistico.db.dto.modelo.Configuracion;
+import logistico.servicio.ConfiguracionServicio;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -19,47 +19,47 @@ import org.zkoss.zul.Listcell;
 import org.zkoss.zul.Listitem;
 import org.zkoss.zul.ListitemRenderer;
 
-public class ListaCompaniaCtl extends GenericForwardComposer implements Serializable{
+public class ListaConfiguracionesCtl extends GenericForwardComposer implements Serializable{
 
 	/**
 	 * Id Serializable
 	 */
 	private static final long serialVersionUID = 1L;
-	private Listbox listaCompanias;
+	private Listbox listaConfiguraciones;
 
 	/**
 	 * Al cargar el zul
 	 */
 	public void doAfterCompose(Component comp) throws Exception{
 		super.doAfterCompose(comp);	
-		cargarCompanias();
+		cargarConfiguraciones();
 	}
 	
 	
-	private void cargarCompanias() throws Exception {
+	private void cargarConfiguraciones() throws Exception {
 		
-		final CompaniaServicio companiaServicio = (CompaniaServicio) SpringUtil.getBean("companiaServicio");
-		List<Compania> companias = companiaServicio.obtener();
-		ListModel companiasDesplegable = new ListModelList(companias);
-		listaCompanias.setModel(companiasDesplegable);
-		listaCompanias.setItemRenderer(new ListitemRenderer() {
+		final ConfiguracionServicio configuracionServicio = (ConfiguracionServicio) SpringUtil.getBean("configuracionServicio");
+		List<Configuracion> configuraciones = configuracionServicio.obtener();
+		ListModel configuracionesDesplegable = new ListModelList(configuraciones);
+		listaConfiguraciones.setModel(configuracionesDesplegable);
+		listaConfiguraciones.setItemRenderer(new ListitemRenderer() {
 
 			@SuppressWarnings("unchecked")
 			@Override
 			public void render(Listitem arg0, Object arg1, int arg2) throws Exception {
-				Compania compania = (Compania) arg1;
+				Configuracion configuracion = (Configuracion) arg1;
 				try {					
-					arg0.setLabel(compania.getNit());
+					arg0.setLabel(configuracion.getDescripcion());
 					Listcell lcButton = new Listcell();
 					lcButton.setParent(arg0);
 					final Button boton = new Button("Eliminar");
 					boton.setParent(lcButton);
-					boton.setId("" + compania.getId());
+					boton.setId("" + configuracion.getId());
 					boton.addEventListener("onClick", new EventListener() {
 						@Override
 						public void onEvent(Event arg0){
 							String identificador = boton.getId();
-							companiaServicio.borrar(Integer.parseInt(identificador));
+							configuracionServicio.borrar(Integer.parseInt(identificador));
 						}
 					});
 				} catch (Exception e) {
