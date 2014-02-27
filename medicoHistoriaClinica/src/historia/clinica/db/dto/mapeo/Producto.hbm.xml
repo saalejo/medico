@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Producto" table="LO_PRODUCTO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="codigoInterno" type="java.lang.String">
+            <column name="COD_INT" />
+        </property>
+        <property name="codigoCum" type="java.lang.String">
+            <column name="COD_CUM" />
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="invima" type="java.lang.String">
+            <column name="INV" />
+        </property>
+        <property name="plan" type="java.lang.Boolean">
+            <column name="PLA" />
+        </property>
+        <property name="presentacion" type="java.lang.String">
+            <column name="PRE" />
+        </property>
+        <property name="contenido" type="java.lang.Double">
+            <column name="CON" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <property name="grupoProductoId" type="int">
+            <column name="LO_GRUPO_PRODUCTO_ID" />
+        </property>
+        <property name="grupoSubgrupoProductoId" type="int">
+            <column name="LO_GRUPO_SUBGRUPO_PRODUCTO_ID" />
+        </property>
+        <property name="productoGenericoId" type="int" access="field">
+            <column name="LO_PRODUCTO_GENERICO_ID" />
+        </property>
+        <property name="unidadMedidaId" type="int">
+            <column name="LO_UNIDAD_MEDIDA_ID" />
+        </property>
+        <many-to-one name="grupoProducto" class="historia.clinica.db.dto.modelo.GrupoProducto" fetch="join" insert="false" update="false">
+            <column name="LO_GRUPO_PRODUCTO_ID" />
+        </many-to-one>
+        <many-to-one name="grupoSubgrupoProducto" class="historia.clinica.db.dto.modelo.GrupoSubgrupoProducto" fetch="join" insert="false" update="false">
+            <column name="LO_GRUPO_SUBGRUPO_PRODUCTO_ID" />
+        </many-to-one>
+        <many-to-one name="ProductoGenericoId" class="historia.clinica.db.dto.modelo.ProductoGenerico" access="field" fetch="join" insert="false" update="false">
+            <column name="LO_PRODUCTO_GENERICO_ID" />
+        </many-to-one>
+        <many-to-one name="unidadMedida" class="historia.clinica.db.dto.modelo.UnidadMedida" fetch="join" insert="false" update="false">
+            <column name="LO_UNIDAD_MEDIDA_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

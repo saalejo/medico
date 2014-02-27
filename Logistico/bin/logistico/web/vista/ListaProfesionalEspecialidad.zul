@@ -1,0 +1,14 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${listaProfesionalEspecialidadCtl}" minimizable="true" closable="true" >
+		<listbox id="listaProfesionalEspecialidad" multiple="true" rows="10">
+				        <listhead>
+				            <listheader label="ProfesionalEspecialidad"/>
+				            <listheader label=""/>
+				        </listhead>       
+				        <listitem >            
+				            <listcell/>
+				        </listitem>
+				    </listbox>
+	</window>
+</zk>

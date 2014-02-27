@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.PrincipioActivo" table="LO_PRINCIPIO_ACTIVO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="codigoCorto" type="java.lang.String">
+            <column name="COD_COR" />
+        </property>
+        <property name="codigoLargo" type="java.lang.String">
+            <column name="COD_LAR" />
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+    </class>
+</hibernate-mapping>

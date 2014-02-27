@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/02/2014 05:30:13 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Antecedente" table="HC_ANTECEDENTE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="grupo" type="java.lang.String">
+            <column name="GRU" />
+        </property>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevoMunicipioCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+          		<column hflex="7"></column>
+          		<column hflex="3"></column>
+          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.logistico.municipio.Descripcion}"/>
+					</cell>
+					<cell>
+						<textbox id="descripcion" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.municipio.Departamento}"/>
+					</cell>
+					<cell>
+						<combobox id="departamento" readonly="true">
+							<comboitem label=" "/>			
+						</combobox>
+					</cell>			
+				</row>				
+				<row>
+					<cell>
+						
+					</cell>
+					<cell>
+						
+					</cell>
+					<cell>
+										
+					</cell>
+					<cell>
+						<button id="cancelar" label="${labels.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

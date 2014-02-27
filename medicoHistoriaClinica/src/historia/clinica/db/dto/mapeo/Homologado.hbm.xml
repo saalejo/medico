@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/02/2014 02:10:07 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Homologado" table="HC_HOMOLOGADO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="factor" type="java.lang.Double">
+            <column name="FAC" />
+        </property>
+        <property name="valor" type="java.lang.Double">
+            <column name="VAL" />
+        </property>
+        <property name="procedimientoId" type="int">
+            <column name="HC_PROCEDIMIENTO_ID" />
+        </property>
+        <property name="tarifarioId" type="int">
+            <column name="CO_TARIFARIO_ID" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        
+        <property name="codigo" type="java.lang.String">
+            <column name="COD" />
+        </property>
+        
+        <many-to-one name="procedimiento" class="historia.clinica.db.dto.modelo.Procedimiento" fetch="join" insert="false" update="false">
+            <column name="HC_PROCEDIMIENTO_ID" />
+        </many-to-one>
+        <many-to-one name="tarifario" class="historia.clinica.db.dto.modelo.Tarifario" fetch="join" insert="false" update="false">
+            <column name="CO_TARIFARIO_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

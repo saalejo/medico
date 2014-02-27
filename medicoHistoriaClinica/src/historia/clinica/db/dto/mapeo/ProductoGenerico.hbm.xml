@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.ProductoGenerico" table="LO_PRODUCTO_GENERICO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="OBS" />
+        </property>
+        <property name="codigoAtc" type="java.lang.String">
+            <column name="COD_ATC" />
+        </property>
+        <property name="codigoRips" type="java.lang.String">
+            <column name="COD_RIP" />
+        </property>
+        <property name="medicamentoControl" type="java.lang.Boolean">
+            <column name="MED_CON" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <property name="anatoId" type="int">
+            <column name="LO_ANATO_ID" />
+        </property>
+        <property name="principioActivoId" type="int">
+            <column name="LO_PRINCIPIO_ACTIVO_ID" />
+        </property>
+        <property name="formaFarmaceuticaId" type="int">
+            <column name="LO_FORMA_FARMACEUTICA_ID" />
+        </property>
+        <property name="concentracionId" type="int">
+            <column name="LO_CONCENTRACION_ID" />
+        </property>
+        <property name="unidadMedidaId" type="int">
+            <column name="LO_UNIDAD_MEDIDA_ID" />
+        </property>
+        <many-to-one name="anato" class="historia.clinica.db.dto.modelo.Anato" fetch="join" insert="false" update="false">
+            <column name="LO_ANATO_ID" />
+        </many-to-one>
+        <many-to-one name="principioActivo" class="historia.clinica.db.dto.modelo.PrincipioActivo" fetch="join" insert="false" update="false">
+            <column name="LO_PRINCIPIO_ACTIVO_ID" />
+        </many-to-one>
+        <many-to-one name="formaFarmaceutica" class="historia.clinica.db.dto.modelo.FormaFarmaceutica" fetch="join" insert="false" update="false">
+            <column name="LO_FORMA_FARMACEUTICA_ID" />
+        </many-to-one>
+        <many-to-one name="concentracion" class="historia.clinica.db.dto.modelo.Concentracion" fetch="join" insert="false" update="false">
+            <column name="LO_CONCENTRACION_ID" />
+        </many-to-one>
+        <many-to-one name="unidadMedida" class="historia.clinica.db.dto.modelo.UnidadMedida" fetch="join" insert="false" update="false">
+            <column name="LO_UNIDAD_MEDIDA_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/02/2014 03:21:54 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.ProfesionalEspecialidad" table="HC_PROFESIONAL_ESPECIALIDAD">
+        <id name="id" type="int" access="field">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="registro" type="java.lang.String" access="field">
+            <column name="REG" />
+        </property>
+        <property name="profesionalId" type="int" access="field">
+            <column name="HC_PROFESIONAL_ID" />
+        </property>
+        <property name="especialidadId" type="int" access="field">
+            <column name="HC_ESPECIALIDAD_ID" />
+        </property>
+        <property name="horarioId" type="int" access="field">
+            <column name="LO_HORARIO_ID" />
+        </property>
+        <property name="usuarioConectado" type="int" access="field">
+            <column name="USU_CONECTADO" />
+        </property>
+        <many-to-one name="especialidad" class="historia.clinica.db.dto.modelo.Especialidad" access="field" fetch="join"  insert="false" update="false">
+            <column name="HC_ESPECIALIDAD_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

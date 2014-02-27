@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Anato" table="LO_ANATO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
+        </property>
+        <property name="codigoNivel2" type="java.lang.String">
+            <column name="COD_NI2" />
+        </property>
+        <property name="descripcionNivel2" type="java.lang.String">
+            <column name="DES_NI2" />
+        </property>
+        <property name="codigoNivel3" type="java.lang.String">
+            <column name="COD_NI3" />
+        </property>
+        <property name="descripcionNivel3" type="java.lang.String">
+            <column name="DES_NI3" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+    </class>
+</hibernate-mapping>

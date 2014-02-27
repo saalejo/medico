@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 03:18:54 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.Aplicacion" table="HC_APLICACION">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaAplicacion" type="java.util.Date">
+            <column name="FEC_APL" />
+        </property>
+        <property name="observacion" type="java.lang.String">
+            <column name="OBS" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <property name="atencionProductoId" type="int">
+            <column name="HC_ATENCION_PRODUCTO_ID" />
+        </property>
+        <many-to-one name="atencionProducto" class="historia.clinica.db.dto.modelo.AtencionProducto" access="field" fetch="join" insert="false" update="false">
+            <column name="HC_ATENCION_PRODUCTO_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.AtencionProducto" table="HC_ATENCION_PRODUCTO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="dosis" type="java.lang.Double">
+            <column name="DOS" />
+        </property>
+        <property name="tiempo" type="java.lang.Double">
+            <column name="TIE" />
+        </property>
+        <property name="cantidad" type="java.lang.Double">
+            <column name="CAN" />
+        </property>
+        <property name="observacion" type="java.lang.String">
+            <column name="OBS" />
+        </property>
+        <property name="urgente" type="java.lang.Boolean">
+            <column name="URG" />
+        </property>
+        <property name="fechaProgramacion" type="java.util.Date">
+            <column name="FEC_PRO" />
+        </property>
+        <property name="estado" type="int">
+            <column name="EST" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <many-to-one name="producto" class="historia.clinica.db.dto.modelo.Producto" fetch="join" insert="false" update="false">
+            <column name="LO_PRODUCTO_ID" />
+        </many-to-one>
+        <many-to-one name="atencion" class="historia.clinica.db.dto.modelo.Atencion" fetch="join" insert="false" update="false">
+            <column name="HC_ATENCION_ID" />
+        </many-to-one>
+        <many-to-one name="frecuencia" class="historia.clinica.db.dto.modelo.Frecuencia" fetch="join" insert="false" update="false">
+            <column name="LO_FRECUENCIA_ID" />
+        </many-to-one>
+        <many-to-one name="viaAplicacion" class="historia.clinica.db.dto.modelo.ViaAplicacion" fetch="join" insert="false" update="false">
+            <column name="LO_VIA_APLICACION_ID" />
+        </many-to-one>
+        <many-to-one name="unidadMedida" class="historia.clinica.db.dto.modelo.UnidadMedida" fetch="join" insert="false" update="false">
+            <column name="LO_UNIDAD_MEDIDA_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

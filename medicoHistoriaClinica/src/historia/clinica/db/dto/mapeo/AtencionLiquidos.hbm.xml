@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 07:59:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.AtencionLiquidos" table="HC_ATENCION_LIQUIDOS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="dosis" type="java.lang.Double">
+            <column name="DOS" />
+        </property>
+        <property name="frecuencia" type="java.lang.Double">
+            <column name="FRE" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="OBS" />
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="EST" />
+        </property>
+        <property name="fechaInicial" type="java.util.Date">
+            <column name="FEC_INI" />
+        </property>
+        <property name="fechaFin" type="java.util.Date">
+            <column name="FEC_FIN" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
+        <property name="atencionId" type="int">
+            <column name="HC_ATENCION_ID" />
+        </property>
+        <property name="liquidosId" type="int">
+            <column name="HC_LIQUIDOS_ID" />
+        </property>
+        <many-to-one name="atencion" class="historia.clinica.db.dto.modelo.Atencion" fetch="join" insert="false" update="false">
+            <column name="HC_ATENCION_ID" />
+        </many-to-one>
+        <many-to-one name="liquidos" class="historia.clinica.db.dto.modelo.Liquidos" fetch="join" insert="false" update="false">
+            <column name="HC_LIQUIDOS_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

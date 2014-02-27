@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/02/2014 02:40:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="historia.clinica.db.dto.modelo.AtencionDiagnostico" table="HC_ATENCION_DIAGNOSTICO">
+        <id name="id" type="int" access="field">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="diagnosticoId" type="int" access="field">
+            <column name="HC_DIAGNOSTICO_ID" />
+        </property>
+        <property name="atencionId" type="int" access="field">
+            <column name="HC_ATENCION_ID" />
+        </property>
+        <property name="usuarioConectado" type="int" access="field">
+            <column name="USU_CON" />
+        </property>
+        
+               
+        <many-to-one name="diagnostico" class="historia.clinica.db.dto.modelo.Diangostico" access="field" fetch="join" insert="false" update="false">
+            <column name="HC_DIAGNOSTICO_ID" />
+        </many-to-one>
+              
+        
+        <many-to-one name="atencion" class="historia.clinica.db.dto.modelo.Atencion" access="field" fetch="join"  insert="false" update="false">
+            <column name="HC_ATENCION_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

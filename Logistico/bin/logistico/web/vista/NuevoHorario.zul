@@ -1,0 +1,58 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window height="90%" apply="${nuevoHorarioCtl}" minimizable="true" closable="true" >
+		<grid hflex="1">
+			<columns>
+				<column hflex="3"></column>
+	          		<column hflex="7"></column>
+	          		<column hflex="3"></column>
+	          		<column hflex="7"></column>
+			</columns>
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.logistico.horario.HoraInicial}"/>
+					</cell>
+					<cell>
+						<textbox id="horaInicial" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.horario.HoraFinal}"/>
+					</cell>
+					<cell>
+						<textbox id="horaFinal" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+						<label value="${labels.logistico.horario.Dia}"/>
+					</cell>
+					<cell>
+						<textbox id="dia" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+					<cell>
+						<label value="${labels.logistico.horario.Activo}"/>
+					</cell>
+					<cell>
+						<textbox id="activo" readonly="false" constraint="no empty: no puede ser vacio" width="90%" />
+					</cell>
+				</row>
+				<row>
+					<cell>
+					
+					</cell>
+					<cell>
+					
+					</cell>		
+					<cell>
+					
+					</cell>					
+					<cell>
+						<button id="cancelar" label="${labels.general.Cancelar}"></button>
+						<button id="guardar" label="${labels.general.Guardar}"></button>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>
