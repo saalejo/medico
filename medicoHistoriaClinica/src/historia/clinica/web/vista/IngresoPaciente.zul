@@ -1,0 +1,22 @@
+<tabbox width="100%" apply="${nuevaConsultaGeneralCtl}" >
+    <tabs>
+    	<tab label="Motivo Consulta"/>
+        <tab label="Rx Sistemas"/>
+        <tab label="Ex Fisico"/>
+        <tab label="Signos Vitales"/>
+        <tab label="Diagnosticos"/>
+    </tabs>
+    <toolbar>
+    	<toolbarbutton id="guardar" label="Guardar"></toolbarbutton>
+    </toolbar>
+    <tabpanels>
+    	<tabpanel>
+    	</tabpanel>
+    	<tabpanel>
+    	</tabpanel>
+    	<tabpanel>
+    	</tabpanel>
+    	<tabpanel>
+    	</tabpanel>
+    </tabpanels>
+</tabbox>

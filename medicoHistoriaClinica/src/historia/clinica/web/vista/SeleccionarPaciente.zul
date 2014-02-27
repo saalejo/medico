@@ -1,0 +1,79 @@
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver"?>
+<borderlayout apply="${menuHCCtl}">
+	<north border="0">	
+				<grid hflex="1">
+					<columns>
+						<column></column>
+		          		<column></column>
+		          		<column></column>
+					</columns>			
+					<rows>							
+						<row>
+							<cell>
+								<label value="${labels.historia.clinica.servicio}"/>
+								<combobox id="servicio" readonly="true">
+									<comboitem label=""/>			
+								</combobox>
+							</cell>
+							<cell>
+								<label value="${labels.historia.clinica.especialidad}"/>
+								<combobox id="especialidad" readonly="true">
+									<comboitem label=""/>			
+								</combobox>
+							</cell>
+							<cell>
+								<label value="${labels.historia.clinica.profecional}"/>
+								<combobox id="profecional" readonly="true">
+									<comboitem label=""/>			
+								</combobox>
+							</cell>
+						</row>
+						<row>							
+							<cell>
+								<label value="${labels.historia.clinica.pabellon}"/>
+								<combobox id="pabellon" readonly="true">
+									<comboitem label=""/>			
+								</combobox>
+							</cell>
+							<cell>
+								<label value="${labels.historia.clinica.ubicacion}"/>
+								<combobox id="ubicacion" readonly="true">
+									<comboitem label=""/>			
+								</combobox>
+							</cell>
+							<cell>
+								<label value="${labels.historia.clinica.nombre}"/>
+								<textbox id="nombre"></textbox>				
+							</cell>							
+						</row>
+						<row>
+							<cell></cell>
+							<cell></cell>
+							<cell></cell>
+						</row>
+					</rows>
+				</grid>
+	</north>
+	<center border="0">		
+    	<listbox id="listaPacientes" multiple="true">
+	        <listhead>
+	            <listheader label="${labels.historia.clinica.tipo.documento}"/>
+	            <listheader label="${labels.historia.clinica.identificacion}"/>
+	            <listheader label="${labels.historia.clinica.edad}"/>
+	            <listheader label="${labels.historia.clinica.nombre}"/>
+	            <listheader label="${labels.historia.clinica.pabellon}"/>
+	            <listheader label="${labels.historia.clinica.ubicacion}"/>
+	            <listheader label="${labels.historia.clinica.profesional}"/>
+	        </listhead>       
+	        <listitem >            
+	            <listcell/>
+	            <listcell/>
+	            <listcell/>
+	            <listcell/>
+	            <listcell/>
+	            <listcell/>
+	            <listcell/>
+	        </listitem>
+	    </listbox>
+	</center>
+</borderlayout>

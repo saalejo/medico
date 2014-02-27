@@ -1,0 +1,165 @@
+<?page title="Motivo Consulta" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<grid>
+        	 <columns>
+        	 	<column></column>
+        	 	<column></column>
+        	 		<column></column>
+        	 </columns>
+        	 <rows>
+        	 	<row >
+        	 		<cell colspan="4">
+        	 			<grid>
+		        	 		<columns>
+					        	 	<column></column>
+					        	 	<column></column>
+				        	 		<column></column>				        	 		
+				        	 		<column></column>
+				        	 </columns>
+				        	<rows>
+				        	 	<row >
+				        	 		<cell colspan="2">
+				        	 			<label value="PESO(Kilogramos)"></label>
+				        	 			<textbox id="peso"></textbox>
+				        	 			<label value="TALLA(Centimetros)"></label>
+				        	 			<textbox id="talla"></textbox>
+				        	 		</cell>
+				        	 		<cell colspan="2">
+				        	 			<label value="INDICE DE MASA CORPORAL"></label>
+				        	 			<textbox id="textoIndiceMasaCorporal" readonly="true"></textbox>
+				        	 		</cell>
+				        	 		
+				        	 	</row>
+				        	 	<row >
+				        	 		<cell>
+				        	 			<label value="PRESION ARTERIAL"></label>
+				        	 			<textbox id="textoPresionArterial"></textbox>
+				        	 		</cell>
+				        	 		<cell>
+				        	 			<label value="FRECUENCIA CARDIACA"></label>
+				        	 			<textbox id="textoFrecuenciaCardiaca"></textbox>
+				        	 		</cell>
+				        	 		<cell>
+				        	 			<label value="FRECUENCIA RESPIRATORIA"></label>
+				        	 			<textbox id="textoFrecuenciaRespiratoria"></textbox>
+				        	 		</cell>
+				        	 		<cell>
+				        	 			<label value="TEMPERATURA"></label>
+				        	 			<textbox id="textoTemperatura"></textbox>
+				        	 		</cell>				        	 		
+				        	 	</row>
+			        		</rows>				        	 			
+        	 			</grid>
+        	 		</cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="CABEZA Y CUELLO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="cabezaYCuello" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>        	 		
+        	 		<cell><textbox id="cabezaYCuelloObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="ORGANOS DE LOS SENTIDOS" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="examenFisicoOrganosDeLosSentidos" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="examenFisicoOrganosDeLosSentidosObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="CARDIO VASCULAR" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="cardioVascular" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="cardioVascularObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="PULMONAR" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="pulmonar" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="pulmonarObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="MAMAS" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="mamas" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>         	 		
+        	 		<cell><textbox id="mamasObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="ABDOMEN" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="abdomen" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="abdomenObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="EXTREMIDADES" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="extremidades" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>   	 		
+        	 		<cell><textbox id="extremidadesObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="OSTEO MUSCULAR" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="examenFisicoOsteoMuscular" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="examenFisicoOsteoMuscularObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="VASCULAR PERIFERICO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="examenFisicoVascularPeriferico" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="examenFisicoVascularPerifericoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="NEUROLOGICO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="examenFisicoNeurologico" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="examenFisicoNeurologicoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="HEMATOPOYETICO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="hematoPoyetico" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>  	 		
+        	 		<cell><textbox id="hematoPoyeticoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="GENITO URINARIO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="examenFisicoGenitoUrinario" readonly="true" value="NORMAL">
+							<comboitem label="ANORMAL"/>			
+						</combobox>
+					</cell>  	 		
+        	 		<cell><textbox id="examenFisicoGenitoUrinarioObservaciones"></textbox></cell>
+        	 	</row>    	       	 
+        	 </rows>
+        	</grid>	
+</zk>

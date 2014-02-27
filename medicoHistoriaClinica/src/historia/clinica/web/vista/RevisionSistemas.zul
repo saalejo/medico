@@ -1,0 +1,136 @@
+<?page title="Motivo Consulta" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<grid>
+        	 <columns>
+        	 	<column></column>
+        	 	<column></column>
+        	 		<column></column>
+        	 </columns>
+        	 <rows>
+        	 	<row >
+        	 		<cell><label value="Neurologico" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="neurologico" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>	
+							<comboitem label="NO REFIERE"/>		
+						</combobox>
+					</cell>        	 		
+        	 		<cell><textbox id="neurologicoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="organosDeLosSentidos" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="organosDeLosSentidos" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="organosDeLosSentidosObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="orofaringeYGarganta" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="orofaringeYGarganta" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="orofaringeYGargantaObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="cardioPulmonar" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="cardioPulmonar" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="cardioPulmonarObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="gastroIntestinal" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="gastroIntestinal" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>         	 		
+        	 		<cell><textbox id="gastroIntestinalObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="endocriono" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="endocriono" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="endocrionoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="vascularPeriferico" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="vascularPeriferico" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>   	 		
+        	 		<cell><textbox id="vascularPerifericoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="linfatico" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="linfatico" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>	
+							<comboitem label="NO REFIERE"/>		
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="linfaticoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="osteoMuscular" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="osteoMuscular" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>
+							<comboitem label="NO REFIERE"/>			
+						</combobox>
+					</cell>    	 		
+        	 		<cell><textbox id="osteoMuscularObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row>
+        	 		<cell><label value="genitoUrinario" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="genitoUrinario" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>	
+							<comboitem label="NO REFIERE"/>		
+						</combobox>
+					</cell>       	 		
+        	 		<cell><textbox id="genitoUrinarioObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="SISTEMA REPRODUCTIVO" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="sistemaReproductivo" readonly="true" value="NO REFIERE">
+							<comboitem label="REFIERE"/>	
+							<comboitem label="NO REFIERE"/>		
+						</combobox>
+					</cell>  	 		
+        	 		<cell><textbox id="sistemaReproductivoObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row >
+        	 		<cell><label value="PIEL Y TEGUMENTARIOS" ></label></cell>
+        	 		<cell>
+        	 			<combobox id="pielYTegumentarios" readonly="true">
+							<comboitem label="REFIERE"/>	
+							<comboitem label="NO REFIERE"/>		
+						</combobox>
+					</cell>  	 		
+        	 		<cell><textbox id="pielYTegumentariosObservaciones"></textbox></cell>
+        	 	</row>
+        	 	<row id="revisarActualisar">
+        	 		<cell><checkbox></checkbox></cell> 
+        	 		<cell colspan="2"><label value="Revisar y/o Actualizar AP y AF"></label></cell>
+        	 	</row>       	       	 
+        	 </rows>
+        	</grid>
+</zk>

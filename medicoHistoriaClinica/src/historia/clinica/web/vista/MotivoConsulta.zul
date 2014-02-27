@@ -1,0 +1,27 @@
+<?page title="Motivo Consulta" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<grid hflex="1">
+		<columns>
+			<column hflex="3"></column>
+		    <column hflex="7"></column>
+		</columns>
+		<rows>	
+	  		<row>
+				<cell>
+					<label value="Motivo Consulta"/>
+				</cell>
+				<cell>
+					<textbox id="txtMotivoConsulta" readonly="false" width="90%"/>
+				</cell>						
+			</row>
+			<row>
+				<cell>
+					<label value="Enfermedad Actual"/>
+				</cell>
+				<cell>
+					<textbox id="txtEnfermedadActual" readonly="false" width="90%"/>
+				</cell>						
+			</row>
+		</rows>
+	</grid>
+</zk>

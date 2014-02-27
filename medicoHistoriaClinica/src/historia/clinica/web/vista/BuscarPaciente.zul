@@ -1,0 +1,63 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+	
+	<window height="90%" apply="${buscarPacienteCtl}" >
+		<grid>
+			<columns>
+	          		<column ></column>
+	          		<column ></column>
+	          		<column ></column>
+			</columns>			
+			<rows>
+				<row>
+					<cell>
+						<label value="${labels.formulario.historiaClinica.Identificacion}"></label>
+						<combobox id="servicio" readonly="true" >
+						</combobox>
+					</cell>
+					<cell>	
+						<label value="${labels.formulario.historiaClinica.Identificacion}"></label>
+						<combobox id="especialidad" readonly="true">			
+						</combobox>					
+					</cell>
+					<cell>	
+						<label value="${labels.historiaClinica.formulario.buscarPaciente.Identificacion}"></label>
+						<combobox id="medico" readonly="true" >
+						</combobox>					
+					</cell>
+	    		</row>
+	    		<row>
+					<cell>
+						<label value="${labels.formulario.historiaClinica.Identificacion}"></label>
+						<combobox id="servicio" readonly="true" >
+						</combobox>
+					</cell>
+					<cell>	
+						<label value="${labels.formulario.historiaClinica.Identificacion}"></label>
+						<combobox id="especialidad" readonly="true">			
+						</combobox>					
+					</cell>
+					<cell>	
+						<label value="${labels.formulario.historiaClinica.Identificacion}"></label>
+						<combobox id="medico" readonly="true" >
+						</combobox>					
+					</cell>
+	    		</row>		
+				<row>
+					<cell>	
+						<listbox id="listaPacientes" multiple="true" rows="4">
+					        <listhead>
+					            <listheader label="Atenciones"/>
+					            <listheader label=""/>
+					            <listheader label=""/>	
+					        </listhead>       
+					        <listitem >            
+					            <listcell/>
+					             <listcell/>
+					             <listcell/>
+					        </listitem>
+	    				</listbox>
+	    			</cell>
+	    		</row>
+    		</rows>
+   		</grid>
+ </window>

@@ -1,0 +1,164 @@
+<?page title="Motivo Consulta" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<grid>
+	   	 <columns>
+	   	 	<column></column>
+	   	 	<column></column>
+	   	 	<column></column>
+	   	 </columns>
+	   	 <rows>
+	   	 	<row>
+	   	 		<cell>
+	   	 			<grid>
+			        	 <columns>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 </columns>
+			        	 <rows>
+			        	 	<row >
+				        	 	<cell><label value="${labels.signos.vitales.frecuencia.cardiaca}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.frecuencia.respiratoria}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.temperatura}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.via.temperatura}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.saturacion.oxigeno}"></label></cell>
+			        	 	</row>
+			        	 	<row >
+			        	 		<cell><textbox id="frecuenciaCardiaca"></textbox></cell>
+				        	 	<cell><textbox id="frecuenciaRespiratoria"></textbox></cell>
+				        	 	<cell><textbox id="temperatura"></textbox></cell>
+				        	 	<cell>
+				        	 		<combobox id="viaTemperatura" readonly="true">
+										<comboitem label="${labels.signos.vitales.via.temperatura.oral}"/>	
+										<comboitem label="${labels.signos.vitales.via.temperatura.axilar}"/>
+										<comboitem label="${labels.signos.vitales.via.temperatura.otica}"/>
+										<comboitem label="${labels.signos.vitales.via.temperatura.rectal}"/>		
+									</combobox>
+								</cell>
+				        	 	<cell><textbox id="saturacionOxigeno"></textbox></cell>
+			        	 	</row>
+			        	 </rows>
+			        </grid>   	 		
+	   	 		</cell>
+	   	 		<cell>
+	   	 			<grid>
+						 <columns>
+							<column></column>
+							<column></column>
+							<column></column>
+						 </columns>
+						 <rows>
+							<row >
+								<cell><label value="${labels.signos.vitales.presion.sistolica}"></label></cell>
+								<cell><label value="${labels.signos.vitales.presion.diastolica}"></label></cell>
+								<cell><label value="${labels.signos.vitales.presion.media"></label></cell>
+							</row>
+							<row >
+								<cell><textbox id="presionSistolica"></textbox></cell>
+								<cell><textbox id="presionDiastolica"></textbox></cell>
+								<cell><textbox id="presionMedia"></textbox></cell>									        	 	
+							</row>
+						 </rows>
+					</grid>
+	   	 		</cell>
+	   	 		<cell>
+					<grid>
+						 <columns>
+							<column></column>
+							<column></column>
+							<column></column>
+						 </columns>
+						 <rows>
+							<row >
+								<cell><label value="${labels.signos.vitales.glasgow}"></label></cell>
+								<cell><label value="${labels.signos.vitales.ramsay}"></label></cell>
+								<cell><label value="${labels.signos.vitales.richmondrass"></label></cell>
+							</row>
+							<row >
+								<cell><textbox id="glasgow"></textbox></cell>
+								<cell><textbox id="ramsay"></textbox></cell>
+								<cell><textbox id="richmondrass"></textbox></cell>									        	 	
+							</row>
+						 </rows>
+					</grid>	   	 		
+	   	 		</cell>	 
+	   	 	</row>
+	   	 	<row>
+	   	 		<cell>
+	   	 			<grid>
+			        	 <columns>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 	<column></column>
+			        	 </columns>
+			        	 <rows>
+			        	 	<row >
+				        	 	<cell><label value="${labels.signos.vitales.pulso}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.pvc}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.talla}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.estado.hidratacion}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.peso}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.glucometria}"></label></cell>
+				        	 	<cell><label value="${labels.signos.vitales.indice.masa.corporal}"></label></cell>
+			        	 	</row>
+			        	 	<row >
+			        	 		<cell><textbox id="pulso"></textbox></cell>
+				        	 	<cell><textbox id="pvc"></textbox></cell>
+				        	 	<cell><textbox id="talla"></textbox></cell>
+				        	 	<cell>
+				        	 		<combobox id="estadoHidratacion" readonly="true">
+										<comboitem label="${labels.signos.vitales.hidratado}"/>	
+										<comboitem label="${labels.signos.vitales.hidratado.grado1}"/>
+										<comboitem label="${labels.signos.vitales.hidratado.grado2}"/>
+										<comboitem label="${labels.signos.vitales.hidratado.grado1}"/>		
+									</combobox>
+								</cell>
+				        	 	<cell><textbox id="peso"></textbox></cell>
+				        	 	<cell><textbox id="glucometria"></textbox></cell>
+				        	 	<cell><textbox id="indiceMasaCorporal"></textbox></cell>
+			        	 	</row>
+			        	 </rows>
+			        </grid>  	   	 		
+	   	 		</cell>
+	   	 		<cell>
+	   	 			<label value="${labels.signos.vitales.escala.dolor}">
+	   	 			<combobox id="escalaDolor" readonly="true">
+						<comboitem label="0"/>
+						<comboitem label="1"/>	
+						<comboitem label="2"/>
+						<comboitem label="3"/>
+						<comboitem label="4"/>	
+						<comboitem label="5"/>	
+						<comboitem label="6"/>
+						<comboitem label="7"/>
+						<comboitem label="8"/>	
+						<comboitem label="9"/>
+						<comboitem label="10"/>							
+					</combobox>
+	   	 		</cell>
+	   	 		<cell>
+	   	 			<label value="${labels.signos.vitales.circunferencia.abdominal}">
+	   	 			<textbox id="indiceMasaCorporal"></textbox>
+	   	 		</cell>
+	   	 	  </row> 
+	   	 	  <row>
+	   	 	  	<cell>
+	   	 	  		<label value="${labels.signos.vitales.riesgo.cardiovascular}">
+	   	 			<textbox id="riesgoCardiovascular"></textbox>
+	   	 	  	</cell>
+	   	 	  	<cell>
+	   	 	  		<label value="${labels.signos.vitales.reerc}">
+	   	 			<textbox id="reerc"></textbox>
+	   	 	  	</cell>
+	   	 	  	<cell>
+	   	 	  		<label value="${labels.signos.vitales.tfg}">
+	   	 			<textbox id="tfg"></textbox>
+	   	 	  	</cell>	   	 	  	
+	   	 	  </row>	       	 
+	   	 </rows>
+	  </grid>	
+</zk>
