@@ -1,38 +1,39 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 08:04:06 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="historia.clinica.db.dto.modelo.Diagnostico" table="atencion_has_diagnostico">
+    <class name="historia.clinica.db.dto.modelo.Diagnostico" table="HC_DIAGNOSTICO">
         <id name="id" type="int">
-            <column name="id" />
+            <column name="ID" />
             <generator class="identity" />
         </id>
-        <property name="atencionId" type="int" >
-            <column name="atencion_id" />
+        <property name="descripcion" type="java.lang.String">
+            <column name="DES" />
         </property>
-        <property name="prinsipal" type="boolean">
-            <column name="prinsipal" />
+        <property name="edadInicial" type="java.util.Date">
+            <column name="EDA_INI" />
         </property>
-        <property name="diagnosticoId" type="int">
-            <column name="diagnostico_id" />
+        <property name="edadFinal" type="java.util.Date">
+            <column name="EDA_FIN" />
         </property>
-        <property name="observaciones" type="java.lang.String">
-            <column name="observaciones" />
+        <property name="sexo" type="java.lang.Boolean">
+            <column name="SEX" />
         </property>
-        <property name="ingresoEgreso" type="java.lang.String">
-            <column name="ingreso_egreso" />
+        <property name="altoCosto" type="java.lang.Boolean">
+            <column name="ALT_COS" />
         </property>
-        <property name="tipo" type="java.lang.String">
-            <column name="tipo" />
+        <property name="protocoloId" type="int">
+            <column name="LO_PROTOCOLO_ID" />
         </property>
-        <property name="clase" type="java.lang.String">
-            <column name="clase" />
+        <property name="especialidadId" type="int">
+            <column name="HC_ESPECIALIDAD_ID" />
         </property>
-        <property name="codigo" type="java.lang.String">
-            <column name="codigo" />
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
         </property>
-        <many-to-one name="diagnostico" class="historia.clinica.db.dto.modelo.DiagnosticoMaestro" fetch="join" insert="false" update="false">
-            <column name="diagnostico_id" />
+        <many-to-one name="especialidad" class="historia.clinica.db.dto.modelo.Especialidad" fetch="join" insert="false" update="false">
+            <column name="HC_ESPECIALIDAD_ID" />
         </many-to-one>
     </class>
 </hibernate-mapping>

@@ -1,79 +1,58 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/02/2014 02:25:01 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="historia.clinica.db.dto.modelo.Atencion" table="atencion">
+    <class name="historia.clinica.db.dto.modelo.Atencion" table="LO_ATENCION">
         <id name="id" type="int">
-            <column name="id" />
+            <column name="ID" />
             <generator class="identity" />
         </id>
-       <set name="diagnosticos" table="atencion_has_diagnostico" inverse="false"  lazy="true" access="field" cascade="all">
-            <key>
-                <column name="atencion_id" not-null="true"/>
-            </key>
-            <one-to-many class="historia.clinica.db.dto.modelo.Diagnostico" />
-        </set>        
-        <property name="fechaAtencion" type="java.util.Date">
-            <column name="fecha_atencion" />
+        <property name="folio" type="int">
+            <column name="FOL" />
         </property>
-        <property name="tipoConsulta" type="java.lang.String">
-            <column name="tipo_consulta" />
-        </property>         
-        <property name="observaciones" type="java.lang.String">
-            <column name="observaciones" />
+        <property name="telemedicina" type="java.lang.Boolean">
+            <column name="TEL" />
         </property>
-        
+        <property name="fecha" type="java.util.Date">
+            <column name="FEC" />
+        </property>
+        <property name="evolucion" type="java.lang.String">
+            <column name="EVO" />
+        </property>
+        <property name="recomendaciones" type="java.lang.String">
+            <column name="REC" />
+        </property>
+        <property name="motivoConsulta" type="java.lang.String">
+            <column name="MOT_CON" />
+        </property>
+        <property name="enfermedadActual" type="java.lang.String">
+            <column name="ENF_ACT" />
+        </property>
+        <property name="tipoConsulta" type="java.lang.Boolean">
+            <column name="TIP_CON" />
+        </property>
+        <property name="usuarioConectado" type="int">
+            <column name="USU_CON" />
+        </property>
         <property name="pacienteId" type="int">
-            <column name="paciente_id" />
-        </property>
-        <property name="causaExternaId" type="int">
-            <column name="causa_externa_id" />
-        </property>
-         <property name="finalidadId" type="int">
-            <column name="finalidad_id" />
-        </property>
-        <property name="municipioId" type="int">
-            <column name="municipio_id" />
+            <column name="AD_PACIENTE_ID" />
         </property>
         <property name="profesionalId" type="int">
-            <column name="profesional_id" />
+            <column name="LO_PROFESIONAL_ID" />
         </property>
         <property name="ingresoId" type="int">
-            <column name="ingreso_id" />
+            <column name="AD_INGRESO_ID" />
         </property>
-         <property name="antecedentesMedicos" type="java.lang.String">
-            <column name="antecedentes_medicos" />
-        </property>
-        <property name="antecedentesQuirurgicos" type="java.lang.String">
-            <column name="antecedentes_quirurgicos" />
-        </property>
-        <property name="antecedentesGinecologicos" type="java.lang.String">
-            <column name="antecedentes_ginecologicos" />
-        </property>
-        <property name="antecedentesAlergicos" type="java.lang.String">
-            <column name="antecedentes_alergicos" />
-        </property>
-        <property name="antecedentesTraumaticos" type="java.lang.String">
-            <column name="antecedentes_traumaticos" />
-        </property>
-        <property name="antecedentesPsiquiatricos" type="java.lang.String">
-            <column name="antecedentes_psiquiatricos" />
-        </property>
-        <many-to-one name="causaExterna" class="historia.clinica.db.dto.modelo.CausaExterna" fetch="join" insert="false" update="false">
-            <column name="causa_externa_id" />
+        <many-to-one name="paciente" class="admisiones.db.dto.modelo.Paciente" fetch="join" insert="false" update="false">
+            <column name="AD_PACIENTE_ID" />
         </many-to-one>
-        <many-to-one name="finalidad" class="historia.clinica.db.dto.modelo.Finalidad" fetch="join" insert="false" update="false">
-            <column name="finalidad_id" />
+        <many-to-one name="ingreso" class="admisiones.db.dto.modelo.Ingreso" fetch="join" insert="false" update="false">
+            <column name="AD_INGRESO_ID" />
         </many-to-one>
-        <many-to-one name="ingreso" class="historia.clinica.db.dto.modelo.Ingreso" fetch="join" insert="false" update="false">
-            <column name="ingreso_id" />
+        <many-to-one name="profesional" class="logistico.db.dto.modelo.Profesional" fetch="join" insert="false" update="false">
+            <column name="LO_PROFESIONAL_ID" />
         </many-to-one>
-        <set name="camposHistoria" table="campos_historia" inverse="false"  lazy="true" access="field" cascade="all" order-by="padre">
-            <key>
-                <column name="atencion_id" not-null="true"/>
-            </key>
-            
-            <one-to-many class="historia.clinica.db.dto.modelo.CampoHistoria" />
-        </set>  
+        
     </class>
 </hibernate-mapping>
