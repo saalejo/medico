@@ -4,10 +4,10 @@
 	<comment></comment>
 	<projects>
 		<project>medicoUtil</project>
-		<project>medicoAdmiciones</project>
 		<project>medicoHistoriaClinica</project>
 		<project>medicoContratos</project>
 		<project>medicoAgenda</project>
+		<project>Admiciones</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

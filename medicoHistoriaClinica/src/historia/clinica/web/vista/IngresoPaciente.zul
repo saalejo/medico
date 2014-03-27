@@ -10,7 +10,7 @@
     	<toolbarbutton id="guardar" label="Guardar"></toolbarbutton>
     </toolbar>
     <tabpanels>
-    	<tabpanel>
+    	<tabpanel>    		
     	</tabpanel>
     	<tabpanel>
     	</tabpanel>

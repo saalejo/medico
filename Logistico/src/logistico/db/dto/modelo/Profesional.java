@@ -11,6 +11,8 @@ public class Profesional implements Serializable {
 
 	int id;
 	String identificacion;
+	String usario;
+	String clave;
 	String nombre;
 	String apellido;
 	Boolean tipoProfesional;
@@ -46,6 +48,8 @@ public class Profesional implements Serializable {
 	
 	//Generación de Getters y Setters 
 	
+	
+	
 	/**
 	 * @return the id
 	 */
@@ -58,6 +62,35 @@ public class Profesional implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
+	/**
+	 * @return the usario
+	 */
+	public String getUsario() {
+		return usario;
+	}
+
+	/**
+	 * @param usario the usario to set
+	 */
+	public void setUsario(String usario) {
+		this.usario = usario;
+	}
+
+	/**
+	 * @return the clave
+	 */
+	public String getClave() {
+		return clave;
+	}
+
+	/**
+	 * @param clave the clave to set
+	 */
+	public void setClave(String clave) {
+		this.clave = clave;
+	}
+
+	
 	/**
 	 * @return the identificacion
 	 */

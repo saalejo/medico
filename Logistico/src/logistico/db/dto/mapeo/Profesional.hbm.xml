@@ -11,6 +11,12 @@
         <property name="identificacion" type="java.lang.String">
             <column name="IDE" />
         </property>
+        <property name="usuario" type="java.lang.String">
+            <column name="usu" />
+        </property>
+        <property name="clave" type="java.lang.String">
+            <column name="cla" />
+        </property>
         <property name="nombre" type="java.lang.String">
             <column name="NOM" />
         </property>

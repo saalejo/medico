@@ -65,8 +65,17 @@ public class ProfesionalServicio implements Serializable {
 			profesional.setId(id);
 			profesionalDao.borrar(profesional);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public Profesional obtenerPorUsuario(String user) {
+		try {
+			return profesionalDao.obtener(user);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
 	}
 }

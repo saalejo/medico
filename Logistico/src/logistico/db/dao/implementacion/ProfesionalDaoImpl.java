@@ -8,6 +8,8 @@ import logistico.db.dto.modelo.Profesional;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 /**
@@ -29,6 +31,20 @@ public class ProfesionalDaoImpl extends HibernateDaoSupport  implements Profesio
 			return profesionales;
 		}catch(HibernateException e){
 			throw new Exception("Ha ocurrido un error obteniendo la lista de Profesionales", e);
+		}
+	}
+	
+	@Override
+	public Profesional obtener(String usuario) throws Exception {
+		Session sesion = null;
+		try{
+			sesion = getSession();		
+			Profesional profesional = (Profesional)sesion.createCriteria(Profesional.class)
+					.add(Restrictions.eq("usuario", usuario))
+					.uniqueResult();		
+			return profesional;
+		}catch(HibernateException e){
+			throw new Exception("Ha ocurrido un error obteniendo el profesional", e);
 		}
 	}
 

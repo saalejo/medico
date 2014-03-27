@@ -21,4 +21,6 @@ public interface ProfesionalDao  {
 
 	void borrar(Profesional profesional) throws Exception;
 
+	Profesional obtener(String user) throws Exception;
+
 }

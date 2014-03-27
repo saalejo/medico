@@ -25,7 +25,7 @@ public class Producto implements Serializable {
 	int unidadMedidaId;
 	
 	GrupoProducto         grupoProducto;
-	GrupoSubgrupoProducto grupoSubgrupoProducto;
+	GrupoSubGrupoProducto grupoSubgrupoProducto;
 	ProductoGenerico      ProductoGenericoId;
 	UnidadMedida          unidadMedida;
 	
@@ -113,10 +113,10 @@ public class Producto implements Serializable {
 	public void setGrupoProducto(GrupoProducto grupoProducto) {
 		this.grupoProducto = grupoProducto;
 	}
-	public GrupoSubgrupoProducto getGrupoSubgrupoProducto() {
+	public GrupoSubGrupoProducto getGrupoSubgrupoProducto() {
 		return grupoSubgrupoProducto;
 	}
-	public void setGrupoSubgrupoProducto(GrupoSubgrupoProducto grupoSubgrupoProducto) {
+	public void setGrupoSubgrupoProducto(GrupoSubGrupoProducto grupoSubgrupoProducto) {
 		this.grupoSubgrupoProducto = grupoSubgrupoProducto;
 	}
 	public Anato getAnato() {

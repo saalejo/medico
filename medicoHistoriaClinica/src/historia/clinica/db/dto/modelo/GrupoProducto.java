@@ -15,7 +15,7 @@ public class GrupoProducto implements Serializable {
 	int grupoSubgrupoProductoId;
 	
 	
-	GrupoSubgrupoProducto grupoSubgrupoProducto;
+	GrupoSubGrupoProducto grupoSubgrupoProducto;
 
 
 	public int getId() {
@@ -58,12 +58,12 @@ public class GrupoProducto implements Serializable {
 	}
 
 
-	public GrupoSubgrupoProducto getGrupoSubgrupoProducto() {
+	public GrupoSubGrupoProducto getGrupoSubgrupoProducto() {
 		return grupoSubgrupoProducto;
 	}
 
 
-	public void setGrupoSubgrupoProducto(GrupoSubgrupoProducto grupoSubgrupoProducto) {
+	public void setGrupoSubgrupoProducto(GrupoSubGrupoProducto grupoSubgrupoProducto) {
 		this.grupoSubgrupoProducto = grupoSubgrupoProducto;
 	}
 	
