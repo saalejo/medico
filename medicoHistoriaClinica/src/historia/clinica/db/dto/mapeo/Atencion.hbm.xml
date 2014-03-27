@@ -52,7 +52,6 @@
         </many-to-one>
         <many-to-one name="profesional" class="logistico.db.dto.modelo.Profesional" fetch="join" insert="false" update="false">
             <column name="LO_PROFESIONAL_ID" />
-        </many-to-one>
-        
+        </many-to-one>        
     </class>
 </hibernate-mapping>

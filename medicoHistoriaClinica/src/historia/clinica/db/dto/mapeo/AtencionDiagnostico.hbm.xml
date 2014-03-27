@@ -16,14 +16,10 @@
         </property>
         <property name="usuarioConectado" type="int" access="field">
             <column name="USU_CON" />
-        </property>
-        
-               
-        <many-to-one name="diagnostico" class="historia.clinica.db.dto.modelo.Diangostico" access="field" fetch="join" insert="false" update="false">
+        </property>              
+        <many-to-one name="diagnostico" class="historia.clinica.db.dto.modelo.Diagnostico" access="field" fetch="join" insert="false" update="false">
             <column name="HC_DIAGNOSTICO_ID" />
         </many-to-one>
-              
-        
         <many-to-one name="atencion" class="historia.clinica.db.dto.modelo.Atencion" access="field" fetch="join"  insert="false" update="false">
             <column name="HC_ATENCION_ID" />
         </many-to-one>
